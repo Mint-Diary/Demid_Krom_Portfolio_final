@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import ProfileCard from "./components/ProfileCard";
 import Tech from "./components/Tech";
-import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
 import Hero from "./components/Hero.jsx";
 import Blog from "./components/Blog/Blog.jsx";
@@ -34,9 +33,6 @@ function HomePage() {
       </section>
       <section id="blog">
         <Blog />
-      </section>
-      <section id="contact">
-        <Contact />
       </section>
     </>
   );
