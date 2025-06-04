@@ -1,21 +1,6 @@
 export const blogPosts = [
   {
     id: 1,
-    slug: "BlogPost1",
-    title:
-      "The 10 best hiking trails in the world you should put in your bucket list",
-    excerpt:
-      "Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus.",
-    author: "Joe Smith",
-    date: "March 3, 2023",
-    readTime: "12 min read",
-    image:
-      "https://cdn.tailkit.com/media/placeholders/photo-73F4pKoUkM0-800x600.jpg",
-    tags: ["travel", "adventure"],
-    component: "BlogPost1",
-  },
-  {
-    id: 2,
     slug: "leetcode",
     title: "Wieso ich hin und her gerissen bin, ob Leetcode einen weiterbringt",
     excerpt:
@@ -29,7 +14,7 @@ export const blogPosts = [
     component: "BlogPost2",
   },
   {
-    id: 3,
+    id: 2,
     slug: "barcode-barcodes-barcode-barcodes-barcode-barcodes",
     title:
       "Von Barcodes zu Kameras: Warum der einfache Weg oft der schwerste ist",
@@ -41,5 +26,23 @@ export const blogPosts = [
     image: "/regal.jpg",
     tags: ["bug", "barcodes,", "learning", "diary"],
     component: "BlogPost3",
+  },
+  {
+    id: 3,
+    slug: "BlogPost1",
+    title:
+      "Warum technische Schuld meine Sicht auf Informatik grundlegend\n" +
+      "verändert hat",
+    excerpt:
+      "Technische Schuld ist ein Begriff, der in der Softwareentwicklung\n" +
+      "immer wieder auftaucht, und doch wird er häufig missverstanden\n" +
+      "oder verharmlost.",
+    author: "Demid Krom ",
+    date: "29 September 2024",
+    readTime: "12 min read",
+    image:
+      "/schuld.png",
+    tags: ["info", "planing"],
+    component: "BlogPost1",
   },
 ];
