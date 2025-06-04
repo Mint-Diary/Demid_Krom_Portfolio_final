@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
-import ProfileCard from "./components/ProfileCard";
 import Tech from "./components/Tech";
 import Testimonials from "./components/Testimonials";
 import Hero from "./components/Hero.jsx";
@@ -24,9 +23,6 @@ function HomePage() {
       </section>
       <section id="tech">
         <Tech />
-      </section>
-      <section id="about">
-        <ProfileCard />
       </section>
       <section id="testimonials">
         <Testimonials />
