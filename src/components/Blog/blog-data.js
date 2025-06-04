@@ -16,21 +16,21 @@ export const blogPosts = [
   },
   {
     id: 2,
-    slug: "best-stargazing-places-world",
-    title: "The 20 best places in the world for star gazing",
+    slug: "leetcode",
+    title: "Wieso ich hin und her gerissen bin, ob Leetcode einen weiterbringt",
     excerpt:
-      "Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus.",
-    author: "Lia Baker",
-    date: "February 23, 2023",
-    readTime: "20 min read",
-    image:
-      "https://cdn.tailkit.com/media/placeholders/photo-phIFdC6lA4E-800x600.jpg",
-    tags: ["travel", "astronomy"],
+      "Leetcode ist ein Phänomen. Auf der einen Seite eine Plattform, die weltweit als Referenz für\n" +
+      "algorithmisches Denken gilt.",
+    author: "Demid Krom ",
+    date: "24 Mai 2025",
+    readTime: "10 min read",
+    image: "/leet.png",
+    tags: ["learning", "interview", "opinion"],
     component: "BlogPost2",
   },
   {
     id: 3,
-    slug: "beautiful-lakes-exploration-guide",
+    slug: "barcode-barcodes-barcode-barcodes-barcode-barcodes",
     title:
       "Von Barcodes zu Kameras: Warum der einfache Weg oft der schwerste ist",
     excerpt:

@@ -15,7 +15,7 @@ export default function BlogPostBarcode() {
               <span className="text-teal-600 dark:text-teal-400">
                 Demid Krom
               </span>{" "}
-              am <span className="font-semibold">5. Juni 2025</span> · 12 min
+              am <span className="font-semibold">15 Februar 2025</span> · 12 min
               Lesezeit
             </p>
           </div>
