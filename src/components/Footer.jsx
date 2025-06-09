@@ -65,22 +65,22 @@ export default function Footer({ onScrollToTop }) {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition duration-100">
+                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
                   {t('footer.servicesList.webDev')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition duration-100">
+                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
                   {t('footer.servicesList.mobileApp')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition duration-100">
+                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
                   {t('footer.servicesList.uiux')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition duration-100">
+                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
                   {t('footer.servicesList.consulting')}
                 </a>
               </li>
