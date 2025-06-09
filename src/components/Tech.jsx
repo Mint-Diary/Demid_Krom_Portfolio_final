@@ -141,11 +141,12 @@ export default function LogosBoxedwithHeading() {
 
   return (
     <div className="bg-slate-100 px-4 py-16 lg:px-8 lg:py-20 dark:bg-slate-900 dark:text-slate-100">
-      <div className="mx-auto max-w-xl text-center">
-        <h2 className="mb-4 text-3xl font-black text-slate-900 dark:text-white">
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className="mb-4 mt-16 text-4xl font-black text-black dark:text-white">
           {t("tech.title")}
         </h2>
-        <p className="mx-auto mb-8 max-w-md text-lg text-slate-600 dark:text-gray-400">
+        <p className="mx-auto mb-16 text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
           {t("tech.subtitle")}
         </p>
       </div>

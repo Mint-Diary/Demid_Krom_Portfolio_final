@@ -135,7 +135,7 @@ export default function TimelineComponent() {
           <h2 className="mb-4 mt-16 text-4xl font-black text-black dark:text-white">
             {t("timeline.title")}
           </h2>
-          <p className="mx-auto text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
+          <p className="mx-auto mb-16 text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
             {t("timeline.subtitle")}
           </p>
         </div>

@@ -5,16 +5,14 @@ export default function TestimonialsAsymmetricGrid() {
       <div className="bg-white dark:bg-slate-950 dark:text-slate-100">
         <div className="container mx-auto space-y-10 px-4 pt-16 pb-48 lg:space-y-16 lg:px-8 lg:pt-32 xl:max-w-7xl">
           {/* Heading */}
-          <div className="mx-auto max-w-3xl text-center">
-            <div>
-              <h2 className="mb-4 text-4xl font-black text-black lg:text-5xl dark:text-white">
-                Testimonials
-              </h2>
-              <p className="text-lg/relaxed font-medium text-slate-700 lg:text-xl/relaxed dark:text-slate-400">
-                Here’s what others say about working with me. I prioritize clean
-                code, collaboration, and delivering results that matter.
-              </p>
-            </div>
+          <div className="text-center">
+            <h2 className="mb-4 text-4xl font-black text-black dark:text-white">
+              Testimonials
+            </h2>
+            <p className="mx-auto text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
+              Here's what others say about working with me. I prioritize clean
+              code, collaboration, and delivering results that matter.
+            </p>
           </div>
           {/* END Heading */}
 
