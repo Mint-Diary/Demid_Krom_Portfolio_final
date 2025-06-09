@@ -7,10 +7,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import Tech from "./components/Tech";
-import Testimonials from "./components/Testimonials";
 import Hero from "./components/Hero.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
+import CVDownload from "./components/Downloads.jsx"
 
 function HomePage() {
   return (
@@ -24,11 +24,11 @@ function HomePage() {
       <section id="tech">
         <Tech />
       </section>
-      <section id="testimonials">
-        <Testimonials />
-      </section>
       <section id="blog">
         <Blog />
+      </section>
+      <section id="cv">
+        <CVDownload />
       </section>
     </>
   );

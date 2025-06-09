@@ -89,25 +89,15 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">
-              {t('footer.newsletter.title')}
-            </h3>
-            <p className="text-sm leading-relaxed text-gray-400">
-              {t('footer.newsletter.description')}
-            </p>
-            <div>
-              <input
-                type="email"
-                placeholder={t('footer.newsletter.placeholder')}
-                className="block w-full rounded-lg border border-gray-600 bg-gray-700/50 px-3 py-2 text-sm text-gray-200 placeholder-gray-400"
-              />
-              <button
-                className="mt-2 w-full rounded-lg bg-green-400/10 px-3 py-2 text-sm font-semibold text-green-400 hover:bg-green-400/20"
-              >
-                {t('footer.newsletter.subscribe')}
-              </button>
-            </div>
+            <h3 className="text-xl font-bold text-gray-100">Funfacts</h3>
+            <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+              <li>Lieblingsmanga: Death Note</li>
+              <li>Eat. Sleep. Code. Repeat.</li>
+              <li>TypeScript? Immer.</li>
+            </ul>
           </div>
+
+
         </div>
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-gray-700/75 pt-8 sm:flex-row sm:space-y-0">
           <div className="text-sm text-gray-400">

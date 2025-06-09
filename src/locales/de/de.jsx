@@ -1,4 +1,3 @@
-// i18n/locales/de.jsx
 export default {
   // Navigation
   nav: {
@@ -179,6 +178,22 @@ export default {
       info: "informativ",
       planing: "Planung",
     },
+  },
+
+  // Download section
+  download: {
+    title: "Demid Krom",
+    subtitle: "Lebenslauf Download",
+    heading: "Mein Lebenslauf",
+    description: "Laden Sie meinen aktuellen deutschen Lebenslauf als PDF herunter. Erfahren Sie mehr über meine Erfahrungen und Qualifikationen.",
+    fileInfo: {
+      type: "File Type:",
+      size: "Size:",
+      typeValue: "PDF",
+      sizeValue: "~2.0 MB"
+    },
+    button: "Lebenslauf herunterladen",
+    footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
   },
 
   // Footer

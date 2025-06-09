@@ -1,236 +1,128 @@
-// i18n/locales/en.jsx
 export default {
   // Navigation
   nav: {
     logo: "DEMID KROM",
     tech: "TECHNOLOGIES",
-    timeline: "JOURNEY",
-    about: "ABOUT",
-    contact: "CONTACT"
+    timeline: "TIMELINE",
+    about: "ABOUT ME",
+    contact: "CONTACT",
+  },
+
+  // Common
+  common: {
+    fullName: "Demid Krom",
+    ribbonBlog: "DE Only",
+    prepositions: {
+      on: "on"
+    }
   },
 
   // Hero section
   hero: {
-    title: "Full Stack Developer",
-    subtitle: "Building modern web applications with passion",
-    description: "With experience in modern web technologies, I create exceptional digital experiences that inspire people",
+    title1: "Hello, I'm",
+    title2: "Full Stack Developer",
+    description:
+      "With experience in modern web technologies, I create exceptional digital experiences that inspire people",
     cta: "Get in touch",
-    ctaSecondary: "My Work",
-    scrollDown: "Scroll Down",
-    greeting: "Hello, I'm",
-    specialization: "I craft innovative solutions",
+    ctaSecondary: "Visit my blog",
     cards: {
       ide: "IDE Development",
       mobile: "Mobile Development",
-      vr: "VR Development"
-    }
+      vr: "VR Development",
+    },
   },
 
   // Timeline
   timeline: {
     title: "My Journey",
-    subtitle: "A roadmap of my professional growth",
+    subtitle: "An overview of my development",
     events: {
-      current: {
-        title: "Senior Full Stack Developer",
-        company: "TechForward GmbH",
-        description: "Leading the development of modern web applications with React and Spring Boot. Implementing microservices and cloud-native solutions."
+      odav: {
+        title: "ODAV AG",
+        description:
+          "Apprenticeship as IT Specialist for Application Development in Full Stack",
+        date: "September 2022 to present",
       },
-      previous: {
-        title: "Backend Developer",
-        company: "DataSolutions AG",
-        description: "Developing scalable backend systems and optimizing database queries. Integration of REST APIs and microservices."
+      finalSchool: {
+        title: "Secondary School",
+        description:
+          "Graduation from Herzog-Ludwig Secondary School in Bogen with intermediate school certificate",
+        date: "December 2017 to September 2022",
       },
-      education: {
-        title: "Computer Science Studies",
-        company: "Technical University of Berlin",
-        description: "Focus on software development and database systems. Graduated with honors."
-      }
+      school: {
+        title: "Secondary School in Regensburg",
+        description:
+          "Attended St.-Wolfgang Secondary School in Regensburg, then transferred to " +
+          "Herzog-Ludwig Secondary School in Bogen, where the intermediate school certificate was " +
+          "obtained",
+        date: "August 2016 to December 2017",
+      },
     },
-    tags: {
-      fullstack: "Full Stack",
-      react: "React",
-      spring: "Spring Boot",
-      java: "Java",
-      backend: "Backend",
-      sql: "SQL",
-      computerScience: "Computer Science",
-      algorithms: "Algorithms",
-      databases: "Databases"
-    }
   },
 
   // Tech stack
   tech: {
     title: "Technologies",
     subtitle: "My technical expertise and preferred tools",
-    frontend: "Frontend",
-    frontendDesc: "Building modern, reactive user interfaces with React, Vue.js, and TypeScript",
-    backend: "Backend",
-    backendDesc: "Scalable server architectures with Java Spring Boot and Node.js",
-    devops: "DevOps",
-    devopsDesc: "Containerization and CI/CD with Docker, Kubernetes, and GitLab",
     proficiencyLevels: {
       expert: "Expert",
       advanced: "Advanced",
       intermediate: "Intermediate",
-      beginner: "Beginner"
-    }
-  },
-
-  // Profile
-  profile: {
-    title: "About Me",
-    subtitle: "Get to know me better",
-    description: "Passionate developer with experience in modern web technologies",
-    bio: "I'm a dedicated full-stack developer who loves creating meaningful digital experiences. With a strong foundation in both frontend and backend technologies, I enjoy solving complex problems and turning ideas into reality.",
-    skills: "Skills",
-    experience: "Years of Experience",
-    projects: "Projects Completed",
-    clients: "Happy Clients",
-    downloadCV: "Download CV",
-    contactMe: "Contact Me",
-    location: "Based in",
-    availability: "Available for freelance",
-    passion: "Passionate about clean code and user experience",
-    name: "Demid Krom",
-    email: "contact@demidkrom.dev",
-    biop: "Full Stack Developer passionate about innovative solutions"
+      beginner: "Beginner",
+    },
   },
 
   // Testimonials
   testimonials: {
     title: "Testimonials",
-    subtitle: "Here's what others say about working with me. I prioritize clean code, collaboration, and delivering results that matter.",
+    subtitle:
+      "What others say about working with me. I value clean code, collaboration, and meaningful results.",
     at: "at",
     items: {
       first: {
-        text: "Demid has completely transformed how we build our web applications. His modern development approach saved us countless development hours while delivering professional results. The solutions are intuitive enough for our marketing team to make updates, yet powerful enough for complex functionality.",
+        text: "Demid completely transformed our web applications. His modern development approach saved us countless development hours while delivering professional results. The solutions are intuitive for our marketing team while being powerful enough for complex functionalities.",
         author: "Sarah Chen",
         role: "CTO",
-        company: "TechFlow"
+        company: "TechFlow",
       },
       second: {
-        text: "Working with Demid has been an excellent experience. His technical expertise and understanding of business requirements exceeded our expectations.",
+        text: "Working with Demid was an excellent experience. His technical expertise and understanding of business requirements exceeded our expectations.",
         author: "Michael Schmidt",
         role: "Project Manager",
-        company: "Digital Solutions GmbH"
+        company: "Digital Solutions GmbH",
       },
       third: {
         text: "Impressive technical skills paired with clear communication. Demid not only delivered what we needed but also proactively suggested improvements.",
         author: "Lisa Weber",
         role: "Product Manager",
-        company: "Innovation Labs"
-      }
-    }
+        company: "Innovation Labs",
+      },
+    },
   },
 
   // Contact
   contact: {
-    title: "Get In Touch",
-    subtitle: "Let's work together on your next project",
-    description: "Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can bring your ideas to life.",
+    title: "Get in touch",
+    subtitle: "Response within 24 hours",
+    description:
+      "Have questions? Contact me and I'll get back to you as soon as possible.",
     companyName: "Demid Krom",
     address: "Berlin, Germany",
     form: {
-      name: "Full Name",
-      namePlaceholder: "Enter your full name",
-      email: "Email Address",
-      emailPlaceholder: "Enter your email address",
-      subject: "Subject",
-      subjectPlaceholder: "What's this about?",
-      message: "Message",
-      messagePlaceholder: "Tell me about your project...",
-      send: "Send Message",
-      sending: "Sending...",
-      success: "Message sent successfully!",
-      error: "Failed to send message. Please try again."
-    },
-    info: {
-      phone: "Phone",
+      name: "Name",
+      namePlaceholder: "John Doe",
       email: "Email",
-      location: "Location",
-      availability: "Availability",
-      response: "Response Time",
-      responseTime: "Within 24 hours"
+      emailPlaceholder: "john.doe@example.com",
+      message: "Message",
+      messagePlaceholder: "Your message here...",
+      submit: "Send",
     },
-    social: {
-      title: "Follow Me",
-      github: "GitHub",
-      linkedin: "LinkedIn",
-      twitter: "Twitter",
-      instagram: "Instagram"
-    },
-    subtitles: "Response within 24 hours",
-    titlet: "Get in touch",
-    descriptiond: "Have questions? Feel free to contact me and I'll get back to you as soon as possible."
-  },
-
-  // Footer
-  footer: {
-    description: "Full-stack developer passionate about creating exceptional digital experiences.",
-    quickLinks: "Quick Links",
-    services: "Services",
-    servicesList: {
-      webDev: "Web Development",
-      mobileApp: "Mobile Apps",
-      uiux: "UI/UX Design",
-      consulting: "Consulting"
-    },
-    contact: "Contact Info",
-    social: "Follow Me",
-    newsletter: {
-      title: "Newsletter",
-      description: "Subscribe to get updates about my latest projects",
-      placeholder: "Enter your email",
-      subscribe: "Subscribe",
-      success: "Successfully subscribed!",
-      error: "Subscription failed. Please try again."
-    },
-    rights: "All rights reserved",
-    builtWith: "Built with React & Tailwind CSS",
-    madeWith: "Made with ❤️ by"
-  },
-
-  // Common
-  common: {
-    loading: "Loading...",
-    error: "Something went wrong",
-    retry: "Try Again",
-    close: "Close",
-    open: "Open",
-    menu: "Menu",
-    back: "Back",
-    next: "Next",
-    previous: "Previous",
-    save: "Save",
-    cancel: "Cancel",
-    confirm: "Confirm",
-    delete: "Delete",
-    edit: "Edit",
-    view: "View",
-    download: "Download",
-    share: "Share",
-    copy: "Copy",
-    copied: "Copied!",
-    search: "Search",
-    filter: "Filter",
-    sort: "Sort",
-    all: "All",
-    none: "None",
-    select: "Select",
-    upload: "Upload",
-    required: "Required",
-    optional: "Optional",
-    yes: "Yes",
-    no: "No",
-    ok: "OK"
   },
 
   // Projects (for future use)
   projects: {
     title: "My Projects",
-    subtitle: "A showcase of my recent work",
+    subtitle: "A showcase of my latest work",
     viewProject: "View Project",
     viewCode: "View Code",
     liveDemo: "Live Demo",
@@ -239,19 +131,95 @@ export default {
     status: "Status",
     completed: "Completed",
     inProgress: "In Progress",
-    upcoming: "Upcoming"
+    upcoming: "Upcoming",
   },
 
-  // Blog (for future use)
+  // Blog
   blog: {
     title: "Latest Posts",
     subtitle: "Thoughts, tutorials, and insights",
-    readMore: "Read More",
-    readTime: "min read",
-    publishedOn: "Published on",
-    tags: "Tags",
-    categories: "Categories",
-    share: "Share this post",
-    related: "Related Posts"
-  }
+
+    blogs: {
+      leetcode: {
+        title:
+          "Why I'm torn about whether Leetcode actually helps you progress",
+        preview:
+          "Leetcode is a phenomenon. On one hand, a platform " +
+          "that's considered a global reference for algorithmic thinking.",
+        date: "May 24, 2025",
+        readTime: "approx. 10 minutes read"
+      },
+      barcodes: {
+        title:
+          "From Barcodes to Cameras: Why the simple way is often the hardest",
+        preview:
+          "It all started with an idea. I wanted to build a literature management app. " +
+          "Simple, lean, and functional. No AI, no camera gimmicks",
+        date: "February 15, 2025",
+        readTime: "approx. 12 minutes read"
+      },
+      debt: {
+        title:
+          "Why technical debt fundamentally changed my view on computer science",
+        preview:
+          "Technical debt is a term that comes up repeatedly in software development, " +
+          "yet it's often misunderstood or downplayed.",
+        date: "September 29, 2024",
+        readTime: "approx. 12 minutes read"
+      },
+    },
+
+    tags: {
+      learning: "personal development",
+      interview: "job interview",
+      opinion: "personal opinion",
+      bug: "bug",
+      barcodes: "barcodes",
+      info: "informative",
+      planing: "planning",
+    },
+  },
+
+  // Download Section
+  download: {
+    title: "Demid Krom",
+    subtitle: "Resume Download",
+    heading: "My Resume",
+    description: "Download my current German resume as PDF. Learn more about my experience and qualifications.",
+    fileInfo: {
+      type: "File Type:",
+      size: "Size:",
+      typeValue: "PDF",
+      sizeValue: "~2.0 MB"
+    },
+    button: "Download Resume",
+    footer: "Click to download • Opens in new tab"
+  },
+
+  // Footer
+  footer: {
+    description:
+      "Full-stack developer with a passion for exceptional digital experiences.",
+    quickLinks: "Quick Links",
+    services: "Services",
+    servicesList: {
+      webDev: "Web Development",
+      mobileApp: "Mobile Apps",
+      uiux: "UI/UX Design",
+      consulting: "Consulting",
+    },
+    contact: "Contact Info",
+    social: "Follow Me",
+    newsletter: {
+      title: "Newsletter",
+      description: "Subscribe to updates on my latest projects",
+      placeholder: "Enter your email",
+      subscribe: "Subscribe",
+      success: "Successfully subscribed!",
+      error: "Subscription failed. Please try again.",
+    },
+    rights: "All rights reserved",
+    builtWith: "Built with React & Tailwind CSS",
+    madeWith: "Made with ❤️ by",
+  },
 };

@@ -387,7 +387,7 @@ export default function ForestComponent() {
           <h1 className="mb-4 text-4xl font-black text-white lg:text-6xl drop-shadow-lg">
             {t('hero.title1')}{" "}
             <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Demid Krom
+              {t('common.fullName')}
             </span>{" "}
             {t('hero.title2')}
           </h1>
@@ -401,13 +401,13 @@ export default function ForestComponent() {
             style={{ pointerEvents: "auto" }}
           >
             <a
-              href="#contact"
+              href="#timeline"
               className="group inline-flex items-center justify-center gap-2 rounded-lg border border-green-400 bg-green-400/20 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-green-300 hover:border-green-300 hover:bg-green-400/30 focus:ring-3 focus:ring-green-400/50 transition-all duration-300"
             >
               <span>{t('hero.cta')}</span>
             </a>
             <a
-              href="#tech"
+              href="#blog"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-transparent bg-white/10 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-white hover:text-cyan-300 hover:bg-white/20 hover:shadow-lg transition-all duration-300"
             >
               <span>{t('hero.ctaSecondary')}</span>

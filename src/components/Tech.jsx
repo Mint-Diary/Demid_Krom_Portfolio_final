@@ -6,7 +6,6 @@ import {
   SiKubernetes,
   SiSpring,
   SiDocker,
-  SiGit,
   SiGitlab,
   SiTailwindcss,
   SiAngular,
