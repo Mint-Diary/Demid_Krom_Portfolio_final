@@ -130,6 +130,16 @@ export default function TimelineComponent() {
           </Canvas>
         </div>
 
+        {/* Heading */}
+        <div className="text-center">
+          <h2 className="mb-4 mt-16 text-4xl font-black text-black dark:text-white">
+            {t("timeline.title")}
+          </h2>
+          <p className="mx-auto text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
+            {t("timeline.subtitle")}
+          </p>
+        </div>
+
         {/* Centered content with fixed width */}
         <div className="relative mx-auto w-[60%] py-5 dark:text-slate-100" style={{ zIndex: 10 }}>
           {/* Vertical Guide */}

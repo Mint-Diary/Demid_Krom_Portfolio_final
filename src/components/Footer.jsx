@@ -114,9 +114,9 @@ export default function Footer({ onScrollToTop }) {
             {t('footer.rights')} © {new Date().getFullYear()}
           </div>
           <div className="text-sm font-medium text-gray-500">
-            {t('footer.madeWith')} <span className="text-red-500">❤</span>{' '}
+            {t('footer.madeWith')} {' '}
             <a href="#" className="text-green-400 hover:text-green-300">
-              Demid Krom
+              {t('common.fullName')}
             </a>
           </div>
         </div>

@@ -24,8 +24,27 @@ export default function BlogListsFullWidth() {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="flex flex-col overflow-hidden rounded-lg bg-white shadow-xs lg:flex-row dark:bg-slate-800"
+              className="relative flex flex-col overflow-hidden rounded-lg bg-white shadow-xs lg:flex-row dark:bg-slate-800"
             >
+              {/* Ribbon */}
+              <div className="absolute -top-2.5 -right-2.5 z-10 size-28 overflow-hidden">
+                <span className="absolute top-0 size-2.5 bg-teal-900" />
+                <span className="absolute right-0 bottom-0 size-2.5 bg-teal-900" />
+                <div className="absolute right-0 bottom-0 flex w-[calc(100%*1.4142)] origin-bottom-right rotate-45 items-center justify-center gap-1.5 bg-teal-600 p-2.5 text-center text-sm leading-tight text-white hover:bg-teal-700 active:bg-teal-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    className="inline-block size-4 text-teal-200"
+                  >
+                    <path d="M7.25 3.688a.75.75 0 0 1 1.5 0v4.562c0 .052-.043.094-.094.094H7.344a.094.094 0 0 1-.094-.094V3.688ZM8 10a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" />
+                    <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs font-semibold">{t('common.ribbonBlog')}</span>
+                </div>
+              </div>
+              {/* END Ribbon */}
+
               <Link
                 to={`/blog/${post.slug}`}
                 className="group relative block w-full overflow-hidden lg:w-2/5 xl:w-1/3"
@@ -52,13 +71,6 @@ export default function BlogListsFullWidth() {
                 />
               </Link>
               <div className="w-full p-6 lg:w-3/5 lg:self-center lg:px-10 lg:py-8 xl:w-2/3">
-                <div className="mb-3 inline-flex flex-wrap items-center gap-1">
-                  {post.tags.map((tag, index) => (
-                    <div key={`${tag}-${index}`}>
-                      {tag}
-                    </div>
-                  ))}
-                </div>
                 <h3 className="mb-2 text-lg font-bold sm:text-xl">
                   <Link
                     to={`/blog/${post.slug}`}
@@ -71,7 +83,8 @@ export default function BlogListsFullWidth() {
                   <span className="font-medium text-teal-600 dark:text-teal-400">
                     {post.author}
                   </span>{" "}
-                  am <span className="font-medium">{post.date}</span> ·{" "}
+                  {t("common.prepositions.on")}{" "}
+                  <span className="font-medium">{post.date}</span> ·{" "}
                   {post.readTime}
                 </p>
                 <p className="leading-relaxed text-slate-600 dark:text-slate-400">

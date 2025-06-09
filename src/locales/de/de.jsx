@@ -12,6 +12,10 @@ export default {
   // Common
   common: {
     fullName: "Demid Krom",
+    ribbonBlog: "Nur DE",
+    prepositions: {
+      on: "am"
+    }
   },
 
   // Hero section
@@ -143,6 +147,8 @@ export default {
         preview:
           "Leetcode ist ein Phänomen. Auf der einen Seite eine Plattform, " +
           "die weltweit als Referenz für algorithmisches Denken gilt.",
+        date: "24 Mai 2025",
+        readTime: "ca. 10 Minuten Lesezeit"
       },
       barcodes: {
         title:
@@ -150,6 +156,8 @@ export default {
         preview:
           "Alles begann mit einer Idee. Ich wollte eine App zur Literaturverwaltung bauen. " +
           "Einfach, schlank und funktional. Keine KI keine Kameraspielereien",
+        date: "15 Februar 2025",
+        readTime: "ca. 12 Minuten Lesezeit"
       },
       debt: {
         title:
@@ -157,6 +165,8 @@ export default {
         preview:
           "Technische Schuld ist ein Begriff, der in der Softwareentwicklung immer wieder" +
           "auftaucht, und doch wird er häufig missverstanden oder verharmlost.",
+        date: "29 September 2024",
+        readTime: "ca. 12 Minuten Lesezeit"
       },
     },
 
