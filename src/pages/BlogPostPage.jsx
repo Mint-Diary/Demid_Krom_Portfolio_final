@@ -1,7 +1,8 @@
 "use client"
 
 import { useParams, Link } from "react-router-dom"
-import { blogPosts } from "../components/Blog/blog-data.js"
+import { useTranslation } from "../i18n/index.jsx"
+import { getBlogPosts } from "../components/Blog/blog-config.js"
 import BlogPost1 from "../components/Blog/Posts/BlogPost1.jsx"
 import BlogPost2 from "../components/Blog/Posts/BlogPost2.jsx"
 import BlogPost3 from "../components/Blog/Posts/BlogPost3.jsx"
@@ -15,6 +16,9 @@ const blogComponents = {
 
 export default function BlogPostPage() {
   const { slug } = useParams()
+  const { t } = useTranslation()
+  const blogPosts = getBlogPosts(t)
+
   const post = blogPosts.find((p) => p.slug === slug)
 
   if (!post) {

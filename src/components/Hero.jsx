@@ -2,7 +2,6 @@
 
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
 import { useTranslation } from "../i18n/index.jsx";
 
 // Particle Grid with Lines Component
@@ -386,11 +385,11 @@ export default function ForestComponent() {
       >
         <div className="relative text-center">
           <h1 className="mb-4 text-4xl font-black text-white lg:text-6xl drop-shadow-lg">
-            {t('hero.greeting')}{" "}
+            {t('hero.title1')}{" "}
             <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
               Demid Krom
             </span>{" "}
-            {t('hero.title')}
+            {t('hero.title2')}
           </h1>
           <p className="mx-auto text-lg/relaxed font-medium text-slate-200 lg:w-2/3 lg:text-xl/relaxed drop-shadow-md">
             {t('hero.description')}

@@ -1,5 +1,6 @@
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useTranslation } from "../i18n/index.jsx";
 
 // Floating Neon Particles (extracted from hero section)
 function NeonParticles() {
@@ -97,7 +98,9 @@ function ParticleScene() {
   );
 }
 
-export default function TimelineCenteredwithExtraInfo() {
+export default function TimelineComponent() {
+  // i18next
+  const { t } = useTranslation();
   return (
     <>
       {/* Background wrapper that fills full width with particles */}
@@ -148,15 +151,14 @@ export default function TimelineCenteredwithExtraInfo() {
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
               <div className="rounded-xl bg-slate-100/80 backdrop-blur-sm p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700 border border-slate-200/50 dark:border-slate-700/50">
-                <h4 className="mb-2 font-semibold">ODAV AG</h4>
+                <h4 className="mb-2 font-semibold">{t('timeline.events.odav.title')}</h4>
                 <p className="text-sm leading-relaxed">
-                  Apprenticeship as an IT Specialist in Full Stack Application
-                  Development
+                  {t('timeline.events.odav.description')}
                 </p>
               </div>
               <div className="px-4 py-2 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:mt-4 lg:flex lg:w-40 lg:translate-x-full lg:flex-col lg:py-0 lg:pr-0 lg:pl-6">
                 <p className="text-sm font-medium text-slate-500">
-                  September 2022 - Present
+                  {t('timeline.events.odav.date')}
                 </p>
               </div>
             </li>
@@ -168,16 +170,14 @@ export default function TimelineCenteredwithExtraInfo() {
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
               <div className="rounded-xl bg-slate-100/80 backdrop-blur-sm p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700 border border-slate-200/50 dark:border-slate-700/50">
-                <h4 className="mb-2 font-semibold">Middle School</h4>
+                <h4 className="mb-2 font-semibold">{t('timeline.events.finalSchool.title')}</h4>
                 <p className="text-sm leading-relaxed">
-                  Graduated from Herzog-Ludwig Middle School in Bogen with a
-                  Mittlerer Bildungsabschluss (equivalent to GCSEs or
-                  intermediate secondary school diploma).
+                  {t('timeline.events.finalSchool.description')}
                 </p>
               </div>
               <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:py-0 lg:pr-6 lg:pl-0 lg:text-right">
                 <p className="text-sm font-medium text-slate-500">
-                  Dezember 2017 - September 2022
+                  {t('timeline.events.finalSchool.date')}
                 </p>
               </div>
             </li>
@@ -190,18 +190,15 @@ export default function TimelineCenteredwithExtraInfo() {
               </div>
               <div className="rounded-xl bg-slate-100/80 backdrop-blur-sm p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700 border border-slate-200/50 dark:border-slate-700/50">
                 <h4 className="mb-2 font-semibold">
-                  Middle School in Regensburg
+                  {t('timeline.events.school.title')}
                 </h4>
                 <p className="text-sm leading-relaxed">
-                  Initially attended St.-Wolfgang-Mittelschule in Regensburg
-                  before relocating to Bogen, where I completed my secondary
-                  education at Herzog-Ludwig-Mittelschule and earned the
-                  Mittlerer Bildungsabschluss
+                  {t('timeline.events.school.description')}
                 </p>
               </div>
               <div className="px-4 py-2 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:mt-4 lg:flex lg:w-40 lg:translate-x-full lg:flex-col lg:py-0 lg:pr-0 lg:pl-6">
                 <p className="text-sm font-medium text-slate-500">
-                  August 2016 - December 2017
+                  {t('timeline.events.school.date')}
                 </p>
               </div>
             </li>
