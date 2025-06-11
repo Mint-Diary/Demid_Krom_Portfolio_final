@@ -5,7 +5,7 @@ This is a React Starter Kit for using Tailkit - https://tailkit.com UI component
 ```
 Requirements: node.js
 
-Installation: npm install
+Installation: npm i
 
 Development: npm run dev
 Production: npm run build
