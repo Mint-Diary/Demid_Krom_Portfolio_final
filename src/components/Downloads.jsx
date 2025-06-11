@@ -6,6 +6,15 @@ export default function DownloadCard() {
 
   return (
     <div className="bg-slate-100 px-4 py-16 lg:px-8 lg:py-20 dark:bg-slate-900 dark:text-slate-100">
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className="mb-4 text-4xl font-black text-black dark:text-white">
+          Downloads
+        </h2>
+        <p className="mx-auto mb-16 text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
+          Die wichtigsten Unterlagen auf einen Blick
+        </p>
+      </div>
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3 md:grid-cols-2">
         {/* CV Card */}
         <div className="transform rounded-xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800/50">
