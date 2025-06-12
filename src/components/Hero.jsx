@@ -401,13 +401,13 @@ export default function ForestComponent() {
             style={{ pointerEvents: "auto" }}
           >
             <a
-              href="#timeline"
+              href="/timeline"
               className="group inline-flex items-center justify-center gap-2 rounded-lg border border-green-400 bg-green-400/20 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-green-300 hover:border-green-300 hover:bg-green-400/30 focus:ring-3 focus:ring-green-400/50 transition-all duration-300"
             >
               <span>{t('hero.cta')}</span>
             </a>
             <a
-              href="#blog"
+              href="/blog"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-transparent bg-white/10 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-white hover:text-cyan-300 hover:bg-white/20 hover:shadow-lg transition-all duration-300"
             >
               <span>{t('hero.ctaSecondary')}</span>
@@ -421,7 +421,7 @@ export default function ForestComponent() {
           >
             <div className="w-full max-w-80 rotate-12 rounded-2xl bg-green-400/10 backdrop-blur-md border border-green-400/20 p-2.5 shadow-2xl hover:bg-green-400/20 transition-all duration-500 hover:scale-105">
               <img
-                src="/ide_dude.png?height=400&width=300"
+                src="/ide_dude.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t('hero.cards.ide')}
               />
@@ -435,7 +435,7 @@ export default function ForestComponent() {
             </div>
             <div className="w-full max-w-80 -rotate-12 rounded-2xl bg-lime-400/10 backdrop-blur-md border border-lime-400/20 p-2.5 shadow-2xl hover:bg-lime-400/20 transition-all duration-500 hover:scale-105">
               <img
-                src="/vr_headset.jpg?height=400&width=300"
+                src="/vr_headset.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t('hero.cards.vr')}
               />

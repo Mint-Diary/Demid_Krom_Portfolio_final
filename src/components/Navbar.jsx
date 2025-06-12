@@ -28,20 +28,20 @@ export default function MainHeadersSimple() {
   // Menu items array to populate both desktop and mobile links
   const menuItems = [
     {
-      name: t("nav.tech"),
-      id: "tech",
-    },
-    {
       name: t("nav.timeline"),
       id: "timeline",
     },
     {
-      name: t("nav.about"),
-      id: "about",
+      name: t("nav.tech"),
+      id: "tech",
     },
     {
-      name: t("nav.contact"),
-      id: "contact",
+      name: t("nav.blog"),
+      id: "blog",
+    },
+    {
+      name: t("nav.download"),
+      id: "downloads",
     },
   ];
 

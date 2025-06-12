@@ -2,10 +2,10 @@ export default {
   // Navigation
   nav: {
     logo: "DEMID KROM",
-    tech: "TECHNOLOGIEN",
     timeline: "WERDEGANG",
-    about: "ÜBER MICH",
-    contact: "KONTAKT",
+    tech: "TECHNOLOGIEN",
+    blog: "BLOG",
+    download: "DOWNLOADS",
   },
 
   // Common
@@ -138,6 +138,8 @@ export default {
   blog: {
     title: "Neueste Beiträge",
     subtitle: "Gedanken, Tutorials und Einblicke",
+    ctabutton: "Zum vollständigen Blog",
+    learnmore: "Mehr erfahren",
 
     blogs: {
       leetcode: {
@@ -192,7 +194,7 @@ export default {
       typeValue: "PDF",
       sizeValue: "~2.0 MB"
     },
-    button: "Lebenslauf herunterladen",
+    button: "Herunterladen",
     footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
   },
 

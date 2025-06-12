@@ -11,6 +11,7 @@ import Hero from "./components/Hero.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
 import CVDownload from "./components/Downloads.jsx"
+import CTABlog from "./components/Blog/CTABlog.jsx";
 
 function HomePage() {
   return (
@@ -27,7 +28,10 @@ function HomePage() {
       <section id="blog">
         <Blog />
       </section>
-      <section id="cv">
+      <section>
+        <CTABlog />
+      </section>
+      <section id="downloads">
         <CVDownload />
       </section>
     </>
