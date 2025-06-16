@@ -5,7 +5,7 @@ export default function DownloadCard() {
   const { t } = useTranslation();
 
   return (
-    <section id="downloads" className="section-wrapper">
+    <section id="downloads" className="section-wrapper bg-slate-100 dark:bg-slate-900/40">
       <header className="section-heading">
         <h2 className="section-title">{t('downloads.title')}</h2>
         <p className="section-subtitle">{t('downloads.subtitle')}</p>
