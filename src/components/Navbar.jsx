@@ -221,6 +221,11 @@ export default function MainHeadersSimple() {
                     <LanguageSwitcher />
                   </div>
 
+                  {/* Mobile Theme Toggle */}
+                  <div className="border-b-2 border-gray-300 dark:border-gray-600 px-6 py-3">
+                    <ThemeToggle />
+                  </div>
+
                   <nav className="flex flex-col gap-1 px-6 py-5">
                     {menuItems.map((item) => (
                       <button

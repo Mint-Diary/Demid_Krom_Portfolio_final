@@ -409,7 +409,7 @@ export default function ForestComponent() {
             style={{ pointerEvents: "auto" }}
           >
             <a
-              href="/timeline"
+              href="#timeline"
               className="group inline-flex items-center justify-center gap-2 rounded-lg border border-green-400 bg-green-400/20 px-5 py-2.5 text-sm leading-6 font-semibold text-green-300 backdrop-blur-sm transition-all duration-300 hover:border-green-300 hover:bg-green-400/30 focus:ring-3 focus:ring-green-400/50"
             >
               <span>{t("hero.cta")}</span>

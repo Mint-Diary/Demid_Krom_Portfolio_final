@@ -28,7 +28,7 @@ export default {
     title2: "フルスタック開発者",
     description:
       "モダンなウェブ技術の経験を持ち、人々にインスピレーションを与える優れたデジタル体験を創造します",
-    cta: "お問い合わせ",
+    cta: "続ける",
     ctaSecondary: "ブログを見る",
     cards: {
       ide: "IDE開発",

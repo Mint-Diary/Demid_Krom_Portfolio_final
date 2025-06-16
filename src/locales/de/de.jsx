@@ -26,7 +26,7 @@ export default {
     title2: "Full Stack Entwickler",
     description:
       "Mit Erfahrung in modernen Web-Technologien entwickle ich außergewöhnliche digitale Erlebnisse, die Menschen begeistern",
-    cta: "Kontakt aufnehmen",
+    cta: "Weiter",
     ctaSecondary: "Zu meinem Blog",
     cards: {
       ide: "IDE Entwicklung",

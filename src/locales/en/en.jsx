@@ -28,7 +28,7 @@ export default {
     title2: "Full Stack Developer",
     description:
       "With experience in modern web technologies, I create exceptional digital experiences that inspire people",
-    cta: "Get in touch",
+    cta: "Scroll down",
     ctaSecondary: "Visit my blog",
     cards: {
       ide: "IDE Development",
