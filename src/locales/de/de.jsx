@@ -5,6 +5,7 @@ export default {
     timeline: "WERDEGANG",
     tech: "TECHNOLOGIEN",
     blog: "BLOG",
+    projects: "PROJEKTE",
     download: "DOWNLOADS",
   },
 
@@ -138,9 +139,11 @@ export default {
   blog: {
     title: "Neueste Beiträge",
     subtitle: "Gedanken, Tutorials und Einblicke",
-    ctabutton: "Zum vollständigen Blog",
-    learnmore: "Mehr erfahren",
-
+    cta: {
+      title: "Entdecke alle Artikel",
+      description: "Tauche tiefer in meine Gedankenwelt ein und stöbere durch sämtliche Blog-Beiträge.",
+      button: "Zum Blog"
+    },
     blogs: {
       leetcode: {
         title:
@@ -192,7 +195,7 @@ export default {
       type: "File Type:",
       size: "Size:",
       typeValue: "PDF",
-      sizeValue: "~2.0 MB"
+      sizeValue: "~2.1 MB"
     },
     button: "Herunterladen",
     footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
@@ -212,6 +215,12 @@ export default {
     },
     contact: "Kontaktinfo",
     social: "Folgen Sie mir",
+    funfacts: {
+      title: "Funfacts",
+      item1: "Lieblingsmanga: Death Note",
+      item2: "Eat. Sleep. Code. Repeat.",
+      item3: "TypeScript? Immer."
+    },
     newsletter: {
       title: "Newsletter",
       description: "Abonnieren Sie Updates zu meinen neuesten Projekten",

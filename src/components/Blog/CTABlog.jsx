@@ -1,13 +1,14 @@
 import { useTranslation } from "../../i18n/index.jsx";
+import { Link } from "react-router-dom";
 
 export default function CTABoxWithImage() {
-  const { t } = useTranslation(); // ✅ Hook-Aufruf jetzt innerhalb der Komponente
+  const { t } = useTranslation(); // Hook-Aufruf jetzt innerhalb der Komponente
 
   return (
     <>
       {/* CTA Section: Box with Image */}
       <div className="bg-slate-100 dark:bg-slate-900 dark:text-slate-100">
-        <div className="container mx-auto px-4 pt-0 pb-16 lg:px-8 lg:pb-32 xl:max-w-6xl">
+        <div className="container mx-auto px-4 pt-0 pb-16 lg:px-8 lg:pb-32 xl:max-w-7xl">
           <div className="relative overflow-hidden rounded-xl px-6 py-8 lg:px-12 lg:py-16">
             <div className="absolute inset-0">
               <img
@@ -23,22 +24,21 @@ export default function CTABoxWithImage() {
               {/* Heading */}
               <div>
                 <h2 className="mb-2 text-3xl font-black text-white lg:text-4xl">
-                  Build your dream now
+                  {t('blog.cta.title')}
                 </h2>
                 <p className="mb-7 text-lg text-slate-300">
-                  Start using our professional solution and build next
-                  generation web applications and websites.
+                  {t('blog.cta.description')}
                 </p>
               </div>
               {/* END Heading */}
 
               {/* Actions */}
               <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                <a
-                  href="#"
+                <Link
+                  to="/blog"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-teal-700 bg-teal-700 px-6 py-3 leading-6 font-semibold text-white hover:border-teal-600 hover:bg-teal-600 hover:text-white focus:ring-3 focus:ring-teal-400/90 active:border-teal-700 active:bg-teal-700"
                 >
-                  <span>{t('blog.ctabutton')}</span>
+                  <span>{t('blog.cta.button')}</span>
                   <svg
                     className="hi-mini hi-arrow-right inline-block size-5 opacity-50"
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,13 +52,7 @@ export default function CTABoxWithImage() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-transparent px-6 py-3 leading-6 font-semibold text-slate-200 hover:border-slate-600 hover:text-slate-50 focus:ring-3 focus:ring-slate-300/25 active:border-slate-500"
-                >
-                  <span>{t('blog.learnmore')}</span>
-                </a>
+                </Link>
               </div>
               {/* END Actions */}
             </div>

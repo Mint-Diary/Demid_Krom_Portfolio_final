@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import { useTranslation, LanguageSwitcher } from "../i18n/index.jsx";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function MainHeadersSimple() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [buildingComplete, setBuildingComplete] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Complete building animation after 4 seconds
@@ -17,12 +18,33 @@ export default function MainHeadersSimple() {
     return () => clearTimeout(timer);
   }, []);
 
+  /**
+   * Navigates to a specific section. If we are not on the homepage, first navigate
+   * back to it and pass the desired scroll target through location state.
+   * The actual scrolling is handled in `App.jsx` once the homepage has mounted.
+   */
   const scrollToSection = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTarget: sectionId } });
+      setMobileNavOpen(false);
+      return;
+    }
+
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMobileNavOpen(false);
     }
+    setMobileNavOpen(false);
+  };
+
+  // Navigate to homepage top when clicking the logo
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTarget: null } });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setMobileNavOpen(false);
   };
 
   // Menu items array to populate both desktop and mobile links
@@ -30,6 +52,10 @@ export default function MainHeadersSimple() {
     {
       name: t("nav.timeline"),
       id: "timeline",
+    },
+    {
+      name: t("nav.projects"),
+      id: "projects",
     },
     {
       name: t("nav.tech"),
@@ -81,7 +107,7 @@ export default function MainHeadersSimple() {
               {/* Logo */}
               <div className="relative overflow-hidden">
                 <button
-                  onClick={() => scrollToSection("home")}
+                  onClick={handleLogoClick}
                   className="logo-build group animate-build-logo inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300"
                 >
                   <div className="pixel-logo animate-build-pixel-logo relative h-6 w-6 bg-green-400 [image-rendering:pixelated]">
@@ -106,7 +132,7 @@ export default function MainHeadersSimple() {
               {/* Navigation */}
               <nav className="hidden space-x-2 lg:block relative z-10">
                 {menuItems.map((item, index) => (
-                  <div key={item.name} className="inline-block overflow-hidden">
+                  <div key={item.id} className="inline-block overflow-hidden">
                     <button
                       onClick={() => scrollToSection(item.id)}
                       className={`inline-block border-2 border-gray-600 px-4 py-2 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white animate-build-menu-${index + 1}`}
@@ -160,8 +186,7 @@ export default function MainHeadersSimple() {
                     <button
                       id="tkMobileNavLabel"
                       onClick={() => {
-                        scrollToSection("home");
-                        setMobileNavOpen(false);
+                        handleLogoClick();
                       }}
                       className="group inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300"
                     >
@@ -194,7 +219,7 @@ export default function MainHeadersSimple() {
                   <nav className="flex flex-col gap-1 px-6 py-5">
                     {menuItems.map((item) => (
                       <button
-                        key={item.name}
+                        key={item.id}
                         onClick={() => scrollToSection(item.id)}
                         className="border-2 border-gray-600 px-4 py-3 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white"
                       >

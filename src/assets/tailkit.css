@@ -122,6 +122,20 @@
     animation: contactPulse 0.5s ease-out 4.0s forwards;
     opacity: 0;
   }
+
+  /* Reusable section heading utilities */
+  .section-wrapper {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .section-heading {
+    @apply text-center mb-16;
+  }
+  .section-title {
+    @apply text-4xl font-black tracking-tight text-gray-900 dark:text-white;
+  }
+  .section-subtitle {
+    @apply mx-auto mt-3 text-xl leading-relaxed font-medium text-gray-600 dark:text-gray-400 lg:w-2/3;
+  }
 }
 
 /* Keyframes */

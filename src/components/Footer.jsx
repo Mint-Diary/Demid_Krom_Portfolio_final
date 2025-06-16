@@ -1,13 +1,28 @@
 import React from "react";
 import { useTranslation } from "../i18n/index.jsx";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Footer({ onScrollToTop }) {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTarget: sectionId } });
+      return;
+    }
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleBrandClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTarget: null } });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -25,7 +40,7 @@ export default function Footer({ onScrollToTop }) {
           {/* Brand */}
           <div className="space-y-4">
             <button
-              onClick={onScrollToTop}
+              onClick={handleBrandClick}
               className="group inline-flex items-center gap-3 text-lg font-bold tracking-wider text-green-400 hover:text-green-300 font-mono"
             >
               <div className="w-6 h-6 bg-green-400 relative [image-rendering:pixelated]">
@@ -89,11 +104,11 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">Funfacts</h3>
+            <h3 className="text-xl font-bold text-gray-100">{t('footer.funfacts.title')}</h3>
             <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-              <li>Lieblingsmanga: Death Note</li>
-              <li>Eat. Sleep. Code. Repeat.</li>
-              <li>TypeScript? Immer.</li>
+              <li>{t('footer.funfacts.item1')}</li>
+              <li>{t('footer.funfacts.item2')}</li>
+              <li>{t('footer.funfacts.item3')}</li>
             </ul>
           </div>
 
@@ -101,7 +116,7 @@ export default function Footer({ onScrollToTop }) {
         </div>
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-gray-700/75 pt-8 sm:flex-row sm:space-y-0">
           <div className="text-sm text-gray-400">
-            {t('footer.rights')} © {new Date().getFullYear()}
+            {t('footer.rights')} &copy; {new Date().getFullYear()}
           </div>
           <div className="text-sm font-medium text-gray-500">
             {t('footer.madeWith')} {' '}

@@ -6,6 +6,9 @@ export default {
     timeline: "TIMELINE",
     about: "ABOUT ME",
     contact: "CONTACT",
+    blog: "BLOG",
+    projects: "PROJECTS",
+    download: "DOWNLOADS",
   },
 
   // Common
@@ -138,7 +141,11 @@ export default {
   blog: {
     title: "Latest Posts",
     subtitle: "Thoughts, tutorials, and insights",
-
+    cta: {
+      title: "Explore the Blog",
+      description: "Dive deeper into my thoughts and read all available articles.",
+      button: "View Blog"
+    },
     blogs: {
       leetcode: {
         title:
@@ -190,10 +197,48 @@ export default {
       type: "File Type:",
       size: "Size:",
       typeValue: "PDF",
-      sizeValue: "~2.0 MB"
+      sizeValue: "~2.1 MB"
     },
     button: "Download Resume",
     footer: "Click to download • Opens in new tab"
+  },
+
+  // Downloads Section Heading
+  downloads: {
+    title: "Downloads",
+    subtitle: "Resume, certificates and references"
+  },
+
+  // Certificates Card
+  certificates: {
+    title: "Certificates & Courses",
+    subtitle: "Continuing Education",
+    heading: "Download Certificates",
+    description: "All courses attended and certificates earned. Proof of ongoing education and skill development.",
+    fileInfo: {
+      type: "Format",
+      size: "Size",
+      typeValue: "PDF",
+      sizeValue: "~1.2 MB"
+    },
+    button: "Download",
+    footer: "Collection of all continuing education certificates"
+  },
+
+  // Reference Card
+  reference: {
+    title: "Reference Letter",
+    subtitle: "Current Reference",
+    heading: "Download Reference Letter",
+    description: "My current reference letter with confirmed evaluations and references. Insight into my professional development and skills.",
+    fileInfo: {
+      type: "Format",
+      size: "Size",
+      typeValue: "PDF",
+      sizeValue: "~120 KB"
+    },
+    button: "Download",
+    footer: "Confidential document for application purposes only"
   },
 
   // Footer
@@ -221,5 +266,11 @@ export default {
     rights: "All rights reserved",
     builtWith: "Built with React & Tailwind CSS",
     madeWith: "Made with ❤️ by",
+    funfacts: {
+      title: "Funfacts",
+      item1: "Favorite manga: Death Note",
+      item2: "Eat. Sleep. Code. Repeat.",
+      item3: "TypeScript? Always."
+    },
   },
 };

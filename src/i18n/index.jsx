@@ -6,6 +6,7 @@ import en from "../locales/en/en.jsx";
 import de from "../locales/de/de.jsx";
 import fr from "../locales/fr/fr.jsx";
 import ja from "../locales/ja/ja.jsx";
+import ru from "../locales/ru/ru.jsx";
 
 // Combine all translations
 const translations = {
@@ -13,6 +14,7 @@ const translations = {
   de,
   fr,
   ja,
+  ru,
 };
 
 // Language Context
@@ -102,7 +104,8 @@ export function LanguageSwitcher({ className = "" }) {
     en: "🇺🇸 EN",
     de: "🇩🇪 DE",
     fr: "🇫🇷 FR",
-    ja: "🇯🇵 JA"
+    ja: "🇯🇵 JA",
+    ru: "🇷🇺 RU"
   };
 
   return (

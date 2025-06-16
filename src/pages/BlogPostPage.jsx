@@ -1,6 +1,7 @@
 "use client"
 
 import { useParams, Link } from "react-router-dom"
+import { useLayoutEffect } from "react"
 import { useTranslation } from "../i18n/index.jsx"
 import { getBlogPosts } from "../components/Blog/blog-config.js"
 import BlogPost1 from "../components/Blog/Posts/BlogPost1.jsx"
@@ -18,6 +19,11 @@ export default function BlogPostPage() {
   const { slug } = useParams()
   const { t } = useTranslation()
   const blogPosts = getBlogPosts(t)
+
+  // Ensure page starts at top synchronously before paint
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   const post = blogPosts.find((p) => p.slug === slug)
 

@@ -5,16 +5,11 @@ export default function DownloadCard() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-slate-100 px-4 py-16 lg:px-8 lg:py-20 dark:bg-slate-900 dark:text-slate-100">
-      {/* Heading */}
-      <div className="text-center">
-        <h2 className="mb-4 text-4xl font-black text-black dark:text-white">
-          Downloads
-        </h2>
-        <p className="mx-auto mb-16 text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
-          Die wichtigsten Unterlagen auf einen Blick
-        </p>
-      </div>
+    <section id="downloads" className="section-wrapper">
+      <header className="section-heading">
+        <h2 className="section-title">{t('downloads.title')}</h2>
+        <p className="section-subtitle">{t('downloads.subtitle')}</p>
+      </header>
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3 md:grid-cols-2">
         {/* CV Card */}
         <div className="transform rounded-xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800/50">
@@ -97,8 +92,8 @@ export default function DownloadCard() {
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">Zertifikate & Kurse</h2>
-                <p className="text-sm text-cyan-100">Weiterbildungen</p>
+                <h2 className="text-xl font-bold text-white">{t('certificates.title')}</h2>
+                <p className="text-sm text-cyan-100">{t('certificates.subtitle')}</p>
               </div>
             </div>
           </div>
@@ -107,11 +102,10 @@ export default function DownloadCard() {
           <div className="p-6">
             <div className="mb-6">
               <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
-                Zertifikate herunterladen
+                {t('certificates.heading')}
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300">
-                Alle meine belegten Kurse und erworbenen Zertifikate.
-                Nachweis über kontinuierliche Weiterbildung und Kompetenzentwicklung.
+                {t('certificates.description')}
               </p>
             </div>
 
@@ -119,18 +113,18 @@ export default function DownloadCard() {
             <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-700/50">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  Format
+                  {t('certificates.fileInfo.type')}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  PDF
+                  {t('certificates.fileInfo.typeValue')}
                 </span>
               </div>
               <div className="mt-2 flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  Größe
+                  {t('certificates.fileInfo.size')}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  ~1.2 MB
+                  {t('certificates.fileInfo.sizeValue')}
                 </span>
               </div>
             </div>
@@ -145,14 +139,14 @@ export default function DownloadCard() {
             >
               <button className="flex w-full items-center justify-center space-x-2 rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition-all duration-200 group-hover:shadow-lg hover:bg-cyan-700">
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>Herunterladen</span>
+                <span>{t('certificates.button')}</span>
                 <ExternalLink className="ml-1 h-4 w-4 opacity-70" />
               </button>
             </a>
 
             {/* Footer Note */}
             <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
-              Sammlung aller Weiterbildungsnachweise
+              {t('certificates.footer')}
             </p>
           </div>
         </div>
@@ -166,8 +160,8 @@ export default function DownloadCard() {
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">Arbeitszeugnis</h2>
-                <p className="text-sm text-teal-100">Aktuelles Zeugnis</p>
+                <h2 className="text-xl font-bold text-white">{t('reference.title')}</h2>
+                <p className="text-sm text-teal-100">{t('reference.subtitle')}</p>
               </div>
             </div>
           </div>
@@ -176,11 +170,10 @@ export default function DownloadCard() {
           <div className="p-6">
             <div className="mb-6">
               <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
-                Arbeitszeugnis herunterladen
+                {t('reference.heading')}
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300">
-                Mein aktuelles Arbeitszeugnis mit Referenzen und bestätigten Bewertungen.
-                Ein Einblick in meine berufliche Entwicklung und Kompetenzen.
+                {t('reference.description')}
               </p>
             </div>
 
@@ -188,18 +181,18 @@ export default function DownloadCard() {
             <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-700/50">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  Format
+                  {t('reference.fileInfo.type')}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  PDF
+                  {t('reference.fileInfo.typeValue')}
                 </span>
               </div>
               <div className="mt-2 flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  Größe
+                  {t('reference.fileInfo.size')}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  ~120 KB
+                  {t('reference.fileInfo.sizeValue')}
                 </span>
               </div>
             </div>
@@ -214,18 +207,18 @@ export default function DownloadCard() {
             >
               <button className="flex w-full items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-cyan-600 to-teal-500 px-6 py-3 font-semibold text-white transition-all duration-200 group-hover:shadow-lg hover:from-teal-600 hover:to-cyan-700">
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>Herunterladen</span>
+                <span>{t('reference.button')}</span>
                 <ExternalLink className="ml-1 h-4 w-4 opacity-70" />
               </button>
             </a>
 
             {/* Footer Note */}
             <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
-              Vertrauliches Dokument, Nur für Bewerbungszwecke
+              {t('reference.footer')}
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

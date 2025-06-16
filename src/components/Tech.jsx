@@ -139,17 +139,11 @@ export default function LogosBoxedwithHeading() {
   ];
 
   return (
-    <div className="bg-slate-100 px-4 py-16 lg:px-8 lg:py-20 dark:bg-slate-900 dark:text-slate-100">
-      {/* Heading */}
-      <div className="text-center">
-        <h2 className="mb-4 mt-16 text-4xl font-black text-black dark:text-white">
-          {t("tech.title")}
-        </h2>
-        <p className="mx-auto mb-16 text-xl leading-relaxed font-medium text-slate-700 lg:w-2/3 dark:text-slate-300">
-          {t("tech.subtitle")}
-        </p>
-      </div>
-
+    <section id="tech" className="section-wrapper bg-slate-100 dark:bg-slate-900/40">
+      <header className="section-heading">
+        <h2 className="section-title">{t('tech.title')}</h2>
+        <p className="section-subtitle">{t('tech.subtitle')}</p>
+      </header>
       <div className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-4 px-4 sm:grid-cols-3 md:grid-cols-4">
         {technologies.map((tech) => (
           <div
@@ -174,6 +168,6 @@ export default function LogosBoxedwithHeading() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

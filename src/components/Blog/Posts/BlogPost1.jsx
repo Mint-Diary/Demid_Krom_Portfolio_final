@@ -1,4 +1,10 @@
+import { useLayoutEffect } from "react";
+
 export default function BlogPost1() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="bg-white dark:bg-slate-800 dark:text-slate-100">
