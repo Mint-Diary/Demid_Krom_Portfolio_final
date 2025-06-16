@@ -38,7 +38,7 @@ export default function Footer({ onScrollToTop }) {
   return (
     <footer className="relative overflow-hidden border-t border-slate-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-900 py-12 lg:py-20 text-gray-800 dark:text-white">
       <div className="relative z-10 container mx-auto px-4 lg:px-8 xl:max-w-7xl">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand */}
           <div className="space-y-4">
             <button
@@ -135,6 +135,17 @@ export default function Footer({ onScrollToTop }) {
               <li>{t("footer.funfacts.item3")}</li>
             </ul>
           </div>
+
+          {/* Scroll-to-top Column */}
+          <div className="flex justify-center items-center">
+            <button
+              onClick={onScrollToTop}
+              aria-label="Scroll to top"
+              className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-teal-600 dark:border-green-400 text-teal-600 dark:text-green-400 bg-white/60 dark:bg-white/10 backdrop-blur-lg transition-transform hover:-translate-y-1 hover:text-teal-500 dark:hover:text-green-300 hover:border-teal-500 dark:hover:border-green-300 animate-bounce"
+            >
+              <ArrowUp size={32} strokeWidth={2.5} />
+            </button>
+          </div>
         </div>
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-gray-700/75 pt-8 sm:flex-row sm:space-y-0">
           <div className="text-sm text-gray-400">
@@ -147,14 +158,6 @@ export default function Footer({ onScrollToTop }) {
                 {t("common.fullName")}
               </a>
             </span>
-            {/* Scroll to top arrow */}
-            <button
-              onClick={onScrollToTop}
-              aria-label="Scroll to top"
-              className="text-teal-600 dark:text-green-400 transition-transform hover:-translate-y-1 hover:text-teal-500 dark:hover:text-green-300 animate-bounce"
-            >
-              <ArrowUp size={20} strokeWidth={2.5} />
-            </button>
           </div>
         </div>
       </div>
