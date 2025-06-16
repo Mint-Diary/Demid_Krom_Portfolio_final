@@ -195,7 +195,7 @@ export default {
       type: "Dateityp:",
       size: "Größe:",
       typeValue: "PDF",
-      sizeValue: "~2,0 MB"
+      sizeValue: "~2,1 MB"
     },
     button: "Lebenslauf herunterladen",
     footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
