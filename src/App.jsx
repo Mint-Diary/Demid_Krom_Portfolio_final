@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import Tech from "./components/Tech";
 import Projects from "./components/Projects";
-import Hero from "./components/Hero.jsx";
+import HeroDynamic from "./components/HeroDynamic.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx"; // Import BlogListPage
@@ -24,7 +24,7 @@ function HomePage() {
   return (
     <>
       <section id="hero">
-        <Hero />
+        <HeroDynamic />
       </section>
       <section id="timeline">
         <Timeline />

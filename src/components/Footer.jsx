@@ -36,7 +36,7 @@ export default function Footer({ onScrollToTop }) {
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-[#101828] py-12 lg:py-20">
+    <footer className="relative overflow-hidden border-t border-slate-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-900 py-12 lg:py-20 text-gray-800 dark:text-white">
       <div className="relative z-10 container mx-auto px-4 lg:px-8 xl:max-w-7xl">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -58,7 +58,7 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Links */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
               {t("footer.quickLinks")}
             </h3>
             <ul className="space-y-2">
@@ -77,7 +77,7 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
               {t("footer.services")}
             </h3>
             <ul className="space-y-2">
@@ -126,7 +126,7 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
               {t("footer.funfacts.title")}
             </h3>
             <ul className="list-inside list-disc space-y-1 text-sm text-gray-400">
@@ -143,7 +143,7 @@ export default function Footer({ onScrollToTop }) {
           <div className="flex items-center gap-4 text-sm font-medium text-gray-500">
             <span>
               {t("footer.madeWith")} {" "}
-              <a href="#" className="text-green-400 hover:text-green-300">
+              <a href="#" className="text-teal-600 hover:text-teal-500 dark:text-green-400 dark:hover:text-green-300">
                 {t("common.fullName")}
               </a>
             </span>
@@ -151,7 +151,7 @@ export default function Footer({ onScrollToTop }) {
             <button
               onClick={onScrollToTop}
               aria-label="Scroll to top"
-              className="text-green-400 transition-transform hover:-translate-y-1 hover:text-green-300 animate-bounce"
+              className="text-teal-600 dark:text-green-400 transition-transform hover:-translate-y-1 hover:text-teal-500 dark:hover:text-green-300 animate-bounce"
             >
               <ArrowUp size={20} strokeWidth={2.5} />
             </button>

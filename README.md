@@ -5,6 +5,9 @@ This is a React Starter Kit for using Tailkit - https://tailkit.com UI component
 ```
 Requirements: node.js
 
+  TODO: ARROW AT FOOTER MOVE IT RIGHT NEXT TO FUNFACTS AND A CIRCLE AROUND IT
+
+
 Installation: npm i
 
 Development: npm run dev
