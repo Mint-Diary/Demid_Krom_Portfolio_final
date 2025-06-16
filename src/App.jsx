@@ -1,7 +1,12 @@
 "use client";
 
 import { LanguageProvider } from "./i18n/index.jsx";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,7 +17,7 @@ import Hero from "./components/Hero.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogPostPage from "./pages/BlogPostPage.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx"; // Import BlogListPage
-import CVDownload from "./components/Downloads.jsx"
+import CVDownload from "./components/Downloads.jsx";
 import CTABlog from "./components/Blog/CTABlog.jsx";
 
 function HomePage() {

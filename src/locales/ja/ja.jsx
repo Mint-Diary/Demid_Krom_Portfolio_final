@@ -16,8 +16,8 @@ export default {
     fullName: "デミド・クロム",
     ribbonBlog: "ドイツ語のみ",
     prepositions: {
-      on: "に"
-    }
+      on: "に",
+    },
   },
 
   // Hero section
@@ -144,27 +144,26 @@ export default {
     searchPlaceholder: "投稿またはガイドを検索",
     cta: {
       title: "ブログを探索",
-      description: "私の思考をより深く掘り下げ、利用可能なすべての記事をお読みください。",
-      button: "ブログを見る"
+      description:
+        "私の思考をより深く掘り下げ、利用可能なすべての記事をお読みください。",
+      button: "ブログを見る",
     },
     blogs: {
       leetcode: {
-        title:
-          "Leetcodeが実際に成長に役立つかどうかで悩んでいる理由",
+        title: "Leetcodeが実際に成長に役立つかどうかで悩んでいる理由",
         preview:
           "Leetcodeは現象です。一方では、" +
           "アルゴリズム的思考の世界的な基準と考えられているプラットフォーム。",
         date: "2025年5月24日",
-        readTime: "約10分で読めます"
+        readTime: "約10分で読めます",
       },
       barcodes: {
-        title:
-          "バーコードからカメラまで：なぜシンプルな方法が最も困難なのか",
+        title: "バーコードからカメラまで：なぜシンプルな方法が最も困難なのか",
         preview:
           "すべてはアイデアから始まりました。文献管理アプリを作りたかったのです。" +
           "シンプルで、軽量で、機能的に。AIなし、カメラの仕掛けなし",
         date: "2025年2月15日",
-        readTime: "約12分で読めます"
+        readTime: "約12分で読めます",
       },
       debt: {
         title:
@@ -173,7 +172,7 @@ export default {
           "技術的負債は、ソフトウェア開発で繰り返し出てくる用語ですが、" +
           "しばしば誤解されたり軽視されたりします。",
         date: "2024年9月29日",
-        readTime: "約12分で読めます"
+        readTime: "約12分で読めます",
       },
     },
 
@@ -193,21 +192,22 @@ export default {
     title: "デミド・クロム",
     subtitle: "履歴書ダウンロード",
     heading: "私の履歴書",
-    description: "現在のドイツ語履歴書をPDFでダウンロード。私の経験と資格について詳しく知ることができます。",
+    description:
+      "現在のドイツ語履歴書をPDFでダウンロード。私の経験と資格について詳しく知ることができます。",
     fileInfo: {
       type: "ファイル形式：",
       size: "サイズ：",
       typeValue: "PDF",
-      sizeValue: "約2.1 MB"
+      sizeValue: "約2.1 MB",
     },
     button: "履歴書をダウンロード",
-    footer: "クリックでダウンロード • 新しいタブで開きます"
+    footer: "クリックでダウンロード • 新しいタブで開きます",
   },
 
   // Downloads Section Heading
   downloads: {
     title: "ダウンロード",
-    subtitle: "履歴書、証明書、推薦状"
+    subtitle: "履歴書、証明書、推薦状",
   },
 
   // Certificates Card
@@ -215,15 +215,16 @@ export default {
     title: "証明書・コース",
     subtitle: "継続教育",
     heading: "証明書をダウンロード",
-    description: "受講したすべてのコースと取得した証明書。継続的な教育とスキル開発の証明。",
+    description:
+      "受講したすべてのコースと取得した証明書。継続的な教育とスキル開発の証明。",
     fileInfo: {
       type: "形式",
       size: "サイズ",
       typeValue: "PDF",
-      sizeValue: "約1.2 MB"
+      sizeValue: "約1.2 MB",
     },
     button: "ダウンロード",
-    footer: "すべての継続教育証明書のコレクション"
+    footer: "すべての継続教育証明書のコレクション",
   },
 
   // Reference Card
@@ -231,21 +232,21 @@ export default {
     title: "推薦状",
     subtitle: "現在の推薦状",
     heading: "推薦状をダウンロード",
-    description: "確認済みの評価と推薦を含む現在の推薦状。私の専門的成長とスキルについての洞察。",
+    description:
+      "確認済みの評価と推薦を含む現在の推薦状。私の専門的成長とスキルについての洞察。",
     fileInfo: {
       type: "形式",
       size: "サイズ",
       typeValue: "PDF",
-      sizeValue: "約120 KB"
+      sizeValue: "約120 KB",
     },
     button: "ダウンロード",
-    footer: "応募目的のみの機密文書"
+    footer: "応募目的のみの機密文書",
   },
 
   // Footer
   footer: {
-    description:
-      "優れたデジタル体験への情熱を持つフルスタック開発者。",
+    description: "優れたデジタル体験への情熱を持つフルスタック開発者。",
     quickLinks: "クイックリンク",
     services: "サービス",
     servicesList: {
@@ -271,7 +272,7 @@ export default {
       title: "ファンファクト",
       item1: "好きなマンガ：デスノート",
       item2: "食う。寝る。書く。ループ。",
-      item3: "TypeScript？ もちろん。"
+      item3: "TypeScript？ もちろん。",
     },
   },
 };

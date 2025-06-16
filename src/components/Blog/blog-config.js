@@ -32,4 +32,4 @@ export const getBlogPosts = (t) => [
     image: "/schuld.png",
     component: "BlogPost1",
   },
-]
+];

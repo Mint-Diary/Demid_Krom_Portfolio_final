@@ -16,8 +16,8 @@ export default {
     fullName: "Demid Krom",
     ribbonBlog: "DE Seulement",
     prepositions: {
-      on: "le"
-    }
+      on: "le",
+    },
   },
 
   // Hero section
@@ -144,8 +144,9 @@ export default {
     searchPlaceholder: "Rechercher un post ou un guide",
     cta: {
       title: "Explorer le Blog",
-      description: "Plongez plus profondément dans mes réflexions et lisez tous les articles disponibles.",
-      button: "Voir le Blog"
+      description:
+        "Plongez plus profondément dans mes réflexions et lisez tous les articles disponibles.",
+      button: "Voir le Blog",
     },
     blogs: {
       leetcode: {
@@ -155,7 +156,7 @@ export default {
           "Leetcode est un phénomène. D'un côté, une plateforme " +
           "qui est considérée comme une référence mondiale pour la pensée algorithmique.",
         date: "24 mai 2025",
-        readTime: "environ 10 minutes de lecture"
+        readTime: "environ 10 minutes de lecture",
       },
       barcodes: {
         title:
@@ -164,7 +165,7 @@ export default {
           "Tout a commencé par une idée. Je voulais construire une application de gestion de littérature. " +
           "Simple, épurée et fonctionnelle. Pas d'IA, pas de gadgets de caméra",
         date: "15 février 2025",
-        readTime: "environ 12 minutes de lecture"
+        readTime: "environ 12 minutes de lecture",
       },
       debt: {
         title:
@@ -173,7 +174,7 @@ export default {
           "La dette technique est un terme qui revient régulièrement dans le développement logiciel, " +
           "mais elle est souvent mal comprise ou minimisée.",
         date: "29 septembre 2024",
-        readTime: "environ 12 minutes de lecture"
+        readTime: "environ 12 minutes de lecture",
       },
     },
 
@@ -193,21 +194,22 @@ export default {
     title: "Demid Krom",
     subtitle: "Téléchargement du CV",
     heading: "Mon CV",
-    description: "Téléchargez mon CV allemand actuel en PDF. Apprenez-en plus sur mon expérience et mes qualifications.",
+    description:
+      "Téléchargez mon CV allemand actuel en PDF. Apprenez-en plus sur mon expérience et mes qualifications.",
     fileInfo: {
       type: "Type de Fichier :",
       size: "Taille :",
       typeValue: "PDF",
-      sizeValue: "~2,1 MB"
+      sizeValue: "~2,1 MB",
     },
     button: "Télécharger le CV",
-    footer: "Cliquez pour télécharger • S'ouvre dans un nouvel onglet"
+    footer: "Cliquez pour télécharger • S'ouvre dans un nouvel onglet",
   },
 
   // Downloads Section Heading
   downloads: {
     title: "Téléchargements",
-    subtitle: "CV, certificats et références"
+    subtitle: "CV, certificats et références",
   },
 
   // Certificates Card
@@ -215,15 +217,16 @@ export default {
     title: "Certificats et Cours",
     subtitle: "Formation Continue",
     heading: "Télécharger les Certificats",
-    description: "Tous les cours suivis et certificats obtenus. Preuve de formation continue et de développement des compétences.",
+    description:
+      "Tous les cours suivis et certificats obtenus. Preuve de formation continue et de développement des compétences.",
     fileInfo: {
       type: "Format",
       size: "Taille",
       typeValue: "PDF",
-      sizeValue: "~1,2 MB"
+      sizeValue: "~1,2 MB",
     },
     button: "Télécharger",
-    footer: "Collection de tous les certificats de formation continue"
+    footer: "Collection de tous les certificats de formation continue",
   },
 
   // Reference Card
@@ -231,15 +234,16 @@ export default {
     title: "Lettre de Recommandation",
     subtitle: "Référence Actuelle",
     heading: "Télécharger la Lettre de Recommandation",
-    description: "Ma lettre de recommandation actuelle avec évaluations confirmées et références. Aperçu de mon développement professionnel et de mes compétences.",
+    description:
+      "Ma lettre de recommandation actuelle avec évaluations confirmées et références. Aperçu de mon développement professionnel et de mes compétences.",
     fileInfo: {
       type: "Format",
       size: "Taille",
       typeValue: "PDF",
-      sizeValue: "~120 KB"
+      sizeValue: "~120 KB",
     },
     button: "Télécharger",
-    footer: "Document confidentiel à des fins de candidature uniquement"
+    footer: "Document confidentiel à des fins de candidature uniquement",
   },
 
   // Footer
@@ -271,7 +275,7 @@ export default {
       title: "Funfacts",
       item1: "Manga préféré : Death Note",
       item2: "Eat. Sleep. Code. Repeat.",
-      item3: "TypeScript ? Toujours."
+      item3: "TypeScript ? Toujours.",
     },
   },
 };

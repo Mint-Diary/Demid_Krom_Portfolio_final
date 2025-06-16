@@ -5,12 +5,15 @@ export default function DownloadCard() {
   const { t } = useTranslation();
 
   return (
-    <section id="downloads" className="section-wrapper bg-slate-100 dark:bg-slate-900/40">
+    <section
+      id="downloads"
+      className="section-wrapper bg-slate-100 dark:bg-slate-900/40"
+    >
       <header className="section-heading">
-        <h2 className="section-title">{t('downloads.title')}</h2>
-        <p className="section-subtitle">{t('downloads.subtitle')}</p>
+        <h2 className="section-title">{t("downloads.title")}</h2>
+        <p className="section-subtitle">{t("downloads.subtitle")}</p>
       </header>
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
         {/* CV Card */}
         <div className="transform rounded-xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-800/50">
           {/* Header */}
@@ -92,8 +95,12 @@ export default function DownloadCard() {
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">{t('certificates.title')}</h2>
-                <p className="text-sm text-cyan-100">{t('certificates.subtitle')}</p>
+                <h2 className="text-xl font-bold text-white">
+                  {t("certificates.title")}
+                </h2>
+                <p className="text-sm text-cyan-100">
+                  {t("certificates.subtitle")}
+                </p>
               </div>
             </div>
           </div>
@@ -102,10 +109,10 @@ export default function DownloadCard() {
           <div className="p-6">
             <div className="mb-6">
               <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
-                {t('certificates.heading')}
+                {t("certificates.heading")}
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300">
-                {t('certificates.description')}
+                {t("certificates.description")}
               </p>
             </div>
 
@@ -113,18 +120,18 @@ export default function DownloadCard() {
             <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-700/50">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  {t('certificates.fileInfo.type')}
+                  {t("certificates.fileInfo.type")}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  {t('certificates.fileInfo.typeValue')}
+                  {t("certificates.fileInfo.typeValue")}
                 </span>
               </div>
               <div className="mt-2 flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  {t('certificates.fileInfo.size')}
+                  {t("certificates.fileInfo.size")}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  {t('certificates.fileInfo.sizeValue')}
+                  {t("certificates.fileInfo.sizeValue")}
                 </span>
               </div>
             </div>
@@ -139,14 +146,14 @@ export default function DownloadCard() {
             >
               <button className="flex w-full items-center justify-center space-x-2 rounded-lg bg-cyan-600 px-6 py-3 font-semibold text-white transition-all duration-200 group-hover:shadow-lg hover:bg-cyan-700">
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>{t('certificates.button')}</span>
+                <span>{t("certificates.button")}</span>
                 <ExternalLink className="ml-1 h-4 w-4 opacity-70" />
               </button>
             </a>
 
             {/* Footer Note */}
             <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
-              {t('certificates.footer')}
+              {t("certificates.footer")}
             </p>
           </div>
         </div>
@@ -160,8 +167,12 @@ export default function DownloadCard() {
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">{t('reference.title')}</h2>
-                <p className="text-sm text-teal-100">{t('reference.subtitle')}</p>
+                <h2 className="text-xl font-bold text-white">
+                  {t("reference.title")}
+                </h2>
+                <p className="text-sm text-teal-100">
+                  {t("reference.subtitle")}
+                </p>
               </div>
             </div>
           </div>
@@ -170,10 +181,10 @@ export default function DownloadCard() {
           <div className="p-6">
             <div className="mb-6">
               <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-white">
-                {t('reference.heading')}
+                {t("reference.heading")}
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300">
-                {t('reference.description')}
+                {t("reference.description")}
               </p>
             </div>
 
@@ -181,18 +192,18 @@ export default function DownloadCard() {
             <div className="mb-6 rounded-lg border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-700/50">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  {t('reference.fileInfo.type')}
+                  {t("reference.fileInfo.type")}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  {t('reference.fileInfo.typeValue')}
+                  {t("reference.fileInfo.typeValue")}
                 </span>
               </div>
               <div className="mt-2 flex items-center justify-between text-sm">
                 <span className="text-slate-600 dark:text-slate-400">
-                  {t('reference.fileInfo.size')}
+                  {t("reference.fileInfo.size")}
                 </span>
                 <span className="font-medium text-slate-900 dark:text-white">
-                  {t('reference.fileInfo.sizeValue')}
+                  {t("reference.fileInfo.sizeValue")}
                 </span>
               </div>
             </div>
@@ -207,14 +218,14 @@ export default function DownloadCard() {
             >
               <button className="flex w-full items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-cyan-600 to-teal-500 px-6 py-3 font-semibold text-white transition-all duration-200 group-hover:shadow-lg hover:from-teal-600 hover:to-cyan-700">
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>{t('reference.button')}</span>
+                <span>{t("reference.button")}</span>
                 <ExternalLink className="ml-1 h-4 w-4 opacity-70" />
               </button>
             </a>
 
             {/* Footer Note */}
             <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
-              {t('reference.footer')}
+              {t("reference.footer")}
             </p>
           </div>
         </div>

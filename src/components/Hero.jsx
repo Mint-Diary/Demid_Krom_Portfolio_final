@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react/no-unknown-property */
 
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -358,18 +359,23 @@ function FuturisticScene() {
 
 export default function ForestComponent() {
   const { t } = useTranslation();
-  
+
   return (
     <div className="relative h-screen overflow-hidden bg-gradient-to-b from-slate-900 via-green-900 to-black">
       {/* 3D Canvas Background */}
       <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <Canvas
-          className="w-full h-full"
+          className="h-full w-full"
           camera={{
-            position: [0, -2, 30], fov: 60, near: 0.1, far: 1000
+            position: [0, -2, 30],
+            fov: 60,
+            near: 0.1,
+            far: 1000,
           }}
           gl={{
-            alpha: true, antialias: true, powerPreference: "high-performance"
+            alpha: true,
+            antialias: true,
+            powerPreference: "high-performance",
           }}
         >
           <FuturisticScene />
@@ -378,21 +384,23 @@ export default function ForestComponent() {
 
       {/* Overlay Content */}
       <div
-        className="relative container mx-auto px-4 py-16 lg:px-8 lg:py-32 xl:max-w-6xl text-white"
+        className="relative container mx-auto px-4 py-16 text-white lg:px-8 lg:py-32 xl:max-w-6xl"
         style={{
-          zIndex: 5, position: "relative", pointerEvents: "none"
+          zIndex: 5,
+          position: "relative",
+          pointerEvents: "none",
         }}
       >
         <div className="relative text-center">
-          <h1 className="mb-4 text-4xl font-black text-white lg:text-6xl drop-shadow-lg">
-            {t('hero.title1')}{" "}
+          <h1 className="mb-4 text-4xl font-black text-white drop-shadow-lg lg:text-6xl">
+            {t("hero.title1")}{" "}
             <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              {t('common.fullName')}
+              {t("common.fullName")}
             </span>{" "}
-            {t('hero.title2')}
+            {t("hero.title2")}
           </h1>
-          <p className="mx-auto text-lg/relaxed font-medium text-slate-200 lg:w-2/3 lg:text-xl/relaxed drop-shadow-md">
-            {t('hero.description')}
+          <p className="mx-auto text-lg/relaxed font-medium text-slate-200 drop-shadow-md lg:w-2/3 lg:text-xl/relaxed">
+            {t("hero.description")}
           </p>
 
           {/* Buttons */}
@@ -402,15 +410,15 @@ export default function ForestComponent() {
           >
             <a
               href="/timeline"
-              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-green-400 bg-green-400/20 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-green-300 hover:border-green-300 hover:bg-green-400/30 focus:ring-3 focus:ring-green-400/50 transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-green-400 bg-green-400/20 px-5 py-2.5 text-sm leading-6 font-semibold text-green-300 backdrop-blur-sm transition-all duration-300 hover:border-green-300 hover:bg-green-400/30 focus:ring-3 focus:ring-green-400/50"
             >
-              <span>{t('hero.cta')}</span>
+              <span>{t("hero.cta")}</span>
             </a>
             <a
               href="/blog"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-transparent bg-white/10 backdrop-blur-sm px-5 py-2.5 text-sm leading-6 font-semibold text-white hover:text-cyan-300 hover:bg-white/20 hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-transparent bg-white/10 px-5 py-2.5 text-sm leading-6 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:text-cyan-300 hover:shadow-lg"
             >
-              <span>{t('hero.ctaSecondary')}</span>
+              <span>{t("hero.ctaSecondary")}</span>
             </a>
           </div>
 
@@ -419,25 +427,25 @@ export default function ForestComponent() {
             className="group relative flex items-center justify-center gap-2 sm:gap-10"
             style={{ zIndex: 15, pointerEvents: "auto" }}
           >
-            <div className="w-full max-w-80 rotate-12 rounded-2xl bg-green-400/10 backdrop-blur-md border border-green-400/20 p-2.5 shadow-2xl hover:bg-green-400/20 transition-all duration-500 hover:scale-105">
+            <div className="w-full max-w-80 rotate-12 rounded-2xl border border-green-400/20 bg-green-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-green-400/20">
               <img
                 src="/ide_dude.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
-                alt={t('hero.cards.ide')}
+                alt={t("hero.cards.ide")}
               />
             </div>
-            <div className="mt-5 w-full max-w-80 rounded-2xl bg-emerald-400/10 backdrop-blur-md border border-emerald-400/20 p-2.5 shadow-2xl hover:bg-emerald-400/20 transition-all duration-500 hover:scale-105">
+            <div className="mt-5 w-full max-w-80 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-emerald-400/20">
               <img
                 src="/hand_with_iphone.jpg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
-                alt={t('hero.cards.mobile')}
+                alt={t("hero.cards.mobile")}
               />
             </div>
-            <div className="w-full max-w-80 -rotate-12 rounded-2xl bg-lime-400/10 backdrop-blur-md border border-lime-400/20 p-2.5 shadow-2xl hover:bg-lime-400/20 transition-all duration-500 hover:scale-105">
+            <div className="w-full max-w-80 -rotate-12 rounded-2xl border border-lime-400/20 bg-lime-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-lime-400/20">
               <img
                 src="/vr_headset.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
-                alt={t('hero.cards.vr')}
+                alt={t("hero.cards.vr")}
               />
             </div>
           </div>

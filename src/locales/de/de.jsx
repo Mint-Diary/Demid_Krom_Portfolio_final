@@ -14,8 +14,8 @@ export default {
     fullName: "Demid Krom",
     ribbonBlog: "Nur DE",
     prepositions: {
-      on: "am"
-    }
+      on: "am",
+    },
   },
 
   // Hero section
@@ -142,8 +142,9 @@ export default {
     searchPlaceholder: "Post oder Anleitung suchen",
     cta: {
       title: "Entdecke alle Artikel",
-      description: "Tauche tiefer in meine Gedankenwelt ein und stöbere durch sämtliche Blog-Beiträge.",
-      button: "Zum Blog"
+      description:
+        "Tauche tiefer in meine Gedankenwelt ein und stöbere durch sämtliche Blog-Beiträge.",
+      button: "Zum Blog",
     },
     blogs: {
       leetcode: {
@@ -153,7 +154,7 @@ export default {
           "Leetcode ist ein Phänomen. Auf der einen Seite eine Plattform, " +
           "die weltweit als Referenz für algorithmisches Denken gilt.",
         date: "24 Mai 2025",
-        readTime: "ca. 10 Minuten Lesezeit"
+        readTime: "ca. 10 Minuten Lesezeit",
       },
       barcodes: {
         title:
@@ -162,7 +163,7 @@ export default {
           "Alles begann mit einer Idee. Ich wollte eine App zur Literaturverwaltung bauen. " +
           "Einfach, schlank und funktional. Keine KI keine Kameraspielereien",
         date: "15 Februar 2025",
-        readTime: "ca. 12 Minuten Lesezeit"
+        readTime: "ca. 12 Minuten Lesezeit",
       },
       debt: {
         title:
@@ -171,7 +172,7 @@ export default {
           "Technische Schuld ist ein Begriff, der in der Softwareentwicklung immer wieder" +
           "auftaucht, und doch wird er häufig missverstanden oder verharmlost.",
         date: "29 September 2024",
-        readTime: "ca. 12 Minuten Lesezeit"
+        readTime: "ca. 12 Minuten Lesezeit",
       },
     },
 
@@ -186,26 +187,27 @@ export default {
     },
   },
 
-// Download Section
+  // Download Section
   download: {
     title: "Demid Krom",
     subtitle: "Lebenslauf Download",
     heading: "Mein Lebenslauf",
-    description: "Laden Sie meinen aktuellen deutschen Lebenslauf als PDF herunter. Erfahren Sie mehr über meine Erfahrungen und Qualifikationen.",
+    description:
+      "Laden Sie meinen aktuellen deutschen Lebenslauf als PDF herunter. Erfahren Sie mehr über meine Erfahrungen und Qualifikationen.",
     fileInfo: {
       type: "Dateityp:",
       size: "Größe:",
       typeValue: "PDF",
-      sizeValue: "~2,1 MB"
+      sizeValue: "~2,1 MB",
     },
     button: "Lebenslauf herunterladen",
-    footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
+    footer: "Klicken zum Herunterladen • Öffnet in neuem Tab",
   },
 
   // Downloads Section Heading
   downloads: {
     title: "Downloads",
-    subtitle: "Lebenslauf, Zertifikate und Referenzen"
+    subtitle: "Lebenslauf, Zertifikate und Referenzen",
   },
 
   // Certificates Card
@@ -213,15 +215,16 @@ export default {
     title: "Zertifikate & Kurse",
     subtitle: "Weiterbildung",
     heading: "Zertifikate herunterladen",
-    description: "Alle besuchten Kurse und erhaltenen Zertifikate. Nachweis für kontinuierliche Weiterbildung und Kompetenzentwicklung.",
+    description:
+      "Alle besuchten Kurse und erhaltenen Zertifikate. Nachweis für kontinuierliche Weiterbildung und Kompetenzentwicklung.",
     fileInfo: {
       type: "Format",
       size: "Größe",
       typeValue: "PDF",
-      sizeValue: "~1,2 MB"
+      sizeValue: "~1,2 MB",
     },
     button: "Herunterladen",
-    footer: "Sammlung aller Weiterbildungszertifikate"
+    footer: "Sammlung aller Weiterbildungszertifikate",
   },
 
   // Reference Card
@@ -229,15 +232,16 @@ export default {
     title: "Arbeitszeugnis",
     subtitle: "Aktuelle Referenz",
     heading: "Arbeitszeugnis herunterladen",
-    description: "Mein aktuelles Arbeitszeugnis mit bestätigten Bewertungen und Referenzen. Einblick in meine berufliche Entwicklung und Fähigkeiten.",
+    description:
+      "Mein aktuelles Arbeitszeugnis mit bestätigten Bewertungen und Referenzen. Einblick in meine berufliche Entwicklung und Fähigkeiten.",
     fileInfo: {
       type: "Format",
       size: "Größe",
       typeValue: "PDF",
-      sizeValue: "~120 KB"
+      sizeValue: "~120 KB",
     },
     button: "Herunterladen",
-    footer: "Vertrauliches Dokument nur für Bewerbungszwecke"
+    footer: "Vertrauliches Dokument nur für Bewerbungszwecke",
   },
 
   // Footer
@@ -258,7 +262,7 @@ export default {
       title: "Funfacts",
       item1: "Lieblingsmanga: Death Note",
       item2: "Eat. Sleep. Code. Repeat.",
-      item3: "TypeScript? Immer."
+      item3: "TypeScript? Immer.",
     },
     newsletter: {
       title: "Newsletter",

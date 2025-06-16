@@ -64,11 +64,11 @@ export default function BlogPostBarcode() {
             </blockquote>
             <p>
               Also telefonierte ich mit Verlagen. Freundliche Menschen,
-              hilfsbereit, aber auch ratlos. Viele Daten seien gar nicht
-              zentral verfügbar. Man müsse Verträge haben, Zugang zu
-              proprietären Datenbanken oder direkt mit Großhändlern wie Libri
-              oder KNV zusammenarbeiten. Ich fragte nach Möglichkeiten, wurde
-              vertröstet. Lizenzen, Kosten, Datenschutz. Kurzum: keine Chance.
+              hilfsbereit, aber auch ratlos. Viele Daten seien gar nicht zentral
+              verfügbar. Man müsse Verträge haben, Zugang zu proprietären
+              Datenbanken oder direkt mit Großhändlern wie Libri oder KNV
+              zusammenarbeiten. Ich fragte nach Möglichkeiten, wurde vertröstet.
+              Lizenzen, Kosten, Datenschutz. Kurzum: keine Chance.
             </p>
             <p>
               Ich entwickelte Workarounds, versuchte, Web-Scraping einzubauen,

@@ -16,8 +16,8 @@ export default {
     fullName: "Demid Krom",
     ribbonBlog: "DE Only",
     prepositions: {
-      on: "on"
-    }
+      on: "on",
+    },
   },
 
   // Hero section
@@ -144,8 +144,9 @@ export default {
     searchPlaceholder: "Search post or guide",
     cta: {
       title: "Explore the Blog",
-      description: "Dive deeper into my thoughts and read all available articles.",
-      button: "View Blog"
+      description:
+        "Dive deeper into my thoughts and read all available articles.",
+      button: "View Blog",
     },
     blogs: {
       leetcode: {
@@ -155,7 +156,7 @@ export default {
           "Leetcode is a phenomenon. On one hand, a platform " +
           "that's considered a global reference for algorithmic thinking.",
         date: "May 24, 2025",
-        readTime: "approx. 10 minutes read"
+        readTime: "approx. 10 minutes read",
       },
       barcodes: {
         title:
@@ -164,7 +165,7 @@ export default {
           "It all started with an idea. I wanted to build a literature management app. " +
           "Simple, lean, and functional. No AI, no camera gimmicks",
         date: "February 15, 2025",
-        readTime: "approx. 12 minutes read"
+        readTime: "approx. 12 minutes read",
       },
       debt: {
         title:
@@ -173,7 +174,7 @@ export default {
           "Technical debt is a term that comes up repeatedly in software development, " +
           "yet it's often misunderstood or downplayed.",
         date: "September 29, 2024",
-        readTime: "approx. 12 minutes read"
+        readTime: "approx. 12 minutes read",
       },
     },
 
@@ -193,21 +194,22 @@ export default {
     title: "Demid Krom",
     subtitle: "Resume Download",
     heading: "My Resume",
-    description: "Download my current German resume as PDF. Learn more about my experience and qualifications.",
+    description:
+      "Download my current German resume as PDF. Learn more about my experience and qualifications.",
     fileInfo: {
       type: "File Type:",
       size: "Size:",
       typeValue: "PDF",
-      sizeValue: "~2.1 MB"
+      sizeValue: "~2.1 MB",
     },
     button: "Download Resume",
-    footer: "Click to download • Opens in new tab"
+    footer: "Click to download • Opens in new tab",
   },
 
   // Downloads Section Heading
   downloads: {
     title: "Downloads",
-    subtitle: "Resume, certificates and references"
+    subtitle: "Resume, certificates and references",
   },
 
   // Certificates Card
@@ -215,15 +217,16 @@ export default {
     title: "Certificates & Courses",
     subtitle: "Continuing Education",
     heading: "Download Certificates",
-    description: "All courses attended and certificates earned. Proof of ongoing education and skill development.",
+    description:
+      "All courses attended and certificates earned. Proof of ongoing education and skill development.",
     fileInfo: {
       type: "Format",
       size: "Size",
       typeValue: "PDF",
-      sizeValue: "~1.2 MB"
+      sizeValue: "~1.2 MB",
     },
     button: "Download",
-    footer: "Collection of all continuing education certificates"
+    footer: "Collection of all continuing education certificates",
   },
 
   // Reference Card
@@ -231,15 +234,16 @@ export default {
     title: "Reference Letter",
     subtitle: "Current Reference",
     heading: "Download Reference Letter",
-    description: "My current reference letter with confirmed evaluations and references. Insight into my professional development and skills.",
+    description:
+      "My current reference letter with confirmed evaluations and references. Insight into my professional development and skills.",
     fileInfo: {
       type: "Format",
       size: "Size",
       typeValue: "PDF",
-      sizeValue: "~120 KB"
+      sizeValue: "~120 KB",
     },
     button: "Download",
-    footer: "Confidential document for application purposes only"
+    footer: "Confidential document for application purposes only",
   },
 
   // Footer
@@ -271,7 +275,7 @@ export default {
       title: "Funfacts",
       item1: "Favorite manga: Death Note",
       item2: "Eat. Sleep. Code. Repeat.",
-      item3: "TypeScript? Always."
+      item3: "TypeScript? Always.",
     },
   },
 };

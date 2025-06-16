@@ -130,7 +130,7 @@ export default function MainHeadersSimple() {
               </div>
 
               {/* Navigation */}
-              <nav className="hidden space-x-2 lg:block relative z-10">
+              <nav className="relative z-10 hidden space-x-2 lg:block">
                 {menuItems.map((item, index) => (
                   <div key={item.id} className="inline-block overflow-hidden">
                     <button
@@ -144,7 +144,7 @@ export default function MainHeadersSimple() {
               </nav>
 
               {/* Open Mobile Navigation */}
-              <div className="overflow-hidden lg:hidden relative z-10">
+              <div className="relative z-10 overflow-hidden lg:hidden">
                 <button
                   onClick={() => setMobileNavOpen(true)}
                   type="button"

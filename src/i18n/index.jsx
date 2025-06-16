@@ -105,7 +105,7 @@ export function LanguageSwitcher({ className = "" }) {
     de: "🇩🇪 DE",
     fr: "🇫🇷 FR",
     ja: "🇯🇵 JA",
-    ru: "🇷🇺 RU"
+    ru: "🇷🇺 RU",
   };
 
   return (
@@ -130,9 +130,14 @@ export function LanguageSwitcher({ className = "" }) {
 
       {isOpen && (
         <>
+          {/* backdrop for closing dropdown via click or key */}
           <div
-            className="fixed inset-0 z-10"
+            role="button"
+            tabIndex={0}
+            aria-label="Close language menu"
+            className="fixed inset-0 z-10 cursor-default"
             onClick={() => setIsOpen(false)}
+            onKeyDown={(e) => (e.key === "Escape" ? setIsOpen(false) : null)}
           />
           <div
             className="absolute top-full right-0 z-20 mt-1 min-w-[120px] border-2 border-gray-600 bg-gray-800 shadow-lg"

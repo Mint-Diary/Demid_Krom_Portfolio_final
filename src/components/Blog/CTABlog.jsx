@@ -2,7 +2,7 @@ import { useTranslation } from "../../i18n/index.jsx";
 import { Link } from "react-router-dom";
 
 export default function CTABoxWithImage() {
-  const { t } = useTranslation(); // Hook-Aufruf jetzt innerhalb der Komponente
+  const { t } = useTranslation(); // Hook to access translations
 
   return (
     <>
@@ -24,10 +24,10 @@ export default function CTABoxWithImage() {
               {/* Heading */}
               <div>
                 <h2 className="mb-2 text-3xl font-black text-white lg:text-4xl">
-                  {t('blog.cta.title')}
+                  {t("blog.cta.title")}
                 </h2>
                 <p className="mb-7 text-lg text-slate-300">
-                  {t('blog.cta.description')}
+                  {t("blog.cta.description")}
                 </p>
               </div>
               {/* END Heading */}
@@ -38,7 +38,7 @@ export default function CTABoxWithImage() {
                   to="/blog"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-teal-700 bg-teal-700 px-6 py-3 leading-6 font-semibold text-white hover:border-teal-600 hover:bg-teal-600 hover:text-white focus:ring-3 focus:ring-teal-400/90 active:border-teal-700 active:bg-teal-700"
                 >
-                  <span>{t('blog.cta.button')}</span>
+                  <span>{t("blog.cta.button")}</span>
                   <svg
                     className="hi-mini hi-arrow-right inline-block size-5 opacity-50"
                     xmlns="http://www.w3.org/2000/svg"

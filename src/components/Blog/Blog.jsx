@@ -38,9 +38,15 @@ export default function BlogListsFullWidth() {
                     className="inline-block size-4 text-teal-200"
                   >
                     <path d="M7.25 3.688a.75.75 0 0 1 1.5 0v4.562c0 .052-.043.094-.094.094H7.344a.094.094 0 0 1-.094-.094V3.688ZM8 10a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" />
-                    <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z" clipRule="evenodd" />
+                    <path
+                      fillRule="evenodd"
+                      d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
+                      clipRule="evenodd"
+                    />
                   </svg>
-                  <span className="text-xs font-semibold">{t('common.ribbonBlog')}</span>
+                  <span className="text-xs font-semibold">
+                    {t("common.ribbonBlog")}
+                  </span>
                 </div>
               </div>
               {/* END Ribbon */}

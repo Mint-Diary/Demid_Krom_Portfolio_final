@@ -8,63 +8,63 @@ export default function Footer({ onScrollToTop }) {
   const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTarget: sectionId } });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTarget: sectionId } });
       return;
     }
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleBrandClick = () => {
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTarget: null } });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTarget: null } });
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const footerLinks = [
-    { name: t('nav.tech'), id: 'tech' },
-    { name: t('nav.timeline'), id: 'timeline' },
-    { name: t('nav.about'), id: 'about' },
-    { name: t('nav.contact'), id: 'contact' },
+    { name: t("nav.tech"), id: "tech" },
+    { name: t("nav.timeline"), id: "timeline" },
+    { name: t("nav.about"), id: "about" },
+    { name: t("nav.contact"), id: "contact" },
   ];
 
   return (
     <footer className="relative overflow-hidden bg-[#101828] py-12 lg:py-20">
-      <div className="container relative z-10 mx-auto px-4 lg:px-8 xl:max-w-7xl">
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 xl:max-w-7xl">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <button
               onClick={handleBrandClick}
-              className="group inline-flex items-center gap-3 text-lg font-bold tracking-wider text-green-400 hover:text-green-300 font-mono"
+              className="group inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300"
             >
-              <div className="w-6 h-6 bg-green-400 relative [image-rendering:pixelated]">
-                <div className="absolute top-1 left-1 w-2 h-2 bg-black" />
-                <div className="absolute top-1 right-1 w-2 h-2 bg-black" />
+              <div className="relative h-6 w-6 bg-green-400 [image-rendering:pixelated]">
+                <div className="absolute top-1 left-1 h-2 w-2 bg-black" />
+                <div className="absolute top-1 right-1 h-2 w-2 bg-black" />
               </div>
-              <span>{t('nav.logo')}</span>
+              <span>{t("nav.logo")}</span>
             </button>
             <p className="text-sm leading-relaxed text-gray-400">
-              {t('footer.description')}
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Links */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-100">
-              {t('footer.quickLinks')}
+              {t("footer.quickLinks")}
             </h3>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-gray-400 hover:text-green-400 transition duration-100"
+                    className="text-gray-400 transition duration-100 hover:text-green-400"
                   >
                     {link.name}
                   </button>
@@ -76,27 +76,39 @@ export default function Footer({ onScrollToTop }) {
           {/* Services */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-100">
-              {t('footer.services')}
+              {t("footer.services")}
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
-                  {t('footer.servicesList.webDev')}
+                <a
+                  href="https://de.fiverr.com/s/8z9wmKv"
+                  className="text-gray-400 transition duration-100 hover:text-green-400"
+                >
+                  {t("footer.servicesList.webDev")}
                 </a>
               </li>
               <li>
-                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
-                  {t('footer.servicesList.mobileApp')}
+                <a
+                  href="https://de.fiverr.com/s/8z9wmKv"
+                  className="text-gray-400 transition duration-100 hover:text-green-400"
+                >
+                  {t("footer.servicesList.mobileApp")}
                 </a>
               </li>
               <li>
-                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
-                  {t('footer.servicesList.uiux')}
+                <a
+                  href="https://de.fiverr.com/s/8z9wmKv"
+                  className="text-gray-400 transition duration-100 hover:text-green-400"
+                >
+                  {t("footer.servicesList.uiux")}
                 </a>
               </li>
               <li>
-                <a href="https://de.fiverr.com/s/8z9wmKv" className="text-gray-400 hover:text-green-400 transition duration-100">
-                  {t('footer.servicesList.consulting')}
+                <a
+                  href="https://de.fiverr.com/s/8z9wmKv"
+                  className="text-gray-400 transition duration-100 hover:text-green-400"
+                >
+                  {t("footer.servicesList.consulting")}
                 </a>
               </li>
             </ul>
@@ -104,24 +116,24 @@ export default function Footer({ onScrollToTop }) {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-100">{t('footer.funfacts.title')}</h3>
-            <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
-              <li>{t('footer.funfacts.item1')}</li>
-              <li>{t('footer.funfacts.item2')}</li>
-              <li>{t('footer.funfacts.item3')}</li>
+            <h3 className="text-xl font-bold text-gray-100">
+              {t("footer.funfacts.title")}
+            </h3>
+            <ul className="list-inside list-disc space-y-1 text-sm text-gray-400">
+              <li>{t("footer.funfacts.item1")}</li>
+              <li>{t("footer.funfacts.item2")}</li>
+              <li>{t("footer.funfacts.item3")}</li>
             </ul>
           </div>
-
-
         </div>
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-gray-700/75 pt-8 sm:flex-row sm:space-y-0">
           <div className="text-sm text-gray-400">
-            {t('footer.rights')} &copy; {new Date().getFullYear()}
+            {t("footer.rights")} &copy; {new Date().getFullYear()}
           </div>
           <div className="text-sm font-medium text-gray-500">
-            {t('footer.madeWith')} {' '}
+            {t("footer.madeWith")}{" "}
             <a href="#" className="text-green-400 hover:text-green-300">
-              {t('common.fullName')}
+              {t("common.fullName")}
             </a>
           </div>
         </div>

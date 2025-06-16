@@ -11,7 +11,7 @@ import {
   SiAngular,
   SiThreedotjs,
   SiCoffeescript,
-  SiI18Next
+  SiI18Next,
 } from "react-icons/si";
 import { FaDatabase, FaRocket, FaCode } from "react-icons/fa";
 import { useTranslation } from "../i18n/index.jsx";
@@ -35,7 +35,7 @@ export default function LogosBoxedwithHeading() {
       icon: <SiTailwindcss />,
       shadow: "hover:shadow-teal-500/10 dark:hover:shadow-teal-500/30",
       icon_color: "text-teal-500 dark:text-teal-400",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "Vue.js",
@@ -56,7 +56,7 @@ export default function LogosBoxedwithHeading() {
       icon: <SiCoffeescript />,
       shadow: "hover:shadow-orange-500/10 dark:hover:shadow-orange-500/30",
       icon_color: "text-orange-600 dark:text-orange-500",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "Spring Boot",
@@ -70,79 +70,81 @@ export default function LogosBoxedwithHeading() {
       icon: <FaDatabase />,
       shadow: "hover:shadow-slate-500/10 dark:hover:shadow-slate-500/30",
       icon_color: "text-slate-600 dark:text-slate-400",
-      proficiency: t("tech.proficiencyLevels.advanced")
+      proficiency: t("tech.proficiencyLevels.advanced"),
     },
     {
       name: "GraphQL",
       icon: <SiGraphql />,
       shadow: "hover:shadow-pink-500/10 dark:hover:shadow-pink-500/30",
       icon_color: "text-pink-600 dark:text-pink-500",
-      proficiency: t("tech.proficiencyLevels.intermediate")
+      proficiency: t("tech.proficiencyLevels.intermediate"),
     },
     {
       name: "REST-APIs",
       icon: <FaCode />,
       shadow: "hover:shadow-purple-500/10 dark:hover:shadow-purple-500/30",
       icon_color: "text-purple-600 dark:text-purple-500",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "CI/CD",
       icon: <FaRocket />,
       shadow: "hover:shadow-yellow-500/10 dark:hover:shadow-yellow-500/30",
       icon_color: "text-yellow-600 dark:text-yellow-500",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "Kubernetes",
       icon: <SiKubernetes />,
       shadow: "hover:shadow-blue-500/10 dark:hover:shadow-blue-500/30",
       icon_color: "text-blue-600 dark:text-blue-500",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "Docker",
       icon: <SiDocker />,
       shadow: "hover:shadow-blue-500/10 dark:hover:shadow-blue-500/30",
       icon_color: "text-blue-500 dark:text-blue-400",
-      proficiency: t("tech.proficiencyLevels.advanced")
+      proficiency: t("tech.proficiencyLevels.advanced"),
     },
     {
       name: "Three.js",
       icon: <SiThreedotjs />,
       shadow: "hover:shadow-black/10 dark:hover:shadow-white/20",
       icon_color: "text-black dark:text-white",
-      proficiency: t("tech.proficiencyLevels.expert")
+      proficiency: t("tech.proficiencyLevels.expert"),
     },
     {
       name: "i18next",
       icon: <SiI18Next />,
       shadow: "hover:shadow-blue-500/10 dark:hover:shadow-blue-500/30",
       icon_color: "text-blue-600 dark:text-blue-500",
-      proficiency: t("tech.proficiencyLevels.advanced")
+      proficiency: t("tech.proficiencyLevels.advanced"),
     },
     {
       name: "GitLab",
       icon: <SiGitlab />,
       shadow: "hover:shadow-orange-500/10 dark:hover:shadow-orange-500/30",
       icon_color: "text-orange-500 dark:text-orange-400",
-      proficiency: t("tech.proficiencyLevels.advanced")
+      proficiency: t("tech.proficiencyLevels.advanced"),
     },
     {
       name: "Angular",
       icon: <SiAngular />,
       shadow: "hover:shadow-red-500/10 dark:hover:shadow-red-500/30",
       icon_color: "text-red-600 dark:text-red-500",
-      proficiency: t("tech.proficiencyLevels.intermediate")
-
+      proficiency: t("tech.proficiencyLevels.intermediate"),
     },
   ];
 
   return (
-    <section id="tech" className="section-wrapper bg-slate-100 dark:bg-slate-900/40">
+    <section
+      id="tech"
+      className="section-wrapper bg-slate-100 dark:bg-slate-900/40"
+    >
       <header className="section-heading">
-        <h2 className="section-title">{t('tech.title')}</h2>
-        <p className="section-subtitle">{t('tech.subtitle')}</p>
+        <h2 className="section-title">{t("tech.title")}</h2>
+        <p className="section-subtitle">{t("tech.subtitle")}</p>
       </header>
       <div className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-4 px-4 sm:grid-cols-3 md:grid-cols-4">
         {technologies.map((tech) => (
