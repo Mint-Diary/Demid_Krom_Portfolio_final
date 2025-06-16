@@ -141,7 +141,7 @@ export default {
 
   // Blog
   blog: {
-    title: "Latest Posts",
+    title: "Welcome to my Blog",
     subtitle: "Thoughts, tutorials, and insights",
     searchPlaceholder: "Search post or guide",
     cta: {

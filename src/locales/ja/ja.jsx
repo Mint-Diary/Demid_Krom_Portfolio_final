@@ -141,7 +141,7 @@ export default {
 
   // Blog
   blog: {
-    title: "最新記事",
+    title: "私のブログへようこそ",
     subtitle: "考察、チュートリアル、洞察",
     searchPlaceholder: "投稿またはガイドを検索",
     cta: {

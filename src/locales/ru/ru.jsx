@@ -141,7 +141,7 @@ export default {
 
   // Blog
   blog: {
-    title: "Последние посты",
+    title: "Добро пожаловать в мой блог",
     subtitle: "Мысли, туториалы и инсайты",
     searchPlaceholder: "Поиск поста или инструкции",
     cta: {

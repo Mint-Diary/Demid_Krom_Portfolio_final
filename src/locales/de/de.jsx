@@ -139,7 +139,7 @@ export default {
 
   // Blog
   blog: {
-    title: "Neueste Beiträge",
+    title: "Willkommen auf meinem Blog",
     subtitle: "Gedanken, Tutorials und Einblicke",
     searchPlaceholder: "Post oder Anleitung suchen",
     cta: {

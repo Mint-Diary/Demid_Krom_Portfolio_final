@@ -145,7 +145,7 @@ export default {
     subtitle: "Réflexions, tutoriels et insights",
     searchPlaceholder: "Rechercher un post ou un guide",
     cta: {
-      title: "Explorer le Blog",
+      title: "Bienvenue sur mon blog",
       description:
         "Plongez plus profondément dans mes réflexions et lisez tous les articles disponibles.",
       button: "Voir le Blog",
