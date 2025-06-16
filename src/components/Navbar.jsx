@@ -78,7 +78,7 @@ export default function MainHeadersSimple() {
   return (
     <>
       {/* Main Header Section: Building Pixel Art */}
-      <div className="relative h-21 bg-slate-100 dark:bg-[#101828] text-gray-800 dark:text-white">
+      <div className="relative h-21 bg-[#F0FDFA] dark:bg-[#101828] text-gray-800 dark:text-white">
         {/* Main Header */}
         <header
           className={`building-navbar relative flex flex-none items-center bg-slate-100 dark:bg-[#101828] pt-5 pb-4 ${
@@ -86,7 +86,7 @@ export default function MainHeadersSimple() {
           } ${buildingComplete ? "pointer-events-auto" : "pointer-events-none"}`}
         >
           {/* Background building animation */}
-          <div className="animate-build-background absolute inset-0 bg-slate-100 dark:bg-[#101828]" />
+          <div className="animate-build-background absolute inset-0 bg-[#F0FDFA] dark:bg-[#101828]" />
 
           {/* Pixel borders */}
           <div
@@ -180,7 +180,7 @@ export default function MainHeadersSimple() {
               >
                 <nav
                   id="tkMobileNav"
-                  className="fixed top-0 right-0 bottom-0 z-[9998] w-72 overflow-auto border-l-4 border-gray-300 dark:border-gray-600 bg-slate-100 dark:bg-gray-800 shadow-lg"
+                  className="fixed top-0 right-0 bottom-0 z-[9998] w-72 overflow-auto border-l-4 border-gray-300 dark:border-gray-600 bg-[#F0FDFA] dark:bg-gray-800 shadow-lg"
                   tabIndex={-1}
                   aria-labelledby="tkMobileNavLabel"
                   aria-modal="true"
