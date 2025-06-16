@@ -160,14 +160,11 @@ export default function TimelineComponent() {
           </p>
         </div>
 
-        {/* Centered content with fixed width */}
-        <div
-          className="relative mx-auto w-[60%] py-5 dark:text-slate-100"
-          style={{ zIndex: 10 }}
-        >
+        {/* Timeline content - new left aligned layout */}
+        <div className="relative mx-auto w-full max-w-3xl py-5 dark:text-slate-100" style={{ zIndex: 10 }}>
           {/* Vertical Guide */}
           <div
-            className="absolute top-0 bottom-0 left-0 flex w-10 flex-col justify-center md:w-12 lg:left-1/2 lg:-ml-6"
+            className="absolute top-0 bottom-0 left-0 flex w-10 flex-col justify-center md:w-12"
             aria-hidden="true"
           >
             <div className="mx-auto h-2.5 w-1 grow-0 rounded-t bg-linear-to-b from-transparent to-teal-100 dark:to-teal-900" />
@@ -177,13 +174,13 @@ export default function TimelineComponent() {
           {/* END Vertical Guide */}
 
           {/* Timeline */}
-          <ul className="relative space-y-4 pl-10 md:pl-12 lg:pl-0">
-            {/* Event */}
-            <li className="relative lg:mr-auto lg:w-1/2 lg:pr-6">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12 lg:right-0 lg:left-auto lg:translate-x-6">
+          <ul className="relative space-y-4 pl-10 md:pl-12">
+            {/* ODAV */}
+            <li className="relative">
+              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl border border-slate-200/50 bg-slate-100/80 p-4 backdrop-blur-sm hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:border-slate-700/50 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.odav.title")}
                 </h4>
@@ -191,20 +188,18 @@ export default function TimelineComponent() {
                   {t("timeline.events.odav.description")}
                 </p>
               </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:mt-4 lg:flex lg:w-40 lg:translate-x-full lg:flex-col lg:py-0 lg:pr-0 lg:pl-6">
-                <p className="text-sm font-medium text-slate-500">
+              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
                   {t("timeline.events.odav.date")}
                 </p>
               </div>
             </li>
-            {/* END Event */}
-
-            {/* Event */}
-            <li className="relative lg:ml-auto lg:w-1/2 lg:pl-6">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12 lg:-translate-x-6">
+            {/* Final School */}
+            <li className="relative">
+              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl border border-slate-200/50 bg-slate-100/80 p-4 backdrop-blur-sm hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:border-slate-700/50 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.finalSchool.title")}
                 </h4>
@@ -212,20 +207,18 @@ export default function TimelineComponent() {
                   {t("timeline.events.finalSchool.description")}
                 </p>
               </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:py-0 lg:pr-6 lg:pl-0 lg:text-right">
-                <p className="text-sm font-medium text-slate-500">
+              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
                   {t("timeline.events.finalSchool.date")}
                 </p>
               </div>
             </li>
-            {/* END Event */}
-
-            {/* Event */}
-            <li className="relative lg:mr-auto lg:w-1/2 lg:pr-6">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12 lg:right-0 lg:left-auto lg:translate-x-6">
+            {/* School */}
+            <li className="relative">
+              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl border border-slate-200/50 bg-slate-100/80 p-4 backdrop-blur-sm hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:border-slate-700/50 dark:bg-slate-800/80 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.school.title")}
                 </h4>
@@ -233,16 +226,16 @@ export default function TimelineComponent() {
                   {t("timeline.events.school.description")}
                 </p>
               </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:mt-4 lg:flex lg:w-40 lg:translate-x-full lg:flex-col lg:py-0 lg:pr-0 lg:pl-6">
-                <p className="text-sm font-medium text-slate-500">
+              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
+                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
                   {t("timeline.events.school.date")}
                 </p>
               </div>
             </li>
-            {/* END Event */}
           </ul>
           {/* END Timeline */}
         </div>
+        {/* END new layout */}
       </div>
     </>
   );
