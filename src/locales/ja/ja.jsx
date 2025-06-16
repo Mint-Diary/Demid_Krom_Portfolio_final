@@ -141,6 +141,7 @@ export default {
   blog: {
     title: "最新記事",
     subtitle: "考察、チュートリアル、洞察",
+    searchPlaceholder: "投稿またはガイドを検索",
     cta: {
       title: "ブログを探索",
       description: "私の思考をより深く掘り下げ、利用可能なすべての記事をお読みください。",
