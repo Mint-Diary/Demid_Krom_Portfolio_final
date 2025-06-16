@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { useTranslation } from "../i18n/index.jsx";
 import { getBlogPosts } from "../components/Blog/blog-config.js";
 import { Link } from "react-router-dom";
@@ -8,6 +8,11 @@ export default function BlogListPage() {
   const { t } = useTranslation();
   const allPosts = getBlogPosts(t);
   const [query, setQuery] = useState("");
+
+  // Ensure page starts at top immediately (no animation)
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filtered = allPosts.filter((p) => {
     const q = query.toLowerCase();

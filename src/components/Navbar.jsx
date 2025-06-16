@@ -112,7 +112,7 @@ export default function MainHeadersSimple() {
               <div className="relative overflow-hidden">
                 <button
                   onClick={handleLogoClick}
-                  className="logo-build group animate-build-logo inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300"
+                  className="logo-build group animate-build-logo inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300 hover:cursor-pointer"
                 >
                   <div className="pixel-logo animate-build-pixel-logo relative h-6 w-6 bg-green-400 [image-rendering:pixelated]">
                     <div className="animate-build-pixel-detail-1 absolute top-1 left-1 h-2 w-2 bg-black" />

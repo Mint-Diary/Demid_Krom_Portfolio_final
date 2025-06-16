@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "../../i18n/index.jsx";
 import { getBlogPosts } from "./blog-config.js";
+import { useLayoutEffect } from "react";
 
 export default function BlogListsFullWidth() {
   const { t } = useTranslation();
   const blogPosts = getBlogPosts(t);
+
+  // Always start at top when navigating to /blog (before paint)
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-slate-100 dark:bg-slate-900 dark:text-slate-100">
