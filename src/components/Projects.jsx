@@ -16,11 +16,11 @@ const projects = [
     live: "https://vuetris.com",
   },
   {
-    title: "Portfolio Site",
-    description: "Personal portfolio website",
-    image: "/project2.jpg",
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://your-portfolio.com",
+    title: "Guessing Game",
+    description: "a game where you have to guess the aspect ratio of an iphone",
+    image: "/iphoneProject.png",
+    github: "https://github.com/Mint-Diary/guessTheRatio",
+    live: "https://v0-guess-i-phone-aspect-ratio-alpha.vercel.app/",
   },
   // Add more projects as needed
 ];
