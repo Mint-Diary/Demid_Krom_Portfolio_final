@@ -140,7 +140,7 @@ export default function MainHeadersSimple() {
                   <div key={item.id} className="inline-block overflow-hidden">
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`inline-block border-2 border-gray-600 px-4 py-2 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white animate-build-menu-${index + 1}`}
+                      className={`inline-block border-2 border-gray-600 px-4 py-2 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white hover:cursor-pointer animate-build-menu-${index + 1}`}
                     >
                       <span>{item.name}</span>
                     </button>
@@ -226,7 +226,7 @@ export default function MainHeadersSimple() {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className="border-2 border-gray-600 px-4 py-3 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white"
+                        className="border-2 border-gray-600 px-4 py-3 font-mono text-sm font-bold text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-500 hover:bg-gray-700 hover:text-white hover:cursor-pointer"
                       >
                         <span>{item.name}</span>
                       </button>
