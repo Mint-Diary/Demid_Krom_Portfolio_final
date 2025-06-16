@@ -48,7 +48,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="section-wrapper bg-slate-100 dark:bg-slate-900/40"
+      className="section-wrapper bg-slate-100 dark:bg-slate-900"
     >
       <header className="section-heading">
         <h2 className="section-title">{t("projects.title")}</h2>
@@ -136,8 +136,8 @@ export default function Projects() {
               onClick={() => goToSlide(index)}
               className={`h-3 w-3 rounded-full transition-colors ${
                 index === currentIndex
-                  ? "bg-blue-600"
-                  : "bg-slate-400/50 hover:bg-slate-400"
+                  ? "bg-teal-500"
+                  : "bg-slate-400/50 hover:bg-teal-400"
               }`}
               aria-label={`Go to project ${index + 1}`}
             />

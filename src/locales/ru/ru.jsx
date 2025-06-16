@@ -15,6 +15,8 @@ export default {
   common: {
     fullName: "Демид Кром",
     ribbonBlog: "Только DE",
+    ribbonBlogTooltip:
+      "Из-за ограничений по времени и спроса блог пока доступен только на немецком.",
     prepositions: {
       on: "в",
     },

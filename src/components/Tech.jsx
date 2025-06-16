@@ -140,7 +140,7 @@ export default function LogosBoxedwithHeading() {
   return (
     <section
       id="tech"
-      className="section-wrapper bg-slate-100 dark:bg-slate-900/40"
+      className="section-wrapper bg-slate-100 dark:bg-slate-900"
     >
       <header className="section-heading">
         <h2 className="section-title">{t("tech.title")}</h2>

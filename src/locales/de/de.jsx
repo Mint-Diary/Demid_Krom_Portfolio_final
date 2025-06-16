@@ -13,6 +13,8 @@ export default {
   common: {
     fullName: "Demid Krom",
     ribbonBlog: "Nur DE",
+    ribbonBlogTooltip:
+      "Aufgrund von Zeitaufwand und Nachfrage ist der Blog derzeit nur auf Deutsch verfügbar.",
     prepositions: {
       on: "am",
     },
@@ -158,7 +160,7 @@ export default {
       },
       barcodes: {
         title:
-          "Von Barcodes zu Kmaeras: Warum der einfache Weg oft der schwerste ist",
+          "Von Barcodes zu Kameras: Warum der einfache Weg oft der schwerste ist",
         preview:
           "Alles begann mit einer Idee. Ich wollte eine App zur Literaturverwaltung bauen. " +
           "Einfach, schlank und funktional. Keine KI keine Kameraspielereien",

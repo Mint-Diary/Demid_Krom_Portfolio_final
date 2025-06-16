@@ -24,10 +24,10 @@ export default function BlogListsFullWidth() {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="relative flex flex-col overflow-hidden rounded-lg bg-white shadow-xs lg:flex-row dark:bg-slate-800"
+              className="relative flex flex-col overflow-hidden rounded-lg bg-white shadow-xs lg:h-72 lg:flex-row xl:h-80 dark:bg-slate-800"
             >
               {/* Ribbon */}
-              <div className="absolute -top-2.5 -right-2.5 z-10 size-28 overflow-hidden">
+              <div className="group absolute -top-2.5 -right-2.5 z-10 size-28 overflow-visible">
                 <span className="absolute top-0 size-2.5 bg-teal-900" />
                 <span className="absolute right-0 bottom-0 size-2.5 bg-teal-900" />
                 <div className="absolute right-0 bottom-0 flex w-[calc(100%*1.4142)] origin-bottom-right rotate-45 items-center justify-center gap-1.5 bg-teal-600 p-2.5 text-center text-sm leading-tight text-white hover:bg-teal-700 active:bg-teal-600">
@@ -48,12 +48,16 @@ export default function BlogListsFullWidth() {
                     {t("common.ribbonBlog")}
                   </span>
                 </div>
+                {/* Tooltip */}
+                <div className="absolute top-1/2 right-full mr-2 hidden -translate-y-1/2 rounded bg-teal-600 px-3 py-1 text-xs font-medium whitespace-nowrap text-white shadow-lg group-hover:block">
+                  {t("common.ribbonBlogTooltip")}
+                </div>
               </div>
               {/* END Ribbon */}
 
               <Link
                 to={`/blog/${post.slug}`}
-                className="group relative block w-full overflow-hidden lg:w-2/5 xl:w-1/3"
+                className="group relative block h-48 w-full overflow-hidden lg:h-full lg:w-2/5 xl:w-1/3"
               >
                 <div className="absolute inset-0 flex items-center justify-center bg-teal-700/75 opacity-0 transition duration-150 ease-out group-hover:opacity-100">
                   <svg
@@ -76,7 +80,7 @@ export default function BlogListsFullWidth() {
                   alt={`Featured Image of ${post.title}`}
                 />
               </Link>
-              <div className="w-full p-6 lg:w-3/5 lg:self-center lg:px-10 lg:py-8 xl:w-2/3">
+              <div className="flex w-full flex-col justify-center p-6 lg:h-full lg:w-3/5 lg:self-center lg:px-10 lg:py-8 xl:w-2/3">
                 <h3 className="mb-2 text-lg font-bold sm:text-xl">
                   <Link
                     to={`/blog/${post.slug}`}

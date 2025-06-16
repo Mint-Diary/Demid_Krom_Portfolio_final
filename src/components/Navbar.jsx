@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
-import { useTranslation, LanguageSwitcher } from "../i18n/index.jsx";
+import {
+  useTranslation,
+  LanguageSwitcher,
+  ThemeToggle,
+} from "../i18n/index.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function MainHeadersSimple() {
@@ -124,9 +128,10 @@ export default function MainHeadersSimple() {
 
             {/* Right Section */}
             <div className="flex items-center gap-3">
-              {/* Language Switcher */}
-              <div className="animate-language-dropdown">
+              {/* Theme + Language */}
+              <div className="animate-language-dropdown flex items-center gap-2">
                 <LanguageSwitcher className="hidden lg:block" />
+                <ThemeToggle className="hidden lg:block" />
               </div>
 
               {/* Navigation */}

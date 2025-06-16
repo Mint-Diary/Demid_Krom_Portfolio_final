@@ -18,6 +18,13 @@
   </head>
 
   <body class="antialiased">
+    <script>
+      // Make dark mode the default. Only switch to light if user explicitly chose it.
+      const stored = localStorage.getItem("theme");
+      if (stored !== "light") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

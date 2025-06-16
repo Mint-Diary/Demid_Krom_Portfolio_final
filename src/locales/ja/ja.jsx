@@ -15,6 +15,8 @@ export default {
   common: {
     fullName: "デミド・クロム",
     ribbonBlog: "ドイツ語のみ",
+    ribbonBlogTooltip:
+      "時間と需要のため、ブログは現在ドイツ語でのみ利用可能です。",
     prepositions: {
       on: "に",
     },

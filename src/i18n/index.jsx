@@ -165,3 +165,8 @@ export function LanguageSwitcher({ className = "" }) {
     </div>
   );
 }
+
+import ThemeToggle from "../components/ThemeToggle.jsx";
+
+// Re-export ThemeToggle for convenience
+export { ThemeToggle };
