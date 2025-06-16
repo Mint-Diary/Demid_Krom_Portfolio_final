@@ -185,20 +185,58 @@ export default {
     },
   },
 
-  // Download section
+// Download Section
   download: {
     title: "Demid Krom",
     subtitle: "Lebenslauf Download",
     heading: "Mein Lebenslauf",
     description: "Laden Sie meinen aktuellen deutschen Lebenslauf als PDF herunter. Erfahren Sie mehr über meine Erfahrungen und Qualifikationen.",
     fileInfo: {
-      type: "File Type:",
-      size: "Size:",
+      type: "Dateityp:",
+      size: "Größe:",
       typeValue: "PDF",
-      sizeValue: "~2.1 MB"
+      sizeValue: "~2,0 MB"
+    },
+    button: "Lebenslauf herunterladen",
+    footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
+  },
+
+  // Downloads Section Heading
+  downloads: {
+    title: "Downloads",
+    subtitle: "Lebenslauf, Zertifikate und Referenzen"
+  },
+
+  // Certificates Card
+  certificates: {
+    title: "Zertifikate & Kurse",
+    subtitle: "Weiterbildung",
+    heading: "Zertifikate herunterladen",
+    description: "Alle besuchten Kurse und erhaltenen Zertifikate. Nachweis für kontinuierliche Weiterbildung und Kompetenzentwicklung.",
+    fileInfo: {
+      type: "Format",
+      size: "Größe",
+      typeValue: "PDF",
+      sizeValue: "~1,2 MB"
     },
     button: "Herunterladen",
-    footer: "Klicken zum Herunterladen • Öffnet in neuem Tab"
+    footer: "Sammlung aller Weiterbildungszertifikate"
+  },
+
+  // Reference Card
+  reference: {
+    title: "Arbeitszeugnis",
+    subtitle: "Aktuelle Referenz",
+    heading: "Arbeitszeugnis herunterladen",
+    description: "Mein aktuelles Arbeitszeugnis mit bestätigten Bewertungen und Referenzen. Einblick in meine berufliche Entwicklung und Fähigkeiten.",
+    fileInfo: {
+      type: "Format",
+      size: "Größe",
+      typeValue: "PDF",
+      sizeValue: "~120 KB"
+    },
+    button: "Herunterladen",
+    footer: "Vertrauliches Dokument nur für Bewerbungszwecke"
   },
 
   // Footer
