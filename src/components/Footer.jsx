@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "../i18n/index.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer({ onScrollToTop }) {
   const { t } = useTranslation();
@@ -29,8 +30,9 @@ export default function Footer({ onScrollToTop }) {
   const footerLinks = [
     { name: t("nav.tech"), id: "tech" },
     { name: t("nav.timeline"), id: "timeline" },
-    { name: t("nav.about"), id: "about" },
-    { name: t("nav.contact"), id: "contact" },
+    { name: t("nav.projects"), id: "projects" },
+    { name: t("nav.blog"), id: "blog" },
+    { name: t("nav.download"), id: "downloads" },
   ];
 
   return (
@@ -82,6 +84,8 @@ export default function Footer({ onScrollToTop }) {
               <li>
                 <a
                   href="https://de.fiverr.com/s/8z9wmKv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 transition duration-100 hover:text-green-400"
                 >
                   {t("footer.servicesList.webDev")}
@@ -90,6 +94,8 @@ export default function Footer({ onScrollToTop }) {
               <li>
                 <a
                   href="https://de.fiverr.com/s/8z9wmKv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 transition duration-100 hover:text-green-400"
                 >
                   {t("footer.servicesList.mobileApp")}
@@ -98,6 +104,8 @@ export default function Footer({ onScrollToTop }) {
               <li>
                 <a
                   href="https://de.fiverr.com/s/8z9wmKv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 transition duration-100 hover:text-green-400"
                 >
                   {t("footer.servicesList.uiux")}
@@ -106,6 +114,8 @@ export default function Footer({ onScrollToTop }) {
               <li>
                 <a
                   href="https://de.fiverr.com/s/8z9wmKv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 transition duration-100 hover:text-green-400"
                 >
                   {t("footer.servicesList.consulting")}
@@ -130,11 +140,21 @@ export default function Footer({ onScrollToTop }) {
           <div className="text-sm text-gray-400">
             {t("footer.rights")} &copy; {new Date().getFullYear()}
           </div>
-          <div className="text-sm font-medium text-gray-500">
-            {t("footer.madeWith")}{" "}
-            <a href="#" className="text-green-400 hover:text-green-300">
-              {t("common.fullName")}
-            </a>
+          <div className="flex items-center gap-4 text-sm font-medium text-gray-500">
+            <span>
+              {t("footer.madeWith")} {" "}
+              <a href="#" className="text-green-400 hover:text-green-300">
+                {t("common.fullName")}
+              </a>
+            </span>
+            {/* Scroll to top arrow */}
+            <button
+              onClick={onScrollToTop}
+              aria-label="Scroll to top"
+              className="text-green-400 transition-transform hover:-translate-y-1 hover:text-green-300 animate-bounce"
+            >
+              <ArrowUp size={20} strokeWidth={2.5} />
+            </button>
           </div>
         </div>
       </div>
