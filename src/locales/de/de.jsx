@@ -223,7 +223,7 @@ export default {
       type: "Format",
       size: "Größe",
       typeValue: "PDF",
-      sizeValue: "~1,2 MB",
+      sizeValue: "~590 KB",
     },
     button: "Herunterladen",
     footer: "Sammlung aller Weiterbildungszertifikate",

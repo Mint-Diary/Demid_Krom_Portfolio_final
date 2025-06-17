@@ -200,7 +200,7 @@ export default {
       type: "ファイル形式：",
       size: "サイズ：",
       typeValue: "PDF",
-      sizeValue: "約2.1 MB",
+      sizeValue: "約590 KB",
     },
     button: "履歴書をダウンロード",
     footer: "クリックでダウンロード • 新しいタブで開きます",

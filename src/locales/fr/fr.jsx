@@ -225,7 +225,7 @@ export default {
       type: "Format",
       size: "Taille",
       typeValue: "PDF",
-      sizeValue: "~1,2 MB",
+      sizeValue: "~590 KB",
     },
     button: "Télécharger",
     footer: "Collection de tous les certificats de formation continue",

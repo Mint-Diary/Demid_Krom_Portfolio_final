@@ -225,7 +225,7 @@ export default {
       type: "Format",
       size: "Size",
       typeValue: "PDF",
-      sizeValue: "~1.2 MB",
+      sizeValue: "~590 KB",
     },
     button: "Download",
     footer: "Collection of all continuing education certificates",

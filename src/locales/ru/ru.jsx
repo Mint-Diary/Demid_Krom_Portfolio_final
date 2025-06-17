@@ -225,7 +225,7 @@ export default {
       type: "Формат",
       size: "Размер",
       typeValue: "PDF",
-      sizeValue: "~1.2 МБ",
+      sizeValue: "~590 KБ",
     },
     button: "Скачать",
     footer: "Коллекция всех сертификатов непрерывного образования",

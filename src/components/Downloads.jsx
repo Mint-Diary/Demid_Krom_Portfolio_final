@@ -138,7 +138,7 @@ export default function DownloadCard() {
 
             {/* Download Button */}
             <a
-              href="/Zertifikate_DK.pdf"
+              href="/Certificates_DK.pdf"
               download="Demid-Krom-Zertifikate"
               target="_blank"
               rel="noreferrer"
