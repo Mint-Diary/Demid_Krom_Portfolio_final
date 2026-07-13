@@ -161,7 +161,10 @@ export default function TimelineComponent() {
         </div>
 
         {/* Timeline content - new left aligned layout */}
-        <div className="relative mx-auto w-full max-w-3xl py-5 dark:text-slate-100" style={{ zIndex: 10 }}>
+        <div
+          className="relative mx-auto w-full max-w-3xl py-5 dark:text-slate-100"
+          style={{ zIndex: 10 }}
+        >
           {/* Vertical Guide */}
           <div
             className="absolute top-0 bottom-0 left-0 flex w-10 flex-col justify-center md:w-12"
@@ -180,7 +183,10 @@ export default function TimelineComponent() {
               <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div
+                data-flammable
+                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
+              >
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.odav.title")}
                 </h4>
@@ -199,7 +205,10 @@ export default function TimelineComponent() {
               <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div
+                data-flammable
+                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
+              >
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.finalSchool.title")}
                 </h4>
@@ -218,7 +227,10 @@ export default function TimelineComponent() {
               <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                 <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
               </div>
-              <div className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700">
+              <div
+                data-flammable
+                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
+              >
                 <h4 className="mb-2 font-semibold">
                   {t("timeline.events.school.title")}
                 </h4>

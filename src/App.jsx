@@ -19,6 +19,7 @@ import BlogPostPage from "./pages/BlogPostPage.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx"; // Import BlogListPage
 import CVDownload from "./components/Downloads.jsx";
 import CTABlog from "./components/Blog/CTABlog.jsx";
+import { FireProvider } from "./components/FireEasterEgg";
 
 function HomePage() {
   return (
@@ -81,26 +82,28 @@ function AppRoutes() {
 
   return (
     <LanguageProvider>
-      <div className="relative min-h-screen">
-        {/* Navbar mit höchstem z-index */}
-        <div className="relative z-[10000]">
-          {shouldResetNavbar ? null : <Navbar />}
-          {shouldResetNavbar && <Navbar key="reset" />}
-        </div>
+      <FireProvider>
+        <div className="relative min-h-screen">
+          {/* Navbar mit höchstem z-index */}
+          <div className="relative z-[10000]">
+            {shouldResetNavbar ? null : <Navbar />}
+            {shouldResetNavbar && <Navbar key="reset" />}
+          </div>
 
-        {/* Main content */}
-        <div className="relative z-0">
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              {/* Blog list page */}
-              <Route path="/blog" element={<BlogListPage />} />
-              <Route path="/blog/:slug" element={<BlogPostPage />} />
-            </Routes>
-          </main>
-          <Footer onScrollToTop={handleScrollToTop} />
+          {/* Main content */}
+          <div className="relative z-0">
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                {/* Blog list page */}
+                <Route path="/blog" element={<BlogListPage />} />
+                <Route path="/blog/:slug" element={<BlogPostPage />} />
+              </Routes>
+            </main>
+            <Footer onScrollToTop={handleScrollToTop} />
+          </div>
         </div>
-      </div>
+      </FireProvider>
     </LanguageProvider>
   );
 }

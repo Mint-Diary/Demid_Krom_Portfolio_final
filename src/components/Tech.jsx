@@ -15,6 +15,7 @@ import {
 } from "react-icons/si";
 import { FaDatabase, FaRocket, FaCode } from "react-icons/fa";
 import { useTranslation } from "../i18n/index.jsx";
+import FireAlarm from "./FireEasterEgg/FireAlarm.jsx";
 
 export default function LogosBoxedwithHeading() {
   const { t } = useTranslation();
@@ -146,29 +147,34 @@ export default function LogosBoxedwithHeading() {
         <h2 className="section-title">{t("tech.title")}</h2>
         <p className="section-subtitle">{t("tech.subtitle")}</p>
       </header>
-      <div className="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-4 px-4 sm:grid-cols-3 md:grid-cols-4">
-        {technologies.map((tech) => (
-          <div
-            key={tech.name}
-            className={`group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-800/50 ${tech.shadow} hover:border-slate-300 dark:hover:border-slate-700`}
-          >
-            <div className="flex items-center">
-              <div className={`mr-3 text-2xl ${tech.icon_color}`}>
-                {tech.icon}
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
-                  {tech.name}
-                </h4>
-                {tech.proficiency && (
-                  <p className="text-xs text-slate-500 dark:text-gray-400">
-                    {tech.proficiency}
-                  </p>
-                )}
+      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center gap-6 px-4 sm:flex-row">
+        <div className="grid grow grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          {technologies.map((tech) => (
+            <div
+              key={tech.name}
+              data-flammable
+              className={`group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-800/50 ${tech.shadow} hover:border-slate-300 dark:hover:border-slate-700`}
+            >
+              <div className="flex items-center">
+                <div className={`mr-3 text-2xl ${tech.icon_color}`}>
+                  {tech.icon}
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white">
+                    {tech.name}
+                  </h4>
+                  {tech.proficiency && (
+                    <p className="text-xs text-slate-500 dark:text-gray-400">
+                      {tech.proficiency}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {/* Fire easter egg: the Feuermelder hangs right next to the cards */}
+        <FireAlarm />
       </div>
     </section>
   );
