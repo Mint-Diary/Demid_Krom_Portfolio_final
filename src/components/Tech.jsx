@@ -147,7 +147,7 @@ export default function LogosBoxedwithHeading() {
         <h2 className="section-title">{t("tech.title")}</h2>
         <p className="section-subtitle">{t("tech.subtitle")}</p>
       </header>
-      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center gap-6 px-4 sm:flex-row">
+      <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center gap-6 px-4 sm:flex-row sm:gap-14">
         <div className="grid grow grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
           {technologies.map((tech) => (
             <div

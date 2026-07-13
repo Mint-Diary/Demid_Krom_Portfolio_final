@@ -333,7 +333,10 @@ export function FireProvider({ children }) {
               key={i}
               className="fire-sprinkler-head"
               style={{ animationDelay: `${i * 70}ms` }}
-            />
+            >
+              <span className="fire-sprinkler-body" />
+              <span className="fire-sprinkler-plate" />
+            </div>
           ))}
         </div>
       )}

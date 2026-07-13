@@ -10,11 +10,16 @@
 
 /* ------------------------------ overlay canvas --------------------------- */
 
+/* width/height 100% (NOT 100vw/vh, which includes the scrollbar): the
+   canvas must end at the inner scrollbar edge like every other fixed
+   element so the Three.js pixel grid lines up with the DOM sprinkler
+   heads. Explicit size is required — a canvas is a replaced element, so
+   inset: 0 alone would leave it at its intrinsic 300x150. */
 .fire-canvas {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 10500;
 }
@@ -119,25 +124,65 @@
   z-index: 10550;
 }
 
+/* A pendent sprinkler: supply pipe -> tapered brass body -> stem -> flat
+   deflector plate. The water in the shader spawns at the plate (y = 46px,
+   keep in sync with RAIN_VERT in fireEngine.js). */
 .fire-sprinkler-head {
-  width: 22px;
-  height: 30px;
-  background: linear-gradient(#94a3b8, #475569 60%, #1e293b);
-  border-radius: 0 0 6px 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  transform: translateY(-110%);
+  position: relative;
+  width: 30px;
+  height: 46px;
+  transform: translateY(-130%);
   animation: fire-sprinkler-drop 0.6s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
 }
 
-.fire-sprinkler-head::after {
-  /* nozzle */
+/* Supply pipe. It reaches far beyond the top edge on purpose: on phones
+   whose layout viewport starts below the notch/camera (e.g. iPhone Pro
+   Max) the pipe still runs off-screen instead of leaving a gap. */
+.fire-sprinkler-head::before {
   content: "";
-  display: block;
-  width: 8px;
-  height: 7px;
-  margin: 30px auto 0;
-  background: #cbd5e1;
-  border-radius: 0 0 4px 4px;
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  width: 7px;
+  height: 92px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #475569, #cbd5e1 45%, #334155);
+}
+
+/* Tapered brass body under the pipe. */
+.fire-sprinkler-body {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 18px;
+  height: 20px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #92400e, #fbbf24 45%, #b45309);
+  clip-path: polygon(0 0, 100% 0, 68% 100%, 32% 100%);
+}
+
+/* Flat deflector plate at the very end, with a thin stem above it. */
+.fire-sprinkler-plate {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 28px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: linear-gradient(90deg, #64748b, #e2e8f0 50%, #64748b);
+}
+
+.fire-sprinkler-plate::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  transform: translateX(-50%);
+  background: #b45309;
 }
 
 @keyframes fire-sprinkler-drop {
@@ -174,8 +219,8 @@
 }
 
 .fire-alarm__body {
-  width: 108px;
-  padding: 8px 8px 6px;
+  width: 188px;
+  padding: 10px 10px 8px;
   background: linear-gradient(160deg, #ef4444 0%, #b91c1c 55%, #7f1d1d 100%);
   border: 2px solid #7f1d1d;
   border-radius: 10px;
@@ -186,18 +231,18 @@
 }
 
 .fire-alarm__label {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   line-height: 1.25;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .fire-alarm__window {
   position: relative;
-  height: 118px;
+  height: 136px;
   background: radial-gradient(circle at 50% 45%, #3f0d0d 0%, #1c0505 80%);
   border: 3px solid #e5e7eb;
   border-radius: 6px;
@@ -263,8 +308,8 @@
 
 .fire-alarm__shard {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.9),
@@ -287,16 +332,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 62px;
-  height: 62px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
-  border: 4px solid #7f1d1d;
+  border: 5px solid #7f1d1d;
   background: radial-gradient(circle at 35% 30%, #f87171, #dc2626 55%, #991b1b);
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.4),
     0 4px 8px rgba(0, 0, 0, 0.6);
   color: #fff;
-  font-size: 8.5px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -340,8 +385,8 @@
 }
 
 .fire-alarm__hint {
-  margin-top: 6px;
-  font-size: 8.5px;
+  margin-top: 8px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
   line-height: 1.3;

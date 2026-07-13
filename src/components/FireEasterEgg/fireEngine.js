@@ -19,9 +19,9 @@
  */
 import * as THREE from "three";
 
-const MAX_DPR = 1.5; // cap devicePixelRatio — additive particles don't need retina
+const MAX_DPR = 2; // cap devicePixelRatio — enough for crisp water drops
 const RAIN_HEADS = 8; // must match the number of DOM sprinkler heads
-const RAIN_DROPS = 1000;
+const RAIN_DROPS = 2400;
 
 /* ------------------------------ shaders ------------------------------ */
 
@@ -123,12 +123,16 @@ const RAIN_VERT = /* glsl */ `
 
   void main() {
     float fall = fract(uTime * aSpeed + aSeed);
-    // Each drop belongs to one sprinkler head and fans out in a cone as it falls.
-    float x = (aHead + 0.5) / ${RAIN_HEADS}.0 * uW + aSpread * fall * 110.0;
-    float y = -fall * (uH + 60.0) + 30.0;
-    vAlpha = uIntensity * (0.4 + 0.6 * fract(aSeed * 5.7));
+    // Each drop belongs to one sprinkler head and fans out in a cone as it
+    // falls. It spawns at the head's deflector plate (~46px below the top
+    // edge, see .fire-sprinkler-head) and fades in so it doesn't pop.
+    // The cone stays needle-thin at the plate and opens to ~±144px at the
+    // bottom, so neighbouring cones overlap into full-width water.
+    float x = (aHead + 0.5) / ${RAIN_HEADS}.0 * uW + aSpread * fall * 288.0;
+    float y = -46.0 - fall * (uH + 30.0);
+    vAlpha = uIntensity * (0.4 + 0.6 * fract(aSeed * 5.7)) * smoothstep(0.0, 0.06, fall);
     gl_Position = projectionMatrix * modelViewMatrix * vec4(x, y, 0.0, 1.0);
-    gl_PointSize = 15.0 * uDpr;
+    gl_PointSize = (12.0 + 7.0 * fract(aSeed * 3.3)) * uDpr;
   }
 `;
 
@@ -137,9 +141,10 @@ const RAIN_FRAG = /* glsl */ `
 
   void main() {
     vec2 uv = gl_PointCoord - 0.5;
-    // Narrow vertical streak instead of a round dot.
-    float streak = smoothstep(0.5, 0.05, abs(uv.x) * 3.2) * smoothstep(0.55, 0.25, abs(uv.y));
-    gl_FragColor = vec4(0.62, 0.8, 1.0, streak * 0.65 * vAlpha);
+    // Crisp elongated droplet: solid core, just enough smoothstep for
+    // anti-aliasing instead of the earlier soft blur.
+    float body = smoothstep(0.17, 0.09, abs(uv.x)) * smoothstep(0.5, 0.38, abs(uv.y));
+    gl_FragColor = vec4(0.62, 0.8, 1.0, body * 0.85 * vAlpha);
   }
 `;
 
@@ -266,8 +271,11 @@ export function createFireEngine(canvas) {
   let vw = 0;
   let vh = 0;
   function resize() {
-    vw = window.innerWidth;
-    vh = window.innerHeight;
+    // Use the layout viewport, not window.innerWidth: innerWidth includes
+    // the scrollbar while fixed DOM elements (canvas, sprinkler heads) end
+    // at its inner edge — this keeps the water aligned with the heads.
+    vw = document.documentElement.clientWidth || window.innerWidth;
+    vh = document.documentElement.clientHeight || window.innerHeight;
     camera.right = vw;
     camera.bottom = -vh;
     camera.updateProjectionMatrix();
