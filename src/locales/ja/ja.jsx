@@ -23,9 +23,9 @@ export default {
   // Hero section
   hero: {
     title1: "こんにちは、私は",
-    title2: "フルスタック開発者",
+    title2: "DevOps／プラットフォームエンジニア",
     description:
-      "モダンなウェブ技術の経験を持ち、人々にインスピレーションを与える優れたデジタル体験を創造します",
+      "CI/CDからKubernetes、クラウドまで、自動化されたインフラを構築・運用し、ソフトウェアを確実かつ安全に動かします",
     cta: "続ける",
     ctaSecondary: "ブログを見る",
     cards: {
@@ -40,11 +40,17 @@ export default {
     title: "私の歩み",
     subtitle: "私の成長の概要",
     events: {
+      derivatives: {
+        title: "LPA / Derivatives Data Solutions",
+        description:
+          "DevOpsプラットフォームエンジニア\n\nVDI基盤構築（Kestra、Traefik）。SVN→Git移行とCI/CD（GitLab、Azure）。Proxmox仮想化＆監視。セキュリティ基盤（Vault、PKI）。",
+        date: "2025年12月から現在",
+      },
       odav: {
         title: "ODAV AG",
         description:
-          "フルスタックアプリケーション開発のIT専門家として見習い研修",
-        date: "2022年9月から現在",
+          "アプリケーション開発者（フルスタック）\n\n文献管理アプリをゼロから設計・実装（Tesseract OCR、Elasticsearch、Liquibase）。自動テストと展開パイプラインを構築（GitLab、Kubernetes、ArgoCD）。",
+        date: "2022年9月から2025年7月",
       },
       finalSchool: {
         title: "中等学校",
@@ -66,7 +72,7 @@ export default {
   // Tech stack
   tech: {
     title: "技術",
-    subtitle: "私の技術的専門知識と愛用ツール",
+    subtitle: "インフラ、自動化、運用のための私のスタック",
     proficiencyLevels: {
       expert: "エキスパート",
       advanced: "上級",
@@ -426,13 +432,14 @@ export default {
 
   // Footer
   footer: {
-    description: "優れたデジタル体験への情熱を持つフルスタック開発者。",
+    description:
+      "信頼性の高いインフラと自動化に情熱を注ぐDevOps／プラットフォームエンジニア。",
     quickLinks: "クイックリンク",
     services: "サービス",
     servicesList: {
-      webDev: "ウェブ開発",
-      mobileApp: "モバイルアプリ",
-      uiux: "UI/UXデザイン",
+      webDev: "CI/CDと自動化",
+      mobileApp: "クラウドインフラ",
+      uiux: "コンテナとKubernetes",
       consulting: "コンサルティング",
     },
     contact: "連絡先情報",

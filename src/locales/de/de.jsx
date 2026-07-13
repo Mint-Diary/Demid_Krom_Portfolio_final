@@ -21,9 +21,9 @@ export default {
   // Hero section
   hero: {
     title1: "Hallo, ich bin",
-    title2: "Full Stack Entwickler",
+    title2: "DevOps / Platform Engineer",
     description:
-      "Mit Erfahrung in modernen Web-Technologien entwickle ich außergewöhnliche digitale Erlebnisse, die Menschen begeistern",
+      "Ich baue und betreibe automatisierte Infrastruktur, von CI/CD über Kubernetes bis zur Cloud, damit Software zuverlässig und sicher läuft",
     cta: "Weiter",
     ctaSecondary: "Zu meinem Blog",
     cards: {
@@ -38,11 +38,17 @@ export default {
     title: "Mein Werdegang",
     subtitle: "Ein Überblick über meine Entwicklung",
     events: {
+      derivatives: {
+        title: "LPA / Derivatives Data Solutions",
+        description:
+          "DevOps Platform Engineer\n\nVDI-Infrastruktur (Kestra, Traefik) aufgebaut. SVN→Git-Migration mit CI/CD (GitLab, Azure). Proxmox-Virtualisierung & Monitoring. Zentrale Sicherheitsinfrastruktur (Vault, PKI).",
+        date: "Dezember 2025 bis heute",
+      },
       odav: {
         title: "ODAV AG",
         description:
-          "Ausbildung zum Fachinformatiker für Anwendungsentwicklung im Bereich Full Stack",
-        date: "September 2022 bis heute",
+          "Fachinformatiker für Anwendungsentwicklung (Full Stack)\n\nLiteraturverwaltungs-App von Grund auf konzipiert und umgesetzt (Tesseract OCR, Elasticsearch, Liquibase). Automatisierte Test- und Deploy-Pipelines aufgebaut (GitLab, Kubernetes, ArgoCD).",
+        date: "September 2022 bis Juli 2025",
       },
       finalSchool: {
         title: "Mittelschule",
@@ -64,7 +70,7 @@ export default {
   // Tech stack
   tech: {
     title: "Technologien",
-    subtitle: "Meine technische Expertise und bevorzugte Werkzeuge",
+    subtitle: "Mein Stack für Infrastruktur, Automatisierung und Betrieb",
     proficiencyLevels: {
       expert: "Experte",
       advanced: "Fortgeschritten",
@@ -428,13 +434,13 @@ export default {
   // Footer
   footer: {
     description:
-      "Full-Stack-Entwickler mit Leidenschaft für außergewöhnliche digitale Erlebnisse.",
+      "DevOps / Platform Engineer mit Leidenschaft für zuverlässige Infrastruktur und Automatisierung.",
     quickLinks: "Schnelllinks",
     services: "Dienstleistungen",
     servicesList: {
-      webDev: "Webentwicklung",
-      mobileApp: "Mobile Apps",
-      uiux: "UI/UX Design",
+      webDev: "CI/CD & Automatisierung",
+      mobileApp: "Cloud-Infrastruktur",
+      uiux: "Container & Kubernetes",
       consulting: "Beratung",
     },
     contact: "Kontaktinfo",

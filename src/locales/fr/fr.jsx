@@ -23,9 +23,9 @@ export default {
   // Hero section
   hero: {
     title1: "Salut, je suis",
-    title2: "Développeur Full Stack",
+    title2: "Ingénieur DevOps / Platform",
     description:
-      "Avec une expérience dans les technologies web modernes, je crée des expériences numériques exceptionnelles qui inspirent les gens",
+      "Je construis et exploite des infrastructures automatisées, du CI/CD à Kubernetes en passant par le cloud, pour des logiciels fiables et sécurisés",
     cta: "Faire défiler",
     ctaSecondary: "Visitez mon blog",
     cards: {
@@ -40,11 +40,17 @@ export default {
     title: "Mon Parcours",
     subtitle: "Un aperçu de mon développement",
     events: {
+      derivatives: {
+        title: "LPA / Derivatives Data Solutions",
+        description:
+          "Ingénieur DevOps Platform\n\nInfrastructure VDI (Kestra, Traefik). Migration SVN→Git avec CI/CD (GitLab, Azure). Virtualisation Proxmox & monitoring. Sécurité (Vault, PKI).",
+        date: "Décembre 2025 à présent",
+      },
       odav: {
         title: "ODAV AG",
         description:
-          "Apprentissage en tant que Spécialiste IT pour le Développement d'Applications en Full Stack",
-        date: "Septembre 2022 à présent",
+          "Développeur d'Applications (Full Stack)\n\nConçu et implémenté une application de gestion littéraire de zéro (Tesseract OCR, Elasticsearch, Liquibase). Construit des pipelines de test et déploiement automatisés (GitLab, Kubernetes, ArgoCD).",
+        date: "Septembre 2022 à Juillet 2025",
       },
       finalSchool: {
         title: "École Secondaire",
@@ -66,7 +72,8 @@ export default {
   // Tech stack
   tech: {
     title: "Technologies",
-    subtitle: "Mon expertise technique et outils préférés",
+    subtitle:
+      "Mon stack pour l'infrastructure, l'automatisation et l'exploitation",
     proficiencyLevels: {
       expert: "Expert",
       advanced: "Avancé",
@@ -430,13 +437,13 @@ export default {
   // Footer
   footer: {
     description:
-      "Développeur full-stack avec une passion pour les expériences numériques exceptionnelles.",
+      "Ingénieur DevOps / Platform passionné par les infrastructures fiables et l'automatisation.",
     quickLinks: "Liens Rapides",
     services: "Services",
     servicesList: {
-      webDev: "Développement Web",
-      mobileApp: "Applications Mobile",
-      uiux: "Design UI/UX",
+      webDev: "CI/CD & Automatisation",
+      mobileApp: "Infrastructure Cloud",
+      uiux: "Conteneurs & Kubernetes",
       consulting: "Conseil",
     },
     contact: "Infos Contact",

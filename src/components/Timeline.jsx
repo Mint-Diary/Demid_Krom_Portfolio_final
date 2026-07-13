@@ -176,74 +176,31 @@ export default function TimelineComponent() {
           </div>
           {/* END Vertical Guide */}
 
-          {/* Timeline */}
+          {/* Timeline — newest first; entries live in the locales under timeline.events */}
           <ul className="relative space-y-4 pl-10 md:pl-12">
-            {/* ODAV */}
-            <li className="relative">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
-                <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
-              </div>
-              <div
-                data-flammable
-                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
-              >
-                <h4 className="mb-2 font-semibold">
-                  {t("timeline.events.odav.title")}
-                </h4>
-                <p className="text-sm leading-relaxed">
-                  {t("timeline.events.odav.description")}
-                </p>
-              </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                  {t("timeline.events.odav.date")}
-                </p>
-              </div>
-            </li>
-            {/* Final School */}
-            <li className="relative">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
-                <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
-              </div>
-              <div
-                data-flammable
-                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
-              >
-                <h4 className="mb-2 font-semibold">
-                  {t("timeline.events.finalSchool.title")}
-                </h4>
-                <p className="text-sm leading-relaxed">
-                  {t("timeline.events.finalSchool.description")}
-                </p>
-              </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                  {t("timeline.events.finalSchool.date")}
-                </p>
-              </div>
-            </li>
-            {/* School */}
-            <li className="relative">
-              <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
-                <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
-              </div>
-              <div
-                data-flammable
-                className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
-              >
-                <h4 className="mb-2 font-semibold">
-                  {t("timeline.events.school.title")}
-                </h4>
-                <p className="text-sm leading-relaxed">
-                  {t("timeline.events.school.description")}
-                </p>
-              </div>
-              <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
-                <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                  {t("timeline.events.school.date")}
-                </p>
-              </div>
-            </li>
+            {["derivatives", "odav", "finalSchool", "school"].map((event) => (
+              <li key={event} className="relative">
+                <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
+                  <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />
+                </div>
+                <div
+                  data-flammable
+                  className="rounded-xl bg-slate-100 p-4 hover:ring-3 hover:ring-slate-100 hover:ring-offset-2 dark:bg-slate-800 dark:ring-offset-slate-900 dark:hover:ring-slate-700"
+                >
+                  <h4 className="mb-2 font-semibold">
+                    {t(`timeline.events.${event}.title`)}
+                  </h4>
+                  <p className="text-sm leading-relaxed whitespace-pre-line">
+                    {t(`timeline.events.${event}.description`)}
+                  </p>
+                </div>
+                <div className="px-4 py-2 lg:absolute lg:top-0 lg:bottom-0 lg:left-0 lg:mt-4 lg:-ml-12 lg:flex lg:w-40 lg:-translate-x-full lg:flex-col lg:p-0 lg:text-right">
+                  <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                    {t(`timeline.events.${event}.date`)}
+                  </p>
+                </div>
+              </li>
+            ))}
           </ul>
           {/* END Timeline */}
         </div>

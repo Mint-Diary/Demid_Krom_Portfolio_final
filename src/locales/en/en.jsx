@@ -23,9 +23,9 @@ export default {
   // Hero section
   hero: {
     title1: "Hello, I'm",
-    title2: "Full Stack Developer",
+    title2: "DevOps / Platform Engineer",
     description:
-      "With experience in modern web technologies, I create exceptional digital experiences that inspire people",
+      "I build and run automated infrastructure, from CI/CD and Kubernetes to the cloud, so software runs reliably and securely",
     cta: "Scroll down",
     ctaSecondary: "Visit my blog",
     cards: {
@@ -40,11 +40,17 @@ export default {
     title: "My Journey",
     subtitle: "An overview of my development",
     events: {
+      derivatives: {
+        title: "LPA / Derivatives Data Solutions",
+        description:
+          "DevOps Platform Engineer\n\nBuilt VDI infrastructure (Kestra, Traefik). SVN→Git migration with CI/CD (GitLab, Azure). Proxmox virtualization & monitoring. Central security infrastructure (Vault, PKI).",
+        date: "December 2025 to present",
+      },
       odav: {
         title: "ODAV AG",
         description:
-          "Apprenticeship as IT Specialist for Application Development in Full Stack",
-        date: "September 2022 to present",
+          "Application Developer (Full Stack)\n\nDesigned and implemented a literature management app from scratch (Tesseract OCR, Elasticsearch, Liquibase). Built automated testing and deployment pipelines (GitLab, Kubernetes, ArgoCD).",
+        date: "September 2022 to July 2025",
       },
       finalSchool: {
         title: "Secondary School",
@@ -66,7 +72,7 @@ export default {
   // Tech stack
   tech: {
     title: "Technologies",
-    subtitle: "My technical expertise and preferred tools",
+    subtitle: "My stack for infrastructure, automation, and operations",
     proficiencyLevels: {
       expert: "Expert",
       advanced: "Advanced",
@@ -429,13 +435,13 @@ export default {
   // Footer
   footer: {
     description:
-      "Full-stack developer with a passion for exceptional digital experiences.",
+      "DevOps / Platform Engineer with a passion for reliable infrastructure and automation.",
     quickLinks: "Quick Links",
     services: "Services",
     servicesList: {
-      webDev: "Web Development",
-      mobileApp: "Mobile Apps",
-      uiux: "UI/UX Design",
+      webDev: "CI/CD & Automation",
+      mobileApp: "Cloud Infrastructure",
+      uiux: "Containers & Kubernetes",
       consulting: "Consulting",
     },
     contact: "Contact Info",

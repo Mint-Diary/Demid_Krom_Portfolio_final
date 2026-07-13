@@ -23,9 +23,9 @@ export default {
   // Hero section
   hero: {
     title1: "Привет, я",
-    title2: "Full Stack Разработчик",
+    title2: "DevOps / Platform-инженер",
     description:
-      "Имея опыт работы с современными веб-технологиями, я создаю исключительные цифровые решения, которые вдохновляют людей",
+      "Я строю и сопровождаю автоматизированную инфраструктуру, от CI/CD и Kubernetes до облака, чтобы софт работал надёжно и безопасно",
     cta: "Продолжить",
     ctaSecondary: "Посетить мой блог",
     cards: {
@@ -40,11 +40,17 @@ export default {
     title: "Мой путь",
     subtitle: "Обзор моего развития",
     events: {
+      derivatives: {
+        title: "LPA / Derivatives Data Solutions",
+        description:
+          "Инженер DevOps Platform\n\nVDI-инфраструктура (Kestra, Traefik). Миграция SVN→Git с CI/CD (GitLab, Azure). Proxmox & мониторинг. Безопасность (Vault, PKI).",
+        date: "Декабрь 2025 по настоящее время",
+      },
       odav: {
         title: "ODAV AG",
         description:
-          "Стажировка как IT-специалист по разработке приложений Full Stack",
-        date: "Сентябрь 2022 по настоящее время",
+          "Разработчик приложений (Full Stack)\n\nСпроектировал и реализовал приложение для управления литературой с нуля (Tesseract OCR, Elasticsearch, Liquibase). Построил автоматизированные конвейеры тестирования и развертывания (GitLab, Kubernetes, ArgoCD).",
+        date: "Сентябрь 2022 по Июль 2025",
       },
       finalSchool: {
         title: "Средняя школа",
@@ -66,7 +72,7 @@ export default {
   // Tech stack
   tech: {
     title: "Технологии",
-    subtitle: "Моя техническая экспертиза и предпочитаемые инструменты",
+    subtitle: "Мой стек для инфраструктуры, автоматизации и эксплуатации",
     proficiencyLevels: {
       expert: "Эксперт",
       advanced: "Продвинутый",
@@ -430,13 +436,13 @@ export default {
   // Footer
   footer: {
     description:
-      "Full-stack разработчик со страстью к исключительным цифровым решениям.",
+      "DevOps / Platform-инженер, увлечённый надёжной инфраструктурой и автоматизацией.",
     quickLinks: "Быстрые ссылки",
     services: "Услуги",
     servicesList: {
-      webDev: "Веб-разработка",
-      mobileApp: "Мобильные приложения",
-      uiux: "UI/UX дизайн",
+      webDev: "CI/CD и автоматизация",
+      mobileApp: "Облачная инфраструктура",
+      uiux: "Контейнеры и Kubernetes",
       consulting: "Консультирование",
     },
     contact: "Контактная информация",
