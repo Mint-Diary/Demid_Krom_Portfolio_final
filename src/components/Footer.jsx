@@ -36,7 +36,7 @@ export default function Footer({ onScrollToTop }) {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-slate-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-900 py-12 lg:py-20 text-gray-800 dark:text-white">
+    <footer className="relative overflow-hidden border-t border-slate-300 bg-gray-100 py-12 text-gray-800 lg:py-20 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
       <div className="relative z-10 container mx-auto px-4 lg:px-8 xl:max-w-7xl">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand */}
@@ -137,11 +137,11 @@ export default function Footer({ onScrollToTop }) {
           </div>
 
           {/* Scroll-to-top Column */}
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <button
               onClick={onScrollToTop}
               aria-label="Scroll to top"
-              className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-teal-600 dark:border-green-400 text-teal-600 dark:text-green-400 bg-white/60 dark:bg-white/10 backdrop-blur-lg transition-transform hover:-translate-y-1 hover:text-teal-500 dark:hover:text-green-300 hover:border-teal-500 dark:hover:border-green-300 animate-bounce"
+              className="flex h-14 w-14 animate-bounce items-center justify-center rounded-full border-2 border-teal-600 bg-white/60 text-teal-600 backdrop-blur-lg transition-transform hover:-translate-y-1 hover:border-teal-500 hover:text-teal-500 dark:border-green-400 dark:bg-white/10 dark:text-green-400 dark:hover:border-green-300 dark:hover:text-green-300"
             >
               <ArrowUp size={32} strokeWidth={2.5} />
             </button>
@@ -153,8 +153,11 @@ export default function Footer({ onScrollToTop }) {
           </div>
           <div className="flex items-center gap-4 text-sm font-medium text-gray-500">
             <span>
-              {t("footer.madeWith")} {" "}
-              <a href="#" className="text-teal-600 hover:text-teal-500 dark:text-green-400 dark:hover:text-green-300">
+              {t("footer.madeWith")}{" "}
+              <a
+                href="#"
+                className="text-teal-600 hover:text-teal-500 dark:text-green-400 dark:hover:text-green-300"
+              >
                 {t("common.fullName")}
               </a>
             </span>

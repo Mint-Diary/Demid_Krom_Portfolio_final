@@ -436,7 +436,7 @@ export default function ForestComponent() {
               className="w-full max-w-[min(20rem,34svh)] rotate-12 rounded-2xl border border-green-400/20 bg-green-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-green-400/20"
             >
               <img
-                src="/ide_dude.jpeg?height=400&width=300"
+                src="/development_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.ide")}
               />
@@ -446,7 +446,7 @@ export default function ForestComponent() {
               className="mt-5 w-full max-w-[min(20rem,34svh)] rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-emerald-400/20"
             >
               <img
-                src="/hand_with_iphone.jpg?height=400&width=300"
+                src="/devops_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.mobile")}
               />
@@ -456,7 +456,7 @@ export default function ForestComponent() {
               className="w-full max-w-[min(20rem,34svh)] -rotate-12 rounded-2xl border border-lime-400/20 bg-lime-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-lime-400/20"
             >
               <img
-                src="/vr_headset.jpeg?height=400&width=300"
+                src="/sysops_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.vr")}
               />

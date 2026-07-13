@@ -7,17 +7,18 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 
+// Titles are proper names; descriptions come from the locales.
 const projects = [
   {
     title: "Vuetris",
-    description: "A Tetris game built with Vue.js",
+    descriptionKey: "projects.items.vuetris",
     image: "/vuetris.png",
     github: "https://github.com/Mint-Diary/vuetris",
     live: "https://vuetris.com",
   },
   {
     title: "Guessing Game",
-    description: "a game where you have to guess the aspect ratio of an iphone",
+    descriptionKey: "projects.items.guessing",
     image: "/iphoneProject.png",
     github: "https://github.com/Mint-Diary/guessTheRatio",
     live: "https://v0-guess-i-phone-aspect-ratio-alpha.vercel.app/",
@@ -80,7 +81,7 @@ export default function Projects() {
                   {projects[currentIndex].title}
                 </h3>
                 <p className="mb-6 text-gray-200">
-                  {projects[currentIndex].description}
+                  {t(projects[currentIndex].descriptionKey)}
                 </p>
                 <div className="flex space-x-4">
                   {projects[currentIndex].github && (
@@ -102,7 +103,7 @@ export default function Projects() {
                       className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
                     >
                       <FiExternalLink className="mr-2" />
-                      <span>Live Demo</span>
+                      <span>{t("projects.liveDemo")}</span>
                     </a>
                   )}
                 </div>

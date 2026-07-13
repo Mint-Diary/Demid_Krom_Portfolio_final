@@ -32,34 +32,31 @@ export default function BlogListsFullWidth() {
               key={post.id}
               className="relative flex flex-col overflow-hidden rounded-lg bg-white shadow-xs lg:h-72 lg:flex-row xl:h-80 dark:bg-slate-800"
             >
-              {/* Ribbon */}
-              <div className="group absolute -top-2.5 -right-2.5 z-10 size-28 overflow-visible">
-                <span className="absolute top-0 size-2.5 bg-teal-900" />
-                <span className="absolute right-0 bottom-0 size-2.5 bg-teal-900" />
-                <div className="absolute right-0 bottom-0 flex w-[calc(100%*1.4142)] origin-bottom-right rotate-45 items-center justify-center gap-1.5 bg-teal-600 p-2.5 text-center text-sm leading-tight text-white hover:bg-teal-700 active:bg-teal-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className="inline-block size-4 text-teal-200"
-                  >
-                    <path d="M7.25 3.688a.75.75 0 0 1 1.5 0v4.562c0 .052-.043.094-.094.094H7.344a.094.094 0 0 1-.094-.094V3.688ZM8 10a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" />
-                    <path
-                      fillRule="evenodd"
-                      d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-xs font-semibold">
-                    {t("common.ribbonBlog")}
-                  </span>
+              {/* "New" ribbon, only on the newest post */}
+              {post.isNew && (
+                <div className="absolute -top-2.5 -right-2.5 z-10 size-28 overflow-visible">
+                  <span className="absolute top-0 size-2.5 bg-amber-800" />
+                  <span className="absolute right-0 bottom-0 size-2.5 bg-amber-800" />
+                  <div className="absolute right-0 bottom-0 flex w-[calc(100%*1.4142)] origin-bottom-right rotate-45 items-center justify-center gap-1.5 bg-amber-500 p-2.5 text-center text-sm leading-tight text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      className="inline-block size-4 text-amber-100"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5 4a.75.75 0 0 1 .738.616l.252 1.388A1.25 1.25 0 0 0 6.996 7.01l1.388.252a.75.75 0 0 1 0 1.476l-1.388.252A1.25 1.25 0 0 0 5.99 9.996l-.252 1.388a.75.75 0 0 1-1.476 0L4.01 9.996A1.25 1.25 0 0 0 3.004 8.99l-1.388-.252a.75.75 0 0 1 0-1.476l1.388-.252A1.25 1.25 0 0 0 4.01 6.004l.252-1.388A.75.75 0 0 1 5 4Zm7-3a.75.75 0 0 1 .721.544l.195.682c.118.415.443.74.858.858l.682.195a.75.75 0 0 1 0 1.442l-.682.195a1.25 1.25 0 0 0-.858.858l-.195.682a.75.75 0 0 1-1.442 0l-.195-.682a1.25 1.25 0 0 0-.858-.858l-.682-.195a.75.75 0 0 1 0-1.442l.682-.195a1.25 1.25 0 0 0 .858-.858l.195-.682A.75.75 0 0 1 12 1Zm-1 9a.75.75 0 0 1 .728.568l.086.345c.09.36.371.641.731.731l.345.086a.75.75 0 0 1 0 1.456l-.345.086a1 1 0 0 0-.731.731l-.086.345a.75.75 0 0 1-1.456 0l-.086-.345a1 1 0 0 0-.731-.731l-.345-.086a.75.75 0 0 1 0-1.456l.345-.086a1 1 0 0 0 .731-.731l.086-.345A.75.75 0 0 1 11 10Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-xs font-semibold">
+                      {t("common.ribbonNew")}
+                    </span>
+                  </div>
                 </div>
-                {/* Tooltip */}
-                <div className="absolute top-1/2 right-full mr-2 hidden -translate-y-1/2 rounded bg-teal-600 px-3 py-1 text-xs font-medium whitespace-nowrap text-white shadow-lg group-hover:block">
-                  {t("common.ribbonBlogTooltip")}
-                </div>
-              </div>
-              {/* END Ribbon */}
+              )}
 
               <Link
                 to={`/blog/${post.slug}`}
@@ -83,7 +80,7 @@ export default function BlogListsFullWidth() {
                 <img
                   src={post.image || "/placeholder.svg"}
                   className="h-full w-full object-cover object-center"
-                  alt={`Featured Image of ${post.title}`}
+                  alt={post.title}
                 />
               </Link>
               <div className="flex w-full flex-col justify-center p-6 lg:h-full lg:w-3/5 lg:self-center lg:px-10 lg:py-8 xl:w-2/3">

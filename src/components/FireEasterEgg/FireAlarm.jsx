@@ -11,7 +11,16 @@
  * red button that starts the extinguish sequence.
  */
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "../../i18n/index.jsx";
 import { useFire } from "./FireContext.jsx";
+
+/** Tiny "{placeholder}" interpolation for locale strings. */
+function fmt(template, vars) {
+  return Object.entries(vars).reduce(
+    (acc, [key, value]) => acc.replaceAll(`{${key}}`, value),
+    template,
+  );
+}
 
 // Crack lines (100x140 viewBox), revealed in stages as the glass takes hits.
 const CRACK_STAGES = [
@@ -44,6 +53,7 @@ export default function FireAlarm() {
     hitGlass,
     pressAlarm,
   } = useFire();
+  const { t } = useTranslation();
   const [shards, setShards] = useState(false);
 
   const burning = phase === "burning";
@@ -84,9 +94,9 @@ export default function FireAlarm() {
     <div className={`fire-alarm ${burning ? "fire-alarm--alert" : ""}`}>
       <div className="fire-alarm__body">
         <div className="fire-alarm__label">
-          FEUER
+          {t("fire.alarm.line1")}
           <br />
-          MELDER
+          {t("fire.alarm.line2")}
         </div>
 
         <div className="fire-alarm__window">
@@ -96,7 +106,7 @@ export default function FireAlarm() {
               type="button"
               className={`fire-alarm__glass ${alarmClicks > 0 ? "fire-alarm__glass--hit" : ""}`}
               onClick={hitGlass}
-              aria-label="Scheibe einschlagen"
+              aria-label={t("fire.alarm.ariaBreak")}
             >
               {stage > 0 && (
                 <svg
@@ -118,9 +128,9 @@ export default function FireAlarm() {
               type="button"
               className={`fire-alarm__button ${burning ? "fire-alarm__button--urgent" : ""}`}
               onClick={pressAlarm}
-              aria-label="Feuer löschen"
+              aria-label={t("fire.alarm.ariaExtinguish")}
             >
-              DRÜCKEN
+              {t("fire.alarm.button")}
             </button>
           )}
 
@@ -136,11 +146,11 @@ export default function FireAlarm() {
         <div className="fire-alarm__hint">
           {glassBroken
             ? burning
-              ? "JETZT DRÜCKEN!"
-              : "Knopf drücken"
+              ? t("fire.alarm.hintUrgent")
+              : t("fire.alarm.hintPress")
             : alarmClicks > 0
-              ? `Noch ${hitsLeft}× schlagen`
-              : "Im Brandfall Scheibe einschlagen"}
+              ? fmt(t("fire.alarm.hintHits"), { count: hitsLeft })
+              : t("fire.alarm.hintIdle")}
         </div>
       </div>
     </div>

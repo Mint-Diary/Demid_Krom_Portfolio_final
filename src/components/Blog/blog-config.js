@@ -9,6 +9,7 @@ export const getBlogPosts = (t) => [
     readTime: t("blog.blogs.leetcode.readTime"),
     image: "/leet.png",
     component: "BlogPost2",
+    isNew: true, // newest post gets the corner ribbon
   },
   {
     id: 2,

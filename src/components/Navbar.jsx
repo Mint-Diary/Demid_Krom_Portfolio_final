@@ -78,10 +78,10 @@ export default function MainHeadersSimple() {
   return (
     <>
       {/* Main Header Section: Building Pixel Art */}
-      <div className="relative h-21 bg-[#F0FDFA] dark:bg-[#101828] text-gray-800 dark:text-white">
+      <div className="relative h-21 bg-[#F0FDFA] text-gray-800 dark:bg-[#101828] dark:text-white">
         {/* Main Header */}
         <header
-          className={`building-navbar relative flex flex-none items-center bg-slate-100 dark:bg-[#101828] pt-5 pb-4 ${
+          className={`building-navbar relative flex flex-none items-center bg-slate-100 pt-5 pb-4 dark:bg-[#101828] ${
             buildingComplete ? "completion-flash" : ""
           } ${buildingComplete ? "pointer-events-auto" : "pointer-events-none"}`}
         >
@@ -112,7 +112,7 @@ export default function MainHeadersSimple() {
               <div className="relative overflow-hidden">
                 <button
                   onClick={handleLogoClick}
-                  className="logo-build group animate-build-logo inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:text-green-300 hover:cursor-pointer"
+                  className="logo-build group animate-build-logo inline-flex items-center gap-3 font-mono text-lg font-bold tracking-wider text-green-400 hover:cursor-pointer hover:text-green-300"
                 >
                   <div className="pixel-logo animate-build-pixel-logo relative h-6 w-6 bg-green-400 [image-rendering:pixelated]">
                     <div className="animate-build-pixel-detail-1 absolute top-1 left-1 h-2 w-2 bg-black" />
@@ -140,7 +140,7 @@ export default function MainHeadersSimple() {
                   <div key={item.id} className="inline-block overflow-hidden">
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`inline-block border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 px-4 py-2 font-mono text-sm font-bold text-gray-800 dark:text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white hover:cursor-pointer animate-build-menu-${index + 1}`}
+                      className={`inline-block border-2 border-gray-300 bg-gray-200 px-4 py-2 font-mono text-sm font-bold text-gray-800 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:cursor-pointer hover:border-gray-400 hover:bg-gray-300 hover:text-black dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:bg-gray-700 dark:hover:text-white animate-build-menu-${index + 1}`}
                     >
                       <span>{item.name}</span>
                     </button>
@@ -153,7 +153,7 @@ export default function MainHeadersSimple() {
                 <button
                   onClick={() => setMobileNavOpen(true)}
                   type="button"
-                  className="mobile-button animate-build-mobile-button inline-flex items-center justify-center gap-2 border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 px-3 py-2 text-sm leading-5 font-bold text-gray-800 dark:text-white transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-300 dark:hover:bg-gray-600"
+                  className="mobile-button animate-build-mobile-button inline-flex items-center justify-center gap-2 border-2 border-gray-300 bg-gray-200 px-3 py-2 text-sm leading-5 font-bold text-gray-800 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 hover:bg-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:border-gray-500 dark:hover:bg-gray-600"
                   aria-controls="tkMobileNav"
                   aria-label={t("common.menu")}
                 >
@@ -180,13 +180,13 @@ export default function MainHeadersSimple() {
               >
                 <nav
                   id="tkMobileNav"
-                  className="fixed top-0 right-0 bottom-0 z-[9998] w-72 overflow-auto border-l-4 border-gray-300 dark:border-gray-600 bg-[#F0FDFA] dark:bg-gray-800 shadow-lg"
+                  className="fixed top-0 right-0 bottom-0 z-[9998] w-72 overflow-auto border-l-4 border-gray-300 bg-[#F0FDFA] shadow-lg dark:border-gray-600 dark:bg-gray-800"
                   tabIndex={-1}
                   aria-labelledby="tkMobileNavLabel"
                   aria-modal="true"
                   role="dialog"
                 >
-                  <div className="flex items-center justify-between border-b-2 border-gray-300 dark:border-gray-600 p-6">
+                  <div className="flex items-center justify-between border-b-2 border-gray-300 p-6 dark:border-gray-600">
                     {/* Logo */}
                     <button
                       id="tkMobileNavLabel"
@@ -206,7 +206,7 @@ export default function MainHeadersSimple() {
                     <button
                       onClick={() => setMobileNavOpen(false)}
                       type="button"
-                      className="inline-flex items-center justify-center gap-2 border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 px-3 py-2 text-sm leading-5 font-bold text-gray-800 dark:text-white transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-300 dark:hover:bg-gray-600"
+                      className="inline-flex items-center justify-center gap-2 border-2 border-gray-300 bg-gray-200 px-3 py-2 text-sm leading-5 font-bold text-gray-800 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 hover:bg-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:border-gray-500 dark:hover:bg-gray-600"
                       aria-label={t("common.close")}
                     >
                       <div className="relative h-5 w-5">
@@ -217,12 +217,12 @@ export default function MainHeadersSimple() {
                   </div>
 
                   {/* Mobile Language Switcher */}
-                  <div className="border-b-2 border-gray-300 dark:border-gray-600 px-6 py-3">
+                  <div className="border-b-2 border-gray-300 px-6 py-3 dark:border-gray-600">
                     <LanguageSwitcher />
                   </div>
 
                   {/* Mobile Theme Toggle */}
-                  <div className="border-b-2 border-gray-300 dark:border-gray-600 px-6 py-3">
+                  <div className="border-b-2 border-gray-300 px-6 py-3 dark:border-gray-600">
                     <ThemeToggle />
                   </div>
 
@@ -231,7 +231,7 @@ export default function MainHeadersSimple() {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className="border-2 border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 px-4 py-3 font-mono text-sm font-bold text-gray-800 dark:text-gray-300 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-black dark:hover:text-white hover:cursor-pointer"
+                        className="border-2 border-gray-300 bg-gray-200 px-4 py-3 font-mono text-sm font-bold text-gray-800 transition-all duration-100 ease-linear [image-rendering:pixelated] hover:translate-x-px hover:translate-y-px hover:cursor-pointer hover:border-gray-400 hover:bg-gray-300 hover:text-black dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:bg-gray-700 dark:hover:text-white"
                       >
                         <span>{item.name}</span>
                       </button>

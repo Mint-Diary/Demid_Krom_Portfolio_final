@@ -32,17 +32,17 @@ export default function BlogPostPage() {
       <div className="flex min-h-screen items-center justify-center bg-white dark:bg-slate-800">
         <div className="text-center">
           <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-            Post Not Found
+            {t("blog.notFound.title")}
           </h1>
           <p className="mb-8 text-gray-600 dark:text-gray-400">
-            The blog post you&apos;re looking for doesn&apos;t exist.
+            {t("blog.notFound.description")}
           </p>
           <Link
             to="/#blog"
             className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-white transition-colors hover:bg-teal-700"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Portfolio
+            {t("blog.notFound.back")}
           </Link>
         </div>
       </div>

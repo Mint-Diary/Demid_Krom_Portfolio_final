@@ -426,7 +426,7 @@ export default function HeroLight() {
               className="w-full max-w-[min(20rem,34svh)] rotate-12 rounded-2xl border border-teal-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
             >
               <img
-                src="/ide_dude.jpeg?height=400&width=300"
+                src="/development_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.ide")}
               />
@@ -436,7 +436,7 @@ export default function HeroLight() {
               className="mt-5 w-full max-w-[min(20rem,34svh)] rounded-2xl border border-cyan-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
             >
               <img
-                src="/hand_with_iphone.jpg?height=400&width=300"
+                src="/devops_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.mobile")}
               />
@@ -446,7 +446,7 @@ export default function HeroLight() {
               className="w-full max-w-[min(20rem,34svh)] -rotate-12 rounded-2xl border border-emerald-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
             >
               <img
-                src="/vr_headset.jpeg?height=400&width=300"
+                src="/sysops_hero.png"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.vr")}
               />
