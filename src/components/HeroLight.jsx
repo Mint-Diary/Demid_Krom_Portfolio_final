@@ -133,8 +133,10 @@ function ParticleGridWave() {
     points.geometry.attributes.position.needsUpdate = true;
     lines.geometry.attributes.position.needsUpdate = true;
 
-    if (materialRef.current) materialRef.current.size = 0.2 + Math.sin(time * 2) * 0.05;
-    if (lineMaterialRef.current) lineMaterialRef.current.opacity = 0.4 + Math.sin(time * 1.5) * 0.1;
+    if (materialRef.current)
+      materialRef.current.size = 0.2 + Math.sin(time * 2) * 0.05;
+    if (lineMaterialRef.current)
+      lineMaterialRef.current.opacity = 0.4 + Math.sin(time * 1.5) * 0.1;
   });
 
   return (
@@ -142,18 +144,50 @@ function ParticleGridWave() {
       {/* Points */}
       <points ref={pointsRef}>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" array={positions} count={positions.length / 3} itemSize={3} />
-          <bufferAttribute attach="attributes-color" array={colors} count={colors.length / 3} itemSize={3} />
+          <bufferAttribute
+            attach="attributes-position"
+            array={positions}
+            count={positions.length / 3}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-color"
+            array={colors}
+            count={colors.length / 3}
+            itemSize={3}
+          />
         </bufferGeometry>
-        <pointsMaterial ref={materialRef} size={0.25} vertexColors transparent opacity={0.7} sizeAttenuation />
+        <pointsMaterial
+          ref={materialRef}
+          size={0.25}
+          vertexColors
+          transparent
+          opacity={0.7}
+          sizeAttenuation
+        />
       </points>
       {/* Lines */}
       <lineSegments ref={linesRef}>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" array={linePositions} count={linePositions.length / 3} itemSize={3} />
-          <bufferAttribute attach="attributes-color" array={lineColors} count={lineColors.length / 3} itemSize={3} />
+          <bufferAttribute
+            attach="attributes-position"
+            array={linePositions}
+            count={linePositions.length / 3}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-color"
+            array={lineColors}
+            count={lineColors.length / 3}
+            itemSize={3}
+          />
         </bufferGeometry>
-        <lineBasicMaterial ref={lineMaterialRef} vertexColors transparent opacity={0.4} />
+        <lineBasicMaterial
+          ref={lineMaterialRef}
+          vertexColors
+          transparent
+          opacity={0.4}
+        />
       </lineSegments>
     </group>
   );
@@ -204,8 +238,18 @@ function FloatingParticles() {
   return (
     <points ref={particlesRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" array={positions} count={particleCount} itemSize={3} />
-        <bufferAttribute attach="attributes-color" array={colors} count={particleCount} itemSize={3} />
+        <bufferAttribute
+          attach="attributes-position"
+          array={positions}
+          count={particleCount}
+          itemSize={3}
+        />
+        <bufferAttribute
+          attach="attributes-color"
+          array={colors}
+          count={particleCount}
+          itemSize={3}
+        />
       </bufferGeometry>
       <pointsMaterial size={0.3} vertexColors transparent opacity={0.8} />
     </points>
@@ -254,8 +298,18 @@ function TopParticles() {
   return (
     <points ref={particlesRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" array={positions} count={particleCount} itemSize={3} />
-        <bufferAttribute attach="attributes-color" array={colors} count={particleCount} itemSize={3} />
+        <bufferAttribute
+          attach="attributes-position"
+          array={positions}
+          count={particleCount}
+          itemSize={3}
+        />
+        <bufferAttribute
+          attach="attributes-color"
+          array={colors}
+          count={particleCount}
+          itemSize={3}
+        />
       </bufferGeometry>
       <pointsMaterial size={0.4} vertexColors transparent opacity={0.9} />
     </points>
@@ -266,10 +320,29 @@ function LightScene() {
   return (
     <>
       <ambientLight intensity={0.6} color="#f0fdfa" />
-      <directionalLight position={[10, 20, 10]} intensity={0.8} color="#ccfbf1" />
-      <pointLight position={[-50, 30, -50]} color="#99f6e4" intensity={1.5} distance={100} />
-      <pointLight position={[50, 30, 50]} color="#5eead4" intensity={1.5} distance={100} />
-      <pointLight position={[0, 50, 0]} color="#2dd4bf" intensity={0.8} distance={120} />
+      <directionalLight
+        position={[10, 20, 10]}
+        intensity={0.8}
+        color="#ccfbf1"
+      />
+      <pointLight
+        position={[-50, 30, -50]}
+        color="#99f6e4"
+        intensity={1.5}
+        distance={100}
+      />
+      <pointLight
+        position={[50, 30, 50]}
+        color="#5eead4"
+        intensity={1.5}
+        distance={100}
+      />
+      <pointLight
+        position={[0, 50, 0]}
+        color="#2dd4bf"
+        intensity={0.8}
+        distance={120}
+      />
 
       <ParticleGridWave />
       <FloatingParticles />
@@ -286,14 +359,20 @@ function LightScene() {
 export default function HeroLight() {
   const { t } = useTranslation();
 
+  // Hero height: 100svh minus the 84px (h-21) navbar so nothing hides below
+  // the fold; svh tracks the real visible height on mobile (collapsing URL bar).
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-teal-50 via-cyan-50 to-emerald-100">
+    <div className="relative h-[calc(100svh-5.25rem)] overflow-hidden bg-gradient-to-b from-teal-50 via-cyan-50 to-emerald-100">
       {/* 3D Canvas */}
       <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <Canvas
           className="h-full w-full"
           camera={{ position: [0, -2, 30], fov: 60, near: 0.1, far: 1000 }}
-          gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
+          gl={{
+            alpha: true,
+            antialias: true,
+            powerPreference: "high-performance",
+          }}
         >
           <LightScene />
         </Canvas>
@@ -301,7 +380,7 @@ export default function HeroLight() {
 
       {/* Overlay */}
       <div
-        className="relative container mx-auto px-4 py-16 lg:px-8 lg:py-32 xl:max-w-6xl"
+        className="relative container mx-auto flex h-full flex-col justify-center px-4 py-6 lg:px-8 lg:py-8 xl:max-w-6xl"
         style={{ zIndex: 5, position: "relative", pointerEvents: "none" }}
       >
         <div className="relative text-center">
@@ -317,25 +396,60 @@ export default function HeroLight() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col justify-center gap-2 pt-8 pb-16 sm:flex-row sm:items-center sm:gap-3" style={{ pointerEvents: "auto" }}>
-            <a href="/timeline" className="group inline-flex items-center justify-center gap-2 rounded-lg border border-teal-500 bg-teal-500 px-5 py-2.5 text-sm font-semibold leading-6 text-white shadow-lg transition-all duration-300 hover:bg-teal-600 hover:shadow-xl focus:ring-3 focus:ring-teal-500/50">
+          <div
+            className="flex flex-col justify-center gap-2 pt-6 pb-8 sm:flex-row sm:items-center sm:gap-3"
+            style={{ pointerEvents: "auto" }}
+          >
+            <a
+              href="/timeline"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-teal-500 bg-teal-500 px-5 py-2.5 text-sm leading-6 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-teal-600 hover:shadow-xl focus:ring-3 focus:ring-teal-500/50"
+            >
               <span>{t("hero.cta")}</span>
             </a>
-            <a href="/blog" className="inline-flex items-center justify-center gap-2 rounded-lg border border-teal-200 bg-white/80 px-5 py-2.5 text-sm font-semibold leading-6 text-teal-700 backdrop-blur-sm transition-all duration-300 hover:bg-white hover:border-teal-300 hover:shadow-lg">
+            <a
+              href="/blog"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-teal-200 bg-white/80 px-5 py-2.5 text-sm leading-6 font-semibold text-teal-700 backdrop-blur-sm transition-all duration-300 hover:border-teal-300 hover:bg-white hover:shadow-lg"
+            >
               <span>{t("hero.ctaSecondary")}</span>
             </a>
           </div>
 
           {/* Cards */}
-          <div className="group relative flex items-center justify-center gap-2 sm:gap-10" style={{ zIndex: 15, pointerEvents: "auto" }}>
-            <div className="w-full max-w-80 rotate-12 rounded-2xl border border-teal-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-              <img src="/ide_dude.jpeg?height=400&width=300" className="aspect-3/4 w-full rounded-xl object-cover" alt={t("hero.cards.ide")} />
+          <div
+            className="group relative flex items-center justify-center gap-2 sm:gap-10"
+            style={{ zIndex: 15, pointerEvents: "auto" }}
+          >
+            {/* max-w: 20rem, but capped by viewport height (3/4 aspect) so
+                the cards never slide below the fold on flat screens */}
+            <div
+              data-flammable
+              className="w-full max-w-[min(20rem,34svh)] rotate-12 rounded-2xl border border-teal-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+            >
+              <img
+                src="/ide_dude.jpeg?height=400&width=300"
+                className="aspect-3/4 w-full rounded-xl object-cover"
+                alt={t("hero.cards.ide")}
+              />
             </div>
-            <div className="mt-5 w-full max-w-80 rounded-2xl border border-cyan-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-              <img src="/hand_with_iphone.jpg?height=400&width=300" className="aspect-3/4 w-full rounded-xl object-cover" alt={t("hero.cards.mobile")} />
+            <div
+              data-flammable
+              className="mt-5 w-full max-w-[min(20rem,34svh)] rounded-2xl border border-cyan-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+            >
+              <img
+                src="/hand_with_iphone.jpg?height=400&width=300"
+                className="aspect-3/4 w-full rounded-xl object-cover"
+                alt={t("hero.cards.mobile")}
+              />
             </div>
-            <div className="w-full max-w-80 -rotate-12 rounded-2xl border border-emerald-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-              <img src="/vr_headset.jpeg?height=400&width=300" className="aspect-3/4 w-full rounded-xl object-cover" alt={t("hero.cards.vr")} />
+            <div
+              data-flammable
+              className="w-full max-w-[min(20rem,34svh)] -rotate-12 rounded-2xl border border-emerald-200 bg-white/80 p-2.5 shadow-xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+            >
+              <img
+                src="/vr_headset.jpeg?height=400&width=300"
+                className="aspect-3/4 w-full rounded-xl object-cover"
+                alt={t("hero.cards.vr")}
+              />
             </div>
           </div>
         </div>

@@ -360,8 +360,10 @@ function FuturisticScene() {
 export default function ForestComponent() {
   const { t } = useTranslation();
 
+  // Hero height: 100svh minus the 84px (h-21) navbar so nothing hides below
+  // the fold; svh tracks the real visible height on mobile (collapsing URL bar).
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b from-slate-900 via-green-900 to-black">
+    <div className="relative h-[calc(100svh-5.25rem)] overflow-hidden bg-gradient-to-b from-slate-900 via-green-900 to-black">
       {/* 3D Canvas Background */}
       <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <Canvas
@@ -384,7 +386,7 @@ export default function ForestComponent() {
 
       {/* Overlay Content */}
       <div
-        className="relative container mx-auto px-4 py-16 text-white lg:px-8 lg:py-32 xl:max-w-6xl"
+        className="relative container mx-auto flex h-full flex-col justify-center px-4 py-6 text-white lg:px-8 lg:py-8 xl:max-w-6xl"
         style={{
           zIndex: 5,
           position: "relative",
@@ -405,7 +407,7 @@ export default function ForestComponent() {
 
           {/* Buttons */}
           <div
-            className="flex flex-col justify-center gap-2 pt-8 pb-16 sm:flex-row sm:items-center sm:gap-3"
+            className="flex flex-col justify-center gap-2 pt-6 pb-8 sm:flex-row sm:items-center sm:gap-3"
             style={{ pointerEvents: "auto" }}
           >
             <a
@@ -427,21 +429,32 @@ export default function ForestComponent() {
             className="group relative flex items-center justify-center gap-2 sm:gap-10"
             style={{ zIndex: 15, pointerEvents: "auto" }}
           >
-            <div className="w-full max-w-80 rotate-12 rounded-2xl border border-green-400/20 bg-green-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-green-400/20">
+            {/* max-w: 20rem, but capped by viewport height (3/4 aspect) so
+                the cards never slide below the fold on flat screens */}
+            <div
+              data-flammable
+              className="w-full max-w-[min(20rem,34svh)] rotate-12 rounded-2xl border border-green-400/20 bg-green-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-green-400/20"
+            >
               <img
                 src="/ide_dude.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.ide")}
               />
             </div>
-            <div className="mt-5 w-full max-w-80 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-emerald-400/20">
+            <div
+              data-flammable
+              className="mt-5 w-full max-w-[min(20rem,34svh)] rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-emerald-400/20"
+            >
               <img
                 src="/hand_with_iphone.jpg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
                 alt={t("hero.cards.mobile")}
               />
             </div>
-            <div className="w-full max-w-80 -rotate-12 rounded-2xl border border-lime-400/20 bg-lime-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-lime-400/20">
+            <div
+              data-flammable
+              className="w-full max-w-[min(20rem,34svh)] -rotate-12 rounded-2xl border border-lime-400/20 bg-lime-400/10 p-2.5 shadow-2xl backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-lime-400/20"
+            >
               <img
                 src="/vr_headset.jpeg?height=400&width=300"
                 className="aspect-3/4 w-full rounded-xl object-cover"
