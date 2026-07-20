@@ -41,13 +41,13 @@ export default {
       derivatives: {
         title: "LPA / Derivatives Data Solutions",
         description:
-          "DevOps Platform Engineer\n\nVDI-Infrastruktur (Kestra, Traefik) aufgebaut. SVN→Git-Migration mit CI/CD (GitLab, Azure). Proxmox-Virtualisierung & Monitoring. Zentrale Sicherheitsinfrastruktur (Vault, PKI).",
+          "DevOps Platform Engineer\n\nMigration der On-Premises-Infrastruktur ins Rechenzentrum inkl. VDI-Plattform geleitet und den Stromverbrauch durch automatisierte Orchestrierung (Kestra, Ansible, Terraform) von 19 kW auf ~4 kW gesenkt. Proxmox-Umgebung (82 VMs) mit Monitoring (Prometheus, Grafana) und zentrales Secrets-Management (HashiCorp Vault, eigene PKI) aufgebaut.",
         date: "Dezember 2025 bis heute",
       },
       odav: {
         title: "ODAV AG",
         description:
-          "Fachinformatiker für Anwendungsentwicklung (Full Stack)\n\nLiteraturverwaltungs-App von Grund auf konzipiert und umgesetzt (Tesseract OCR, Elasticsearch, Liquibase). Automatisierte Test- und Deploy-Pipelines aufgebaut (GitLab, Kubernetes, ArgoCD).",
+          "Fachinformatiker für Anwendungsentwicklung (Ausbildung)\n\nAnwendung zur automatisierten Literatur- und Medienverwaltung konzipiert und entwickelt (Tesseract OCR, Elasticsearch, Liquibase). Automatisierte CI/CD-Pipelines (GitLab, Kubernetes, ArgoCD) für mehr Systemstabilität und bessere Entwickler-Workflows aufgebaut.",
         date: "September 2022 bis Juli 2025",
       },
       finalSchool: {
@@ -55,14 +55,6 @@ export default {
         description:
           "Abschluss an der Herzog-Ludwig-Mittelschule in Bogen mit dem Mittleren Bildungsabschluss",
         date: "Dezember 2017 bis September 2022",
-      },
-      school: {
-        title: "Mittelschule in Regensburg",
-        description:
-          "Besuch der St.-Wolfgang-Mittelschule in Regensburg, anschließend Schulwechsel " +
-          "nach Bogen zur Herzog-Ludwig-Mittelschule, wo der Mittlere Bildungsabschluss erworben " +
-          "wurde",
-        date: "August 2016 bis Dezember 2017",
       },
     },
   },

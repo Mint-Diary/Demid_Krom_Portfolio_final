@@ -43,13 +43,13 @@ export default {
       derivatives: {
         title: "LPA / Derivatives Data Solutions",
         description:
-          "DevOpsプラットフォームエンジニア\n\nVDI基盤構築（Kestra、Traefik）。SVN→Git移行とCI/CD（GitLab、Azure）。Proxmox仮想化＆監視。セキュリティ基盤（Vault、PKI）。",
+          "DevOpsプラットフォームエンジニア\n\nオンプレミス基盤のデータセンターへの移行（VDIプラットフォーム含む）を主導し、自動オーケストレーション（Kestra、Ansible、Terraform）により消費電力を19 kWから約4 kWに削減。82台のVMを備えたProxmox環境と監視（Prometheus、Grafana）、一元的なシークレット管理（HashiCorp Vault、独自PKI）を構築。",
         date: "2025年12月から現在",
       },
       odav: {
         title: "ODAV AG",
         description:
-          "アプリケーション開発者（フルスタック）\n\n文献管理アプリをゼロから設計・実装（Tesseract OCR、Elasticsearch、Liquibase）。自動テストと展開パイプラインを構築（GitLab、Kubernetes、ArgoCD）。",
+          "アプリケーション開発エンジニア（研修生）\n\n文献・メディアの自動管理アプリケーションを設計・開発（Tesseract OCR、Elasticsearch、Liquibase）。自動CI/CDパイプライン（GitLab、Kubernetes、ArgoCD）を構築し、システムの安定性と開発者のワークフローを改善。",
         date: "2022年9月から2025年7月",
       },
       finalSchool: {
@@ -57,14 +57,6 @@ export default {
         description:
           "ボーゲンのヘルツォーク・ルートヴィヒ中等学校を中等学校修了証書で卒業",
         date: "2017年12月から2022年9月",
-      },
-      school: {
-        title: "レーゲンスブルクの中等学校",
-        description:
-          "レーゲンスブルクの聖ヴォルフガング中等学校に通学後、" +
-          "ボーゲンのヘルツォーク・ルートヴィヒ中等学校に転校し、そこで中等学校修了証書を" +
-          "取得",
-        date: "2016年8月から2017年12月",
       },
     },
   },

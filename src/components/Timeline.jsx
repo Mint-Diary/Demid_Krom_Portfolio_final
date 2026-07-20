@@ -178,7 +178,7 @@ export default function TimelineComponent() {
 
           {/* Timeline — newest first; entries live in the locales under timeline.events */}
           <ul className="relative space-y-4 pl-10 md:pl-12">
-            {["derivatives", "odav", "finalSchool", "school"].map((event) => (
+            {["derivatives", "odav", "finalSchool"].map((event) => (
               <li key={event} className="relative">
                 <div className="absolute top-0 bottom-0 left-0 mt-5 flex w-10 -translate-x-full justify-center md:w-12">
                   <div className="size-3 rounded-full bg-teal-500 ring-3 ring-teal-100 ring-offset-2 dark:bg-teal-300 dark:ring-teal-900 dark:ring-offset-slate-900" />

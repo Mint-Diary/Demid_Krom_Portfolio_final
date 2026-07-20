@@ -66,8 +66,8 @@ export default function DownloadCard() {
 
             {/* Download Button */}
             <a
-              href="/CV_DK.pdf"
-              download="Demid-Krom-Lebenslauf"
+              href="/Demid_Krom_CV.pdf"
+              download="Demid_Krom_CV"
               target="_blank"
               rel="noreferrer"
               className="group w-full"
@@ -138,8 +138,8 @@ export default function DownloadCard() {
 
             {/* Download Button */}
             <a
-              href="/Certificates_DK.pdf"
-              download="Demid-Krom-Zertifikate"
+              href="/Demid_Krom_Certificates.pdf"
+              download="Demid_Krom_Certificates"
               target="_blank"
               rel="noreferrer"
               className="group w-full"
@@ -210,8 +210,8 @@ export default function DownloadCard() {
 
             {/* Download Button */}
             <a
-              href="/Reference_DK.pdf"
-              download="Demid-Krom-Arbeitszeugnis"
+              href="/Demid_Krom_Reference.pdf"
+              download="Demid_Krom_Reference"
               target="_blank"
               rel="noreferrer"
               className="group w-full"

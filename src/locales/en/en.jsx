@@ -43,13 +43,13 @@ export default {
       derivatives: {
         title: "LPA / Derivatives Data Solutions",
         description:
-          "DevOps Platform Engineer\n\nBuilt VDI infrastructure (Kestra, Traefik). SVN→Git migration with CI/CD (GitLab, Azure). Proxmox virtualization & monitoring. Central security infrastructure (Vault, PKI).",
+          "DevOps Platform Engineer\n\nLed the on-premises to data-center migration incl. a VDI platform, cutting power consumption from 19 kW to ~4 kW through automated orchestration (Kestra, Ansible, Terraform). Set up a Proxmox environment (82 VMs) with monitoring (Prometheus, Grafana) and central secrets management (HashiCorp Vault, custom PKI).",
         date: "December 2025 to present",
       },
       odav: {
         title: "ODAV AG",
         description:
-          "Application Developer (Full Stack)\n\nDesigned and implemented a literature management app from scratch (Tesseract OCR, Elasticsearch, Liquibase). Built automated testing and deployment pipelines (GitLab, Kubernetes, ArgoCD).",
+          "IT Specialist in Application Development (Apprentice)\n\nDesigned and built an application for automated literature and media management (Tesseract OCR, Elasticsearch, Liquibase). Built automated CI/CD pipelines (GitLab, Kubernetes, ArgoCD) to improve system stability and developer workflows.",
         date: "September 2022 to July 2025",
       },
       finalSchool: {
@@ -57,14 +57,6 @@ export default {
         description:
           "Graduation from Herzog-Ludwig Secondary School in Bogen with intermediate school certificate",
         date: "December 2017 to September 2022",
-      },
-      school: {
-        title: "Secondary School in Regensburg",
-        description:
-          "Attended St.-Wolfgang Secondary School in Regensburg, then transferred to " +
-          "Herzog-Ludwig Secondary School in Bogen, where the intermediate school certificate was " +
-          "obtained",
-        date: "August 2016 to December 2017",
       },
     },
   },

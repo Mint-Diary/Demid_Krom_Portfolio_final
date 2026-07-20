@@ -43,13 +43,13 @@ export default {
       derivatives: {
         title: "LPA / Derivatives Data Solutions",
         description:
-          "Ingénieur DevOps Platform\n\nInfrastructure VDI (Kestra, Traefik). Migration SVN→Git avec CI/CD (GitLab, Azure). Virtualisation Proxmox & monitoring. Sécurité (Vault, PKI).",
+          "Ingénieur DevOps Platform\n\nPiloté la migration de l'infrastructure sur site vers un centre de données incl. une plateforme VDI, réduisant la consommation électrique de 19 kW à ~4 kW grâce à l'orchestration automatisée (Kestra, Ansible, Terraform). Mis en place un environnement Proxmox (82 VMs) avec monitoring (Prometheus, Grafana) et une gestion centralisée des secrets (HashiCorp Vault, PKI dédiée).",
         date: "Décembre 2025 à présent",
       },
       odav: {
         title: "ODAV AG",
         description:
-          "Développeur d'Applications (Full Stack)\n\nConçu et implémenté une application de gestion littéraire de zéro (Tesseract OCR, Elasticsearch, Liquibase). Construit des pipelines de test et déploiement automatisés (GitLab, Kubernetes, ArgoCD).",
+          "Développeur d'applications (Alternance)\n\nConçu et développé une application de gestion automatisée de la littérature et des médias (Tesseract OCR, Elasticsearch, Liquibase). Construit des pipelines CI/CD automatisés (GitLab, Kubernetes, ArgoCD) pour améliorer la stabilité et les flux de travail des développeurs.",
         date: "Septembre 2022 à Juillet 2025",
       },
       finalSchool: {
@@ -57,14 +57,6 @@ export default {
         description:
           "Diplôme de l'École Secondaire Herzog-Ludwig à Bogen avec certificat d'école intermédiaire",
         date: "Décembre 2017 à Septembre 2022",
-      },
-      school: {
-        title: "École Secondaire à Ratisbonne",
-        description:
-          "Fréquentation de l'École Secondaire St.-Wolfgang à Ratisbonne, puis transfert à " +
-          "l'École Secondaire Herzog-Ludwig à Bogen, où le certificat d'école intermédiaire a été " +
-          "obtenu",
-        date: "Août 2016 à Décembre 2017",
       },
     },
   },
