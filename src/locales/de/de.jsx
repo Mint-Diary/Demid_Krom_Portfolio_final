@@ -442,6 +442,7 @@ export default {
       item1: "Lieblingsmanga: Death Note",
       item2: "Eat. Sleep. Code. Repeat.",
       item3: "TypeScript? Immer.",
+      item4: "Ich teste nicht in Prod",
     },
     newsletter: {
       title: "Newsletter",

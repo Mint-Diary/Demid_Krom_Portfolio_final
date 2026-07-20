@@ -38,7 +38,7 @@ export default function Footer({ onScrollToTop }) {
   return (
     <footer className="relative overflow-hidden border-t border-slate-300 bg-gray-100 py-12 text-gray-800 lg:py-20 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
       <div className="relative z-10 container mx-auto px-4 lg:px-8 xl:max-w-7xl">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <button
@@ -75,56 +75,7 @@ export default function Footer({ onScrollToTop }) {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              {t("footer.services")}
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://de.fiverr.com/s/8z9wmKv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 transition duration-100 hover:text-green-400"
-                >
-                  {t("footer.servicesList.webDev")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://de.fiverr.com/s/8z9wmKv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 transition duration-100 hover:text-green-400"
-                >
-                  {t("footer.servicesList.mobileApp")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://de.fiverr.com/s/8z9wmKv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 transition duration-100 hover:text-green-400"
-                >
-                  {t("footer.servicesList.uiux")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://de.fiverr.com/s/8z9wmKv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 transition duration-100 hover:text-green-400"
-                >
-                  {t("footer.servicesList.consulting")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
+          {/* Funfacts */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
               {t("footer.funfacts.title")}
@@ -133,6 +84,7 @@ export default function Footer({ onScrollToTop }) {
               <li>{t("footer.funfacts.item1")}</li>
               <li>{t("footer.funfacts.item2")}</li>
               <li>{t("footer.funfacts.item3")}</li>
+              <li>{t("footer.funfacts.item4")}</li>
             </ul>
           </div>
 

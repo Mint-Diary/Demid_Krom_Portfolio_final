@@ -456,6 +456,7 @@ export default {
       item1: "Manga préféré : Death Note",
       item2: "Eat. Sleep. Code. Repeat.",
       item3: "TypeScript ? Toujours.",
+      item4: "Je ne teste pas en production.",
     },
   },
 

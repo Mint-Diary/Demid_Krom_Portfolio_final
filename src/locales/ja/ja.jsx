@@ -452,6 +452,7 @@ export default {
       item1: "好きなマンガ：デスノート",
       item2: "食う。寝る。書く。ループ。",
       item3: "TypeScript？ もちろん。",
+      item4: "本番環境ではテストしない。",
     },
   },
 
